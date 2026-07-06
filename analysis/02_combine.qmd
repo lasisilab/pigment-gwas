@@ -1,0 +1,87 @@
+---
+title: "02 · Combine"
+subtitle: "One harmonized pigmentation-GWAS compendium"
+---
+
+## What this workbook produces
+
+**Output B** — `output/pigmentation_gwas_harmonized.csv`: the catalog pull (Output A) plus
+every per-source file in `output/sources/`, all on the shared schema, unioned and
+deduplicated by rsID. This step is a **pure union/dedup** — every source is already mapped
+onto the common columns in its own workbook, so nothing source-specific happens here except
+choosing which source wins a shared rsID.
+
+Set `CATALOG_VERSION` to a filename under `output/catalog/versions/` to pin a specific
+catalog pull; the default `"latest"` uses the current Output A.
+
+```{python}
+import sys, glob
+sys.path.insert(0, "scripts")
+import pandas as pd
+from harmonize import to_harmonized, const, combine, HARMONIZED_COLS
+
+CATALOG_VERSION = "latest"   # or e.g. "pigmentation_gwas_catalog_20260701T002827Z.csv"
+
+cat_path = ("output/catalog/pigmentation_gwas_catalog.csv" if CATALOG_VERSION == "latest"
+            else f"output/catalog/versions/{CATALOG_VERSION}")
+cat_raw = pd.read_csv(cat_path, dtype=str, keep_default_na=False)
+```
+
+## Map the catalog onto the shared schema
+
+The catalog's `or_beta` column mixes odds ratios and linear betas without a clean unit, and
+the v1 pull did not capture the discovery-sample ancestry or the numeric CI. So catalog rows
+carry `effect_type = "unknown"` and `needs_sumstats = True` — an explicit flag that these
+loci need full summary statistics (or a widened pull) before they are scoring-ready, not a
+silent gap. `effect_size` still carries the reported `or_beta` and `eaf` the risk-allele
+frequency, so nothing is thrown away.
+
+```{python}
+cat_map = {
+    "rsid":            "rsid",
+    "chr":             "chr",
+    "pos":             "pos_hg38",
+    "build":           const("hg38"),
+    "effect_allele":   "risk_allele",
+    "eaf":             "risk_freq",
+    "effect_type":     const("unknown"),
+    "effect_size":     "or_beta",
+    "pvalue":          "pvalue",
+    "trait":           "mapped_trait",
+    "mapped_gene":     "mapped_gene",
+    "pubmed":          "pubmed",
+    "study_accession": "study_accession",
+}
+cat_ver = cat_raw["queried_utc"].iloc[0] if "queried_utc" in cat_raw and len(cat_raw) else "unknown"
+catalog = to_harmonized(cat_raw, cat_map, source="gwas_catalog",
+                        source_version=cat_ver, needs_sumstats=True)
+print(f"catalog: {len(catalog)} loci (queried {cat_ver})")
+```
+
+## Union all sources and deduplicate
+
+Precedence prefers African-ancestry paper effect sizes over the catalog for shared rsIDs
+(mirroring the source-of-truth choice the SAPPHIRE pipeline made). A shared rsID keeps the
+higher-precedence row and its `source` is rewritten to the `+`-joined set of contributing
+sources (e.g. `crawford2017+gwas_catalog`), so multi-source provenance survives the dedup.
+
+```{python}
+frames = [catalog]
+for f in sorted(glob.glob("output/sources/*_harmonized.csv")):
+    frames.append(pd.read_csv(f, dtype=str, keep_default_na=False)[HARMONIZED_COLS])
+
+PRECEDENCE = ["crawford2017", "gwas_catalog"]   # earlier = wins a shared rsID
+compendium = combine(frames, precedence=PRECEDENCE)
+compendium.to_csv("output/pigmentation_gwas_harmonized.csv", index=False)
+print(f"{len(compendium)} unique loci -> output/pigmentation_gwas_harmonized.csv")
+```
+
+## Summary
+
+```{python}
+print("rows per source tag:")
+print(compendium["source"].value_counts().to_string())
+print(f"\nloci flagged needs_sumstats: {(compendium['needs_sumstats'].astype(str) == 'True').sum()}"
+      f" / {len(compendium)}")
+compendium.head(15)
+```

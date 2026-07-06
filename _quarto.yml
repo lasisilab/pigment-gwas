@@ -1,0 +1,30 @@
+project:
+  type: website
+  execute-dir: project      # run every workbook from the repo root, so paths are uniform
+  output-dir: docs          # render the site into docs/ (GitHub Pages convention)
+  render:
+    - index.qmd
+    - analysis/01_catalog_pull.qmd
+    - analysis/sources/crawford2017.qmd
+    - analysis/02_combine.qmd
+
+website:
+  title: "pigment-gwas"
+  navbar:
+    left:
+      - text: "Home"
+        file: index.qmd
+      - text: "1 · Catalog pull"
+        file: analysis/01_catalog_pull.qmd
+      - text: "Sources"
+        menu:
+          - text: "Crawford 2017"
+            file: analysis/sources/crawford2017.qmd
+      - text: "2 · Combine"
+        file: analysis/02_combine.qmd
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    code-fold: show

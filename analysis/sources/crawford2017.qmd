@@ -1,0 +1,59 @@
+---
+title: "Source · Crawford et al. 2017"
+subtitle: "African skin-pigmentation GWAS (Science, PMID 29025994)"
+---
+
+## Why this source
+
+Crawford et al. 2017 is the defining GWAS of skin pigmentation in **African** populations
+(SLC24A5, MFSD12, DDB1/TMEM138, OCA2/HERC2, and others). It is **not** in the GWAS Catalog
+download, so the catalog pull in `01_catalog_pull.qmd` can never recover it — it has to be
+added as its own source. This workbook maps Crawford's Table 1 onto the shared schema and
+writes one standardized file; the combine step then folds it in.
+
+This is the template for **adding any non-catalog source**: copy this workbook, point it at
+a new source table, adjust the mapping, and write `output/sources/<name>_harmonized.csv`.
+No existing workbook changes.
+
+## Source quirks to be honest about
+
+- **Build is hg19** (`pos_hg19`), whereas the catalog is hg38 — harmonization keeps `build`
+  per row so nothing silently mis-aligns; rsID is the safe join key.
+- **Effect allele = the derived allele.** Crawford codes the whole table against one
+  allele/beta convention, and the sign needs calibrating against a known locus
+  (`rs1426654`-A is light-associated). We keep the reported `beta` as `effect_size` with
+  `effect_type = beta`; the sign convention is a documented review item for scoring, not a
+  per-locus summary-stats gap, so `needs_sumstats = False`.
+- Ancestry is recorded as African (Crawford's discovery cohorts).
+
+```{python}
+import sys
+sys.path.insert(0, "scripts")
+import pandas as pd
+from harmonize import to_harmonized, const
+
+cw = pd.read_csv("data/sources/crawford2017_table1.tsv", sep="\t",
+                 dtype=str, keep_default_na=False)
+
+mapping = {
+    "rsid":          "rsid",
+    "chr":           "chr",
+    "pos":           "pos_hg19",
+    "build":         const("hg19"),
+    "effect_allele": "derived",      # Crawford's effect is coded on the derived allele
+    "other_allele":  "ancestral",
+    "effect_type":   const("beta"),
+    "effect_size":   "beta",
+    "pvalue":        "pvalue",
+    "trait":         const("skin pigmentation (Crawford 2017 Table 1)"),
+    "ancestry":      const("African (Crawford et al. 2017 discovery cohorts)"),
+    "mapped_gene":   "nearest_gene",
+    "pubmed":        const("29025994"),
+}
+
+craw = to_harmonized(cw, mapping, source="crawford2017",
+                     source_version="2017_Table1", needs_sumstats=False)
+craw.to_csv("output/sources/crawford2017_harmonized.csv", index=False)
+print(f"{len(craw)} Crawford loci -> output/sources/crawford2017_harmonized.csv")
+craw.head(10)
+```

@@ -1,0 +1,15 @@
+# Quarto build artifacts
+/_site/
+/.quarto/
+**/*.quarto_ipynb
+
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# macOS
+.DS_Store
+
+# NOTE: data/ and output/ are deliberately COMMITTED — they are the atlas itself
+# (the pulled catalog data, its version history, and the harmonized compendium).

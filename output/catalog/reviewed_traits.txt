@@ -1,0 +1,11 @@
+# Reviewed mapped-trait snapshot. One per line.
+# New traits appearing in a later pull are flagged for review.
+Abnormal skin pigmentation, freckles
+Abnormal skin pigmentation, suntan
+eye colour measurement, strand of hair color, skin pigmentation
+facial pigmentation
+freckles
+skin pigmentation
+skin sensitivity to sun
+sunburn
+suntan

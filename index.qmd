@@ -1,0 +1,19 @@
+---
+title: "pigment-gwas"
+subtitle: "A versioned, harmonized compendium of pigmentation GWAS loci"
+---
+
+A small atlas of skin-pigmentation GWAS loci, built to seed improved polygenic scores and
+HIrisPlex-style comparisons. Two outputs, produced by two kinds of workbook:
+
+- **[1 · Catalog pull](analysis/01_catalog_pull.qmd)** → `output/catalog/pigmentation_gwas_catalog.csv`
+  — the latest NHGRI-EBI GWAS Catalog pull for pigmentation, versioned (every pull archived
+  under `output/catalog/versions/`).
+- **Per-source workbooks** (e.g. [Crawford 2017](analysis/sources/crawford2017.qmd)) → one
+  standardized file each in `output/sources/`.
+- **[2 · Combine](analysis/02_combine.qmd)** → `output/pigmentation_gwas_harmonized.csv`
+  — the catalog plus every per-source file, unioned and deduplicated onto one shared schema.
+
+**Adding a source** = add one per-source workbook that writes `output/sources/<name>_harmonized.csv`;
+the combine step picks it up automatically. See the [README](README.md) for the schema and the
+add-a-source recipe.

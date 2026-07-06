@@ -1,0 +1,26 @@
+{
+  "queried_utc": "2026-07-01T00:28:27Z",
+  "axis": "skin",
+  "label": "Skin pigmentation & photo-response",
+  "config_file": "config/traits_pigmentation.json",
+  "roots": [
+    "OBA_VT0002095",
+    "OBA_2045282",
+    "EFO_0003963",
+    "MONDO_0005326",
+    "EFO_0004279",
+    "MONDO_0005434",
+    "EFO_0021835"
+  ],
+  "anchors": {
+    "rs1426654": "SLC24A5",
+    "rs12913832": "HERC2"
+  },
+  "n_loci": 440,
+  "n_on_array": null,
+  "new_unreviewed_traits": [],
+  "endpoint": "https://www.ebi.ac.uk/gwas/api/search/downloads",
+  "query": "shortForm:\"<root>\" includeChildTraits=true efo=true facet=association",
+  "source": "NHGRI-EBI GWAS Catalog download endpoint (with child traits)",
+  "script": "scripts/gwas_catalog.py v1.0"
+}

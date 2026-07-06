@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>02 · Combine – pigment-gwas</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script><script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-5b4ad623e5705c0698d39aec6f10cf02.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="https://cdn.jsdelivr.net/npm/requirejs@2.3.6/require.min.js" integrity="sha384-c9c+LnTbwQ3aujuU7ULEPVvgLs+Fn6fJUvIGTsuu1ZcCf11fiEubah0ttpca4ntM sha384-6V1/AdqZRWk1KAlWbKBlGhN7VG4iE/yAZcO6NZPMF8od0vukrvr0tg4qY6NSrItx" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
+
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">pigment-gwas</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../analysis/01_catalog_pull.html"> 
+<span class="menu-text">1 · Catalog pull</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-sources" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Sources</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-sources">    
+        <li>
+    <a class="dropdown-item" href="../analysis/sources/crawford2017.html">
+ <span class="dropdown-text">Crawford 2017</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link active" href="../analysis/02_combine.html" aria-current="page"> 
+<span class="menu-text">2 · Combine</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#what-this-workbook-produces" id="toc-what-this-workbook-produces" class="nav-link active" data-scroll-target="#what-this-workbook-produces">What this workbook produces</a></li>
+  <li><a href="#map-the-catalog-onto-the-shared-schema" id="toc-map-the-catalog-onto-the-shared-schema" class="nav-link" data-scroll-target="#map-the-catalog-onto-the-shared-schema">Map the catalog onto the shared schema</a></li>
+  <li><a href="#union-all-sources-and-deduplicate" id="toc-union-all-sources-and-deduplicate" class="nav-link" data-scroll-target="#union-all-sources-and-deduplicate">Union all sources and deduplicate</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">02 · Combine</h1>
+<p class="subtitle lead">One harmonized pigmentation-GWAS compendium</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="what-this-workbook-produces" class="level2">
+<h2 class="anchored" data-anchor-id="what-this-workbook-produces">What this workbook produces</h2>
+<p><strong>Output B</strong> — <code>output/pigmentation_gwas_harmonized.csv</code>: the catalog pull (Output A) plus every per-source file in <code>output/sources/</code>, all on the shared schema, unioned and deduplicated by rsID. This step is a <strong>pure union/dedup</strong> — every source is already mapped onto the common columns in its own workbook, so nothing source-specific happens here except choosing which source wins a shared rsID.</p>
+<p>Set <code>CATALOG_VERSION</code> to a filename under <code>output/catalog/versions/</code> to pin a specific catalog pull; the default <code>"latest"</code> uses the current Output A.</p>
+<div id="789cf8a2" class="cell" data-execution_count="1">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys, glob</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>sys.path.insert(<span class="dv">0</span>, <span class="st">"scripts"</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> harmonize <span class="im">import</span> to_harmonized, const, combine, HARMONIZED_COLS</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>CATALOG_VERSION <span class="op">=</span> <span class="st">"latest"</span>   <span class="co"># or e.g. "pigmentation_gwas_catalog_20260701T002827Z.csv"</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>cat_path <span class="op">=</span> (<span class="st">"output/catalog/pigmentation_gwas_catalog.csv"</span> <span class="cf">if</span> CATALOG_VERSION <span class="op">==</span> <span class="st">"latest"</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>            <span class="cf">else</span> <span class="ss">f"output/catalog/versions/</span><span class="sc">{</span>CATALOG_VERSION<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>cat_raw <span class="op">=</span> pd.read_csv(cat_path, dtype<span class="op">=</span><span class="bu">str</span>, keep_default_na<span class="op">=</span><span class="va">False</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+</section>
+<section id="map-the-catalog-onto-the-shared-schema" class="level2">
+<h2 class="anchored" data-anchor-id="map-the-catalog-onto-the-shared-schema">Map the catalog onto the shared schema</h2>
+<p>The catalog’s <code>or_beta</code> column mixes odds ratios and linear betas without a clean unit, and the v1 pull did not capture the discovery-sample ancestry or the numeric CI. So catalog rows carry <code>effect_type = "unknown"</code> and <code>needs_sumstats = True</code> — an explicit flag that these loci need full summary statistics (or a widened pull) before they are scoring-ready, not a silent gap. <code>effect_size</code> still carries the reported <code>or_beta</code> and <code>eaf</code> the risk-allele frequency, so nothing is thrown away.</p>
+<div id="0825ad16" class="cell" data-execution_count="2">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>cat_map <span class="op">=</span> {</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"rsid"</span>:            <span class="st">"rsid"</span>,</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"chr"</span>:             <span class="st">"chr"</span>,</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"pos"</span>:             <span class="st">"pos_hg38"</span>,</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"build"</span>:           const(<span class="st">"hg38"</span>),</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"effect_allele"</span>:   <span class="st">"risk_allele"</span>,</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">"eaf"</span>:             <span class="st">"risk_freq"</span>,</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">"effect_type"</span>:     const(<span class="st">"unknown"</span>),</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">"effect_size"</span>:     <span class="st">"or_beta"</span>,</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">"pvalue"</span>:          <span class="st">"pvalue"</span>,</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">"trait"</span>:           <span class="st">"mapped_trait"</span>,</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">"mapped_gene"</span>:     <span class="st">"mapped_gene"</span>,</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    <span class="st">"pubmed"</span>:          <span class="st">"pubmed"</span>,</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    <span class="st">"study_accession"</span>: <span class="st">"study_accession"</span>,</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>cat_ver <span class="op">=</span> cat_raw[<span class="st">"queried_utc"</span>].iloc[<span class="dv">0</span>] <span class="cf">if</span> <span class="st">"queried_utc"</span> <span class="kw">in</span> cat_raw <span class="kw">and</span> <span class="bu">len</span>(cat_raw) <span class="cf">else</span> <span class="st">"unknown"</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>catalog <span class="op">=</span> to_harmonized(cat_raw, cat_map, source<span class="op">=</span><span class="st">"gwas_catalog"</span>,</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>                        source_version<span class="op">=</span>cat_ver, needs_sumstats<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"catalog: </span><span class="sc">{</span><span class="bu">len</span>(catalog)<span class="sc">}</span><span class="ss"> loci (queried </span><span class="sc">{</span>cat_ver<span class="sc">}</span><span class="ss">)"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>catalog: 440 loci (queried 2026-07-01T00:28:27Z)</code></pre>
+</div>
+</div>
+</section>
+<section id="union-all-sources-and-deduplicate" class="level2">
+<h2 class="anchored" data-anchor-id="union-all-sources-and-deduplicate">Union all sources and deduplicate</h2>
+<p>Precedence prefers African-ancestry paper effect sizes over the catalog for shared rsIDs (mirroring the source-of-truth choice the SAPPHIRE pipeline made). A shared rsID keeps the higher-precedence row and its <code>source</code> is rewritten to the <code>+</code>-joined set of contributing sources (e.g.&nbsp;<code>crawford2017+gwas_catalog</code>), so multi-source provenance survives the dedup.</p>
+<div id="1d5da97d" class="cell" data-execution_count="3">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>frames <span class="op">=</span> [catalog]</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> f <span class="kw">in</span> <span class="bu">sorted</span>(glob.glob(<span class="st">"output/sources/*_harmonized.csv"</span>)):</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    frames.append(pd.read_csv(f, dtype<span class="op">=</span><span class="bu">str</span>, keep_default_na<span class="op">=</span><span class="va">False</span>)[HARMONIZED_COLS])</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>PRECEDENCE <span class="op">=</span> [<span class="st">"crawford2017"</span>, <span class="st">"gwas_catalog"</span>]   <span class="co"># earlier = wins a shared rsID</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>compendium <span class="op">=</span> combine(frames, precedence<span class="op">=</span>PRECEDENCE)</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>compendium.to_csv(<span class="st">"output/pigmentation_gwas_harmonized.csv"</span>, index<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span><span class="bu">len</span>(compendium)<span class="sc">}</span><span class="ss"> unique loci -&gt; output/pigmentation_gwas_harmonized.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>492 unique loci -&gt; output/pigmentation_gwas_harmonized.csv</code></pre>
+</div>
+</div>
+</section>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">Summary</h2>
+<div id="f24073b7" class="cell" data-execution_count="4">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"rows per source tag:"</span>)</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(compendium[<span class="st">"source"</span>].value_counts().to_string())</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">loci flagged needs_sumstats: </span><span class="sc">{</span>(compendium[<span class="st">'needs_sumstats'</span>].astype(<span class="bu">str</span>) <span class="op">==</span> <span class="st">'True'</span>)<span class="sc">.</span><span class="bu">sum</span>()<span class="sc">}</span><span class="ss">"</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>      <span class="ss">f" / </span><span class="sc">{</span><span class="bu">len</span>(compendium)<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>compendium.head(<span class="dv">15</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>rows per source tag:
+source
+gwas_catalog                 436
+crawford2017                  52
+crawford2017+gwas_catalog      4
+
+loci flagged needs_sumstats: 436 / 492</code></pre>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="4">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">rsid</th>
+<th data-quarto-table-cell-role="th">chr</th>
+<th data-quarto-table-cell-role="th">pos</th>
+<th data-quarto-table-cell-role="th">build</th>
+<th data-quarto-table-cell-role="th">effect_allele</th>
+<th data-quarto-table-cell-role="th">other_allele</th>
+<th data-quarto-table-cell-role="th">eaf</th>
+<th data-quarto-table-cell-role="th">effect_type</th>
+<th data-quarto-table-cell-role="th">effect_size</th>
+<th data-quarto-table-cell-role="th">standard_error</th>
+<th data-quarto-table-cell-role="th">...</th>
+<th data-quarto-table-cell-role="th">pvalue</th>
+<th data-quarto-table-cell-role="th">trait</th>
+<th data-quarto-table-cell-role="th">ancestry</th>
+<th data-quarto-table-cell-role="th">sample_size</th>
+<th data-quarto-table-cell-role="th">mapped_gene</th>
+<th data-quarto-table-cell-role="th">pubmed</th>
+<th data-quarto-table-cell-role="th">study_accession</th>
+<th data-quarto-table-cell-role="th">source</th>
+<th data-quarto-table-cell-role="th">source_version</th>
+<th data-quarto-table-cell-role="th">needs_sumstats</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">0</th>
+<td>rs55711543</td>
+<td></td>
+<td></td>
+<td>hg38</td>
+<td>T</td>
+<td></td>
+<td>NR</td>
+<td>unknown</td>
+<td>0.497</td>
+<td></td>
+<td>...</td>
+<td>2E-205</td>
+<td>suntan</td>
+<td></td>
+<td></td>
+<td></td>
+<td>29739929</td>
+<td>GCST005897</td>
+<td>gwas_catalog</td>
+<td>2026-07-01T00:28:27Z</td>
+<td>True</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">1</th>
+<td>rs11283428</td>
+<td></td>
+<td></td>
+<td>hg38</td>
+<td>?</td>
+<td></td>
+<td>0.328048</td>
+<td>unknown</td>
+<td>0.115727</td>
+<td></td>
+<td>...</td>
+<td>3E-11</td>
+<td>skin pigmentation</td>
+<td></td>
+<td></td>
+<td></td>
+<td>36672889</td>
+<td>GCST90255690</td>
+<td>gwas_catalog</td>
+<td>2026-07-01T00:28:27Z</td>
+<td>True</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">2</th>
+<td>rs535930</td>
+<td>1</td>
+<td>110181866</td>
+<td>hg38</td>
+<td>?</td>
+<td></td>
+<td>NR</td>
+<td>unknown</td>
+<td></td>
+<td></td>
+<td>...</td>
+<td>3E-11</td>
+<td>sunburn</td>
+<td></td>
+<td></td>
+<td>SLC6A17</td>
+<td>30595370</td>
+<td>GCST007086</td>
+<td>gwas_catalog</td>
+<td>2026-07-01T00:28:27Z</td>
+<td>True</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">3</th>
+<td>rs183827287</td>
+<td>1</td>
+<td>114078318</td>
+<td>hg38</td>
+<td>?</td>
+<td></td>
+<td>NR</td>
+<td>unknown</td>
+<td>14.09</td>
+<td></td>
+<td>...</td>
+<td>1E-9</td>
+<td>skin pigmentation</td>
+<td></td>
+<td></td>
+<td>OLFML3 - SYT6</td>
+<td>37294081</td>
+<td>GCST90269962</td>
+<td>gwas_catalog</td>
+<td>2026-07-01T00:28:27Z</td>
+<td>True</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">4</th>
+<td>rs2793827</td>
+<td>1</td>
+<td>119906182</td>
+<td>hg38</td>
+<td>?</td>
+<td></td>
+<td>NR</td>
+<td>unknown</td>
+<td></td>
+<td></td>
+<td>...</td>
+<td>3E-8</td>
+<td>sunburn</td>
+<td></td>
+<td></td>
+<td>ADAM30 - NOTCH2</td>
+<td>30595370</td>
+<td>GCST007086</td>
+<td>gwas_catalog</td>
+<td>2026-07-01T00:28:27Z</td>
+<td>True</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">5</th>
+<td>rs61816761</td>
+<td>1</td>
+<td>152313385</td>
+<td>hg38</td>
+<td>?</td>
+<td></td>
+<td>NR</td>
+<td>unknown</td>
+<td></td>
+<td></td>
+<td>...</td>
+<td>2E-14</td>
+<td>sunburn</td>
+<td></td>
+<td></td>
+<td>FLG, CCDST</td>
+<td>30595370</td>
+<td>GCST007086</td>
+<td>gwas_catalog</td>
+<td>2026-07-01T00:28:27Z</td>
+<td>True</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">6</th>
+<td>rs11264244</td>
+<td>1</td>
+<td>154696591</td>
+<td>hg38</td>
+<td>?</td>
+<td></td>
+<td>NR</td>
+<td>unknown</td>
+<td></td>
+<td></td>
+<td>...</td>
+<td>3E-8</td>
+<td>sunburn</td>
+<td></td>
+<td></td>
+<td>ADAR - KCNN3</td>
+<td>30595370</td>
+<td>GCST007086</td>
+<td>gwas_catalog</td>
+<td>2026-07-01T00:28:27Z</td>
+<td>True</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">7</th>
+<td>rs7538231</td>
+<td>1</td>
+<td>17875687</td>
+<td>hg38</td>
+<td>A</td>
+<td></td>
+<td>NR</td>
+<td>unknown</td>
+<td>0.341084</td>
+<td></td>
+<td>...</td>
+<td>1E-7</td>
+<td>skin pigmentation</td>
+<td></td>
+<td></td>
+<td>ACTL8 - LINC01654</td>
+<td>30895295</td>
+<td>GCST007739</td>
+<td>gwas_catalog</td>
+<td>2026-07-01T00:28:27Z</td>
+<td>True</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">8</th>
+<td>rs114143322</td>
+<td>1</td>
+<td>197483784</td>
+<td>hg38</td>
+<td>?</td>
+<td></td>
+<td>NR</td>
+<td>unknown</td>
+<td></td>
+<td></td>
+<td>...</td>
+<td>1E-6</td>
+<td>suntan</td>
+<td></td>
+<td></td>
+<td>CRB1 - DENND1B</td>
+<td>29195075</td>
+<td>GCST005189</td>
+<td>gwas_catalog</td>
+<td>2026-07-01T00:28:27Z</td>
+<td>True</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">9</th>
+<td>rs17025239</td>
+<td>1</td>
+<td>215724880</td>
+<td>hg38</td>
+<td>A</td>
+<td></td>
+<td>NR</td>
+<td>unknown</td>
+<td>0.243222</td>
+<td></td>
+<td>...</td>
+<td>8E-6</td>
+<td>skin pigmentation</td>
+<td></td>
+<td></td>
+<td>USH2A</td>
+<td>30895295</td>
+<td>GCST007739</td>
+<td>gwas_catalog</td>
+<td>2026-07-01T00:28:27Z</td>
+<td>True</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">10</th>
+<td>rs6429197</td>
+<td>1</td>
+<td>235611717</td>
+<td>hg38</td>
+<td>C</td>
+<td></td>
+<td>NR</td>
+<td>unknown</td>
+<td>0.384576</td>
+<td></td>
+<td>...</td>
+<td>7E-6</td>
+<td>skin pigmentation</td>
+<td></td>
+<td></td>
+<td>GNG4</td>
+<td>30895295</td>
+<td>GCST007739</td>
+<td>gwas_catalog</td>
+<td>2026-07-01T00:28:27Z</td>
+<td>True</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">11</th>
+<td>rs10737883</td>
+<td>1</td>
+<td>242645039</td>
+<td>hg38</td>
+<td>C</td>
+<td></td>
+<td>NR</td>
+<td>unknown</td>
+<td>1.00959</td>
+<td></td>
+<td>...</td>
+<td>3E-6</td>
+<td>skin pigmentation</td>
+<td></td>
+<td></td>
+<td>PLD5 - RSL24D1P4</td>
+<td>30895295</td>
+<td>GCST007739</td>
+<td>gwas_catalog</td>
+<td>2026-07-01T00:28:27Z</td>
+<td>True</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">12</th>
+<td>rs4463718</td>
+<td>1</td>
+<td>55440394</td>
+<td>hg38</td>
+<td>G</td>
+<td></td>
+<td>NR</td>
+<td>unknown</td>
+<td>0.262495</td>
+<td></td>
+<td>...</td>
+<td>1E-6</td>
+<td>skin pigmentation</td>
+<td></td>
+<td></td>
+<td>LINC01755</td>
+<td>30895295</td>
+<td>GCST007739</td>
+<td>gwas_catalog</td>
+<td>2026-07-01T00:28:27Z</td>
+<td>True</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">13</th>
+<td>rs1308048</td>
+<td>1</td>
+<td>66422859</td>
+<td>hg38</td>
+<td>?</td>
+<td></td>
+<td>NR</td>
+<td>unknown</td>
+<td></td>
+<td></td>
+<td>...</td>
+<td>2E-20</td>
+<td>sunburn</td>
+<td></td>
+<td></td>
+<td>PDE4B - SGIP1</td>
+<td>30595370</td>
+<td>GCST007086</td>
+<td>gwas_catalog</td>
+<td>2026-07-01T00:28:27Z</td>
+<td>True</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">14</th>
+<td>rs11210187</td>
+<td>1</td>
+<td>73249550</td>
+<td>hg38</td>
+<td>?</td>
+<td></td>
+<td>NR</td>
+<td>unknown</td>
+<td></td>
+<td></td>
+<td>...</td>
+<td>4E-11</td>
+<td>sunburn</td>
+<td></td>
+<td></td>
+<td>RN7SKP19 - LINC01360</td>
+<td>30595370</td>
+<td>GCST007086</td>
+<td>gwas_catalog</td>
+<td>2026-07-01T00:28:27Z</td>
+<td>True</td>
+</tr>
+</tbody>
+</table>
+
+<p>15 rows × 21 columns</p>
+</div>
+</div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

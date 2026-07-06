@@ -1,0 +1,493 @@
+rsid,chr,pos,build,effect_allele,other_allele,eaf,effect_type,effect_size,standard_error,ci_text,pvalue,trait,ancestry,sample_size,mapped_gene,pubmed,study_accession,source,source_version,needs_sumstats
+rs55711543,,,hg38,T,,NR,unknown,0.497,,,2E-205,suntan,,,,29739929,GCST005897,gwas_catalog,2026-07-01T00:28:27Z,True
+rs11283428,,,hg38,?,,0.328048,unknown,0.115727,,,3E-11,skin pigmentation,,,,36672889,GCST90255690,gwas_catalog,2026-07-01T00:28:27Z,True
+rs535930,1,110181866,hg38,?,,NR,unknown,,,,3E-11,sunburn,,,SLC6A17,30595370,GCST007086,gwas_catalog,2026-07-01T00:28:27Z,True
+rs183827287,1,114078318,hg38,?,,NR,unknown,14.09,,,1E-9,skin pigmentation,,,OLFML3 - SYT6,37294081,GCST90269962,gwas_catalog,2026-07-01T00:28:27Z,True
+rs2793827,1,119906182,hg38,?,,NR,unknown,,,,3E-8,sunburn,,,ADAM30 - NOTCH2,30595370,GCST007086,gwas_catalog,2026-07-01T00:28:27Z,True
+rs61816761,1,152313385,hg38,?,,NR,unknown,,,,2E-14,sunburn,,,"FLG, CCDST",30595370,GCST007086,gwas_catalog,2026-07-01T00:28:27Z,True
+rs11264244,1,154696591,hg38,?,,NR,unknown,,,,3E-8,sunburn,,,ADAR - KCNN3,30595370,GCST007086,gwas_catalog,2026-07-01T00:28:27Z,True
+rs7538231,1,17875687,hg38,A,,NR,unknown,0.341084,,,1E-7,skin pigmentation,,,ACTL8 - LINC01654,30895295,GCST007739,gwas_catalog,2026-07-01T00:28:27Z,True
+rs114143322,1,197483784,hg38,?,,NR,unknown,,,,1E-6,suntan,,,CRB1 - DENND1B,29195075,GCST005189,gwas_catalog,2026-07-01T00:28:27Z,True
+rs17025239,1,215724880,hg38,A,,NR,unknown,0.243222,,,8E-6,skin pigmentation,,,USH2A,30895295,GCST007739,gwas_catalog,2026-07-01T00:28:27Z,True
+rs6429197,1,235611717,hg38,C,,NR,unknown,0.384576,,,7E-6,skin pigmentation,,,GNG4,30895295,GCST007739,gwas_catalog,2026-07-01T00:28:27Z,True
+rs10737883,1,242645039,hg38,C,,NR,unknown,1.00959,,,3E-6,skin pigmentation,,,PLD5 - RSL24D1P4,30895295,GCST007739,gwas_catalog,2026-07-01T00:28:27Z,True
+rs4463718,1,55440394,hg38,G,,NR,unknown,0.262495,,,1E-6,skin pigmentation,,,LINC01755,30895295,GCST007739,gwas_catalog,2026-07-01T00:28:27Z,True
+rs1308048,1,66422859,hg38,?,,NR,unknown,,,,2E-20,sunburn,,,PDE4B - SGIP1,30595370,GCST007086,gwas_catalog,2026-07-01T00:28:27Z,True
+rs11210187,1,73249550,hg38,?,,NR,unknown,,,,4E-11,sunburn,,,RN7SKP19 - LINC01360,30595370,GCST007086,gwas_catalog,2026-07-01T00:28:27Z,True
+rs75499699,1,81355115,hg38,?,,NR,unknown,0.21,,,1E-8,skin pigmentation,,,ADGRL2,40010489,GCST90502779,gwas_catalog,2026-07-01T00:28:27Z,True
+rs2272756,1,946653,hg38,A,,NR,unknown,0.324533,,,3E-6,skin pigmentation,,,NOC2L,30895295,GCST007739,gwas_catalog,2026-07-01T00:28:27Z,True
+rs12161672,10,111127713,hg38,G,,NR,unknown,20.1,,,1E-5,facial pigmentation,,,ADRA2A - BTBD7P2,35313536,GCST90104590,gwas_catalog,2026-07-01T00:28:27Z,True
+rs12259842,10,116695732,hg38,T,,0.25,unknown,1.23,,,7E-11,freckles,,,HSPA12A,29895819,GCST006091,gwas_catalog,2026-07-01T00:28:27Z,True
+rs10886142,10,117801913,hg38,T,,0.49,unknown,1.2,,,1E-9,freckles,,,LINC02674 - RAB11FIP2,29895819,GCST006091,gwas_catalog,2026-07-01T00:28:27Z,True
+rs11198112,10,117804632,hg38,T,,0.097,unknown,2.3,,,1E-37,facial pigmentation,,,LINC02674 - RAB11FIP2,32835660,GCST90002283,gwas_catalog,2026-07-01T00:28:27Z,True
+rs10444039,10,117806027,hg38,C,,0.912,unknown,1.6666665,,,6E-21,freckles,,,LINC02674 - RAB11FIP2,29895819,GCST006091,gwas_catalog,2026-07-01T00:28:27Z,True
+rs35563099,10,117812892,hg38,T,,0.14,unknown,0.008,,,1E-29,skin pigmentation,,,LINC02674 - RAB11FIP2,36536295,GCST90246327,gwas_catalog,2026-07-01T00:28:27Z,True
+rs4752116,10,117823291,hg38,C,,0.79,unknown,1.2345679,,,3E-9,freckles,,,LINC02674 - RAB11FIP2,29895819,GCST006091,gwas_catalog,2026-07-01T00:28:27Z,True
+rs11812960,10,23876027,hg38,?,,NR,unknown,,,,1E-6,suntan,,,KIAA1217,29195075,GCST005189,gwas_catalog,2026-07-01T00:28:27Z,True
+rs7087356,10,80441547,hg38,?,,NR,unknown,,,,1E-8,sunburn,,,PRXL2A - TSPAN14,30595370,GCST007086,gwas_catalog,2026-07-01T00:28:27Z,True
+rs3740027,10,89309379,hg38,T,,NR,unknown,0.5252,,,5E-6,facial pigmentation,,,LIPA,35313536,GCST90104591,gwas_catalog,2026-07-01T00:28:27Z,True
+rs7913440,10,9598581,hg38,C,,NR,unknown,0.24137,,,5E-6,skin pigmentation,,,LINC00709 - HSP90AB7P,30895295,GCST007739,gwas_catalog,2026-07-01T00:28:27Z,True
+rs1001949,11,11159318,hg38,G,,0.221,unknown,0.37,,,4E-8,skin pigmentation,,,LINC02752,34265127,GCST90026491,gwas_catalog,2026-07-01T00:28:27Z,True
+rs77996260,11,126160311,hg38,C,,NR,unknown,0.5152,,,9E-6,facial pigmentation,,,NAP1L1P1 - RPUSD4,35313536,GCST90104591,gwas_catalog,2026-07-01T00:28:27Z,True
+rs7125001,11,129445284,hg38,T,,NR,unknown,8.442,,,6E-6,facial pigmentation,,,BARX2,35313536,GCST90104590,gwas_catalog,2026-07-01T00:28:27Z,True
+rs12421680,11,131481074,hg38,A,,NR,unknown,0.41,,,6E-6,sunburn,,,NTM,23548203,GCST001933,gwas_catalog,2026-07-01T00:28:27Z,True
+rs2953060,11,16065201,hg38,?,,NR,unknown,,,,2E-13,sunburn,,,SOX6,30595370,GCST007086,gwas_catalog,2026-07-01T00:28:27Z,True
+rs11023926,11,16352168,hg38,?,,NR,unknown,,,,4E-9,sunburn,,,SOX6,30595370,GCST007086,gwas_catalog,2026-07-01T00:28:27Z,True
+rs4578351,11,16566033,hg38,?,,NR,unknown,,,,3E-15,sunburn,,,SOX6,30595370,GCST007086,gwas_catalog,2026-07-01T00:28:27Z,True
+rs653173,11,61018855,hg19,G,A,,beta,2.68,,,8.2e-9,skin pigmentation (Crawford 2017 Table 1),African (Crawford et al. 2017 discovery cohorts),,PGA5,29025994,,crawford2017,2017_Table1,False
+rs2001746,11,61033525,hg19,A,T,,beta,2.56,,,1.7e-8,skin pigmentation (Crawford 2017 Table 1),African (Crawford et al. 2017 discovery cohorts),,VWCE,29025994,,crawford2017,2017_Table1,False
+rs73490303,11,61043773,hg19,C,G,,beta,2.67,,,7.2e-9,skin pigmentation (Crawford 2017 Table 1),African (Crawford et al. 2017 discovery cohorts),,VWCE,29025994,,crawford2017,2017_Table1,False
+rs9704187,11,61044470,hg19,C,G,,beta,2.58,,,1.3e-8,skin pigmentation (Crawford 2017 Table 1),African (Crawford et al. 2017 discovery cohorts),,VWCE,29025994,,crawford2017,2017_Table1,False
+rs11230658,11,61046876,hg19,C,T,,beta,3.01,,,9.4e-10,skin pigmentation (Crawford 2017 Table 1),African (Crawford et al. 2017 discovery cohorts),,VWCE,29025994,,crawford2017,2017_Table1,False
+rs1108769,11,61054892,hg19,C,A,,beta,2.82,,,3.0e-9,skin pigmentation (Crawford 2017 Table 1),African (Crawford et al. 2017 discovery cohorts),,VWCE,29025994,,crawford2017,2017_Table1,False
+rs10897150,11,61063156,hg19,T,G,,beta,2.79,,,8.8e-9,skin pigmentation (Crawford 2017 Table 1),African (Crawford et al. 2017 discovery cohorts),,VWCE,29025994,,crawford2017,2017_Table1,False
+rs12275843,11,61075524,hg19,C,T,,beta,2.64,,,5.5e-9,skin pigmentation (Crawford 2017 Table 1),African (Crawford et al. 2017 discovery cohorts),,DDB1,29025994,,crawford2017,2017_Table1,False
+rs11230664,11,61076372,hg19,T,C,,beta,2.95,,,2.1e-9,skin pigmentation (Crawford 2017 Table 1),African (Crawford et al. 2017 discovery cohorts),,DDB1,29025994,,crawford2017,2017_Table1,False
+rs7120594,11,61080557,hg19,C,T,,beta,2.58,,,1.2e-8,skin pigmentation (Crawford 2017 Table 1),African (Crawford et al. 2017 discovery cohorts),,DDB1,29025994,,crawford2017,2017_Table1,False
+rs12289370,11,61084180,hg19,A,G,,beta,2.99,,,1.3e-9,skin pigmentation (Crawford 2017 Table 1),African (Crawford et al. 2017 discovery cohorts),,DDB1,29025994,,crawford2017,2017_Table1,False
+rs7934735,11,61088140,hg19,T,G,,beta,2.98,,,1.5e-9,skin pigmentation (Crawford 2017 Table 1),African (Crawford et al. 2017 discovery cohorts),,DDB1,29025994,,crawford2017,2017_Table1,False
+rs2512809,11,61106525,hg19,T,C,,beta,-2.93,,,7.4e-10,skin pigmentation (Crawford 2017 Table 1),African (Crawford et al. 2017 discovery cohorts),,TKFC,29025994,,crawford2017,2017_Table1,False
+rs2513329,11,61106892,hg19,C,G,,beta,-2.73,,,1.6e-8,skin pigmentation (Crawford 2017 Table 1),African (Crawford et al. 2017 discovery cohorts),,TKFC,29025994,,crawford2017,2017_Table1,False
+rs2260655,11,61108974,hg19,A,G,,beta,2.63,,,9.0e-9,skin pigmentation (Crawford 2017 Table 1),African (Crawford et al. 2017 discovery cohorts),,TKFC,29025994,,crawford2017,2017_Table1,False
+rs2305465,11,61112802,hg19,T,C,,beta,2.62,,,1.8e-8,skin pigmentation (Crawford 2017 Table 1),African (Crawford et al. 2017 discovery cohorts),,TKFC,29025994,,crawford2017,2017_Table1,False
+rs148172827,11,61115821,hg19,CATCAA,C,,beta,-2.95,,,1.8e-9,skin pigmentation (Crawford 2017 Table 1),African (Crawford et al. 2017 discovery cohorts),,TKFC,29025994,,crawford2017,2017_Table1,False
+rs7951574,11,61122878,hg19,A,G,,beta,2.92,,,2.8e-9,skin pigmentation (Crawford 2017 Table 1),African (Crawford et al. 2017 discovery cohorts),,CYB561A3,29025994,,crawford2017,2017_Table1,False
+rs7948623,11,61137147,hg19,T,A,,beta,-2.94,,,2.2e-11,skin pigmentation (Crawford 2017 Table 1),African (Crawford et al. 2017 discovery cohorts),,TMEM138,29025994,,crawford2017,2017_Table1,False
+rs11230678,11,61139869,hg19,A,G,,beta,-2.41,,,1.7e-9,skin pigmentation (Crawford 2017 Table 1),African (Crawford et al. 2017 discovery cohorts),,TMEM138,29025994,,crawford2017,2017_Table1,False
+rs10897155,11,61141164,hg19,T,C,,beta,-2.41,,,1.6e-9,skin pigmentation (Crawford 2017 Table 1),African (Crawford et al. 2017 discovery cohorts),,TMEM138,29025994,,crawford2017,2017_Table1,False
+rs57265008,11,61141259,hg19,C,T,,beta,2.34,,,3.7e-9,skin pigmentation (Crawford 2017 Table 1),African (Crawford et al. 2017 discovery cohorts),,TMEM138,29025994,,crawford2017,2017_Table1,False
+rs7394502,11,61141476,hg19,A,G,,beta,-2.41,,,1.6e-9,skin pigmentation (Crawford 2017 Table 1),African (Crawford et al. 2017 discovery cohorts),,TMEM138,29025994,,crawford2017,2017_Table1,False
+rs4939519,11,61142943,hg19,T,C,,beta,-2.47,,,2.8e-10,skin pigmentation (Crawford 2017 Table 1),African (Crawford et al. 2017 discovery cohorts),,TMEM138,29025994,,crawford2017,2017_Table1,False
+rs1377457,11,61144652,hg19,A,C,,beta,-3.01,,,1.5e-9,skin pigmentation (Crawford 2017 Table 1),African (Crawford et al. 2017 discovery cohorts),,TMEM138,29025994,,crawford2017,2017_Table1,False
+rs1377458,11,61144707,hg19,T,C,,beta,-2.40,,,2.1e-9,skin pigmentation (Crawford 2017 Table 1),African (Crawford et al. 2017 discovery cohorts),,TMEM138,29025994,,crawford2017,2017_Table1,False
+rs397709980,11,61148456,hg19,GA,G,,beta,-2.90,,,2.4e-11,skin pigmentation (Crawford 2017 Table 1),African (Crawford et al. 2017 discovery cohorts),,TMEM216,29025994,,crawford2017,2017_Table1,False
+rs12791961,11,61152028,hg19,A,C,,beta,2.90,,,9.7e-9,skin pigmentation (Crawford 2017 Table 1),African (Crawford et al. 2017 discovery cohorts),,TMEM216,29025994,,crawford2017,2017_Table1,False
+rs4453253,11,61152630,hg19,T,C,,beta,-2.85,,,5.4e-11,skin pigmentation (Crawford 2017 Table 1),African (Crawford et al. 2017 discovery cohorts),,TMEM216,29025994,,crawford2017,2017_Table1,False
+rs4939520,11,61153401,hg19,T,C,,beta,-2.79,,,1.4e-10,skin pigmentation (Crawford 2017 Table 1),African (Crawford et al. 2017 discovery cohorts),,TMEM216,29025994,,crawford2017,2017_Table1,False
+rs3017597,11,61222635,hg19,A,G,,beta,-2.77,,,5.4e-9,skin pigmentation (Crawford 2017 Table 1),African (Crawford et al. 2017 discovery cohorts),,SDHAF2,29025994,,crawford2017,2017_Table1,False
+rs1626067,11,67425084,hg38,?,,NR,unknown,,,,2E-11,sunburn,,,CARNS1,30595370,GCST007086,gwas_catalog,2026-07-01T00:28:27Z,True
+rs72917317,11,69049973,hg38,G,,NR,unknown,0.163,,,1E-29,suntan,,,TPCN2,29739929,GCST005897,gwas_catalog,2026-07-01T00:28:27Z,True
+rs150527451,11,69050429,hg38,?,,NR,unknown,,,,8E-17,sunburn,,,TPCN2,30595370,GCST007086,gwas_catalog,2026-07-01T00:28:27Z,True
+rs72932540,11,69154575,hg38,G,,NR,unknown,0.135,,,5E-20,suntan,,,TPCN2 - SMIM38,29739929,GCST005897,gwas_catalog,2026-07-01T00:28:27Z,True
+rs61901730,11,88377080,hg38,?,,NR,unknown,,,,2E-9,sunburn,,,CTSC - GAPDHP70,30595370,GCST007086,gwas_catalog,2026-07-01T00:28:27Z,True
+rs79731025,11,88422110,hg38,?,,NR,unknown,,,,8E-9,sunburn,,,GAPDHP70 - GRM5-AS1,30595370,GCST007086,gwas_catalog,2026-07-01T00:28:27Z,True
+rs7937452,11,88493228,hg38,T,,NR,unknown,0.102,,,5E-17,suntan,,,GAPDHP70 - GRM5-AS1,29739929,GCST005897,gwas_catalog,2026-07-01T00:28:27Z,True
+rs12792431,11,88687669,hg38,C,,NR,unknown,0.179,,,4E-71,suntan,,,GRM5,29739929,GCST005897,gwas_catalog,2026-07-01T00:28:27Z,True
+rs188092667,11,88721001,hg38,?,,NR,unknown,,,,2E-13,sunburn,,,GRM5,30595370,GCST007086,gwas_catalog,2026-07-01T00:28:27Z,True
+rs7118677,11,88778356,hg38,?,,NR,unknown,,,,8E-10,"eye colour measurement, strand of hair color, skin pigmentation",,,GRM5,30664655,GCST007451,gwas_catalog,2026-07-01T00:28:27Z,True
+rs71469216,11,88803283,hg38,C,,NR,unknown,0.191,,,6E-84,suntan,,,GRM5,29739929,GCST005897,gwas_catalog,2026-07-01T00:28:27Z,True
+rs10831496,11,88824823,hg38,G,,NR,unknown,0.14,,,5E-9,suntan,,,GRM5,19340012,GCST000371,gwas_catalog,2026-07-01T00:28:27Z,True
+rs10160510,11,88881156,hg38,T,,NR,unknown,0.247758,,,3E-10,skin pigmentation,,,GRM5,31315583,GCST008516,gwas_catalog,2026-07-01T00:28:27Z,True
+rs4121827,11,88936881,hg38,C,,NR,unknown,0.187,,,1E-79,suntan,,,GRM5,29739929,GCST005897,gwas_catalog,2026-07-01T00:28:27Z,True
+rs111258505,11,89012759,hg38,?,,NR,unknown,,,,2E-11,sunburn,,,GRM5,30595370,GCST007086,gwas_catalog,2026-07-01T00:28:27Z,True
+rs34749698,11,89066563,hg38,C,,NR,unknown,0.188,,,4E-82,suntan,,,GRM5 - TYR,29739929,GCST005897,gwas_catalog,2026-07-01T00:28:27Z,True
+rs2187128,11,89146747,hg38,T,,0.125176,unknown,0.142788,,,2E-9,skin pigmentation,,,GRM5 - TYR,36672889,GCST90255690,gwas_catalog,2026-07-01T00:28:27Z,True
+rs190581995,11,89154050,hg38,?,,NR,unknown,,,,2E-9,sunburn,,,GRM5 - TYR,30595370,GCST007086,gwas_catalog,2026-07-01T00:28:27Z,True
+rs1042602,11,89178528,hg38,C,,0.67,unknown,1.32,,,2E-11,freckles,,,TYR,17952075,GCST000119,gwas_catalog,2026-07-01T00:28:27Z,True
+rs7116973,11,89213898,hg38,A,,0.125426,unknown,0.144741,,,7E-9,skin pigmentation,,,TYR,36672889,GCST90255690,gwas_catalog,2026-07-01T00:28:27Z,True
+rs1393350,11,89277878,hg38,A,,NR,unknown,0.19,,,2E-13,suntan,,,TYR,19340012,GCST000371,gwas_catalog,2026-07-01T00:28:27Z,True
+rs1126809,11,89284793,hg38,?,,NR,unknown,,,,4E-280,sunburn,,,TYR,30595370,GCST007086,gwas_catalog,2026-07-01T00:28:27Z,True
+rs369896246,11,89322393,hg38,A,,0.152477,unknown,2.81651,,,2E-12,skin pigmentation,,,TYR - NOX4,36672889,GCST90255688,gwas_catalog,2026-07-01T00:28:27Z,True
+rs142893386,11,89452293,hg38,?,,NR,unknown,,,,2E-9,sunburn,,,NOX4,30595370,GCST007086,gwas_catalog,2026-07-01T00:28:27Z,True
+rs11018623,11,89464544,hg38,C,,NR,unknown,0.085,,,3E-23,suntan,,,NOX4,29739929,GCST005897,gwas_catalog,2026-07-01T00:28:27Z,True
+rs17221124,11,89714207,hg38,T,,NR,unknown,0.154,,,2E-29,suntan,,,TRIM77,29739929,GCST005897,gwas_catalog,2026-07-01T00:28:27Z,True
+rs78539082,11,90236011,hg38,C,,NR,unknown,0.112,,,1E-17,suntan,,,CHORDC1 - DISC1FP1,29739929,GCST005897,gwas_catalog,2026-07-01T00:28:27Z,True
+rs7127419,11,90315731,hg38,A,,NR,unknown,0.675051,,,3E-6,skin pigmentation,,,DISC1FP1,30895295,GCST007739,gwas_catalog,2026-07-01T00:28:27Z,True
+rs1944068,11,90475715,hg38,A,,NR,unknown,0.052,,,1E-8,suntan,,,DISC1FP1,29739929,GCST005897,gwas_catalog,2026-07-01T00:28:27Z,True
+rs1379496,12,102579439,hg38,A,,NR,unknown,0.239513,,,6E-6,skin pigmentation,,,IGF1 - LINC00485,30895295,GCST007739,gwas_catalog,2026-07-01T00:28:27Z,True
+rs10846744,12,124827879,hg38,G,,0.317,unknown,0.35,,,5E-32,facial pigmentation,,,SCARB1,34648798,GCST90020056,gwas_catalog,2026-07-01T00:28:27Z,True
+rs10848158,12,130607421,hg38,C,,NR,unknown,0.249954,,,6E-6,skin pigmentation,,,RIMBP2,30895295,GCST007739,gwas_catalog,2026-07-01T00:28:27Z,True
+rs11055339,12,13290536,hg38,A,,NR,unknown,0.5443,,,5E-6,facial pigmentation,,,EMP1 - LINC01559,35313536,GCST90104591,gwas_catalog,2026-07-01T00:28:27Z,True
+rs860877,12,25071152,hg38,G,,NR,unknown,8.95,,,7E-6,facial pigmentation,,,IRAG2,35313536,GCST90104590,gwas_catalog,2026-07-01T00:28:27Z,True
+rs7969151,12,53765493,hg38,A,,0.21,unknown,0.13,,,2E-6,suntan,,,CISTR - RN7SKP289,19340012,GCST000371,gwas_catalog,2026-07-01T00:28:27Z,True
+rs76277998,12,82092118,hg38,C,,NR,unknown,11.26,,,4E-6,facial pigmentation,,,LINC02426 - CCDC59,35313536,GCST90104590,gwas_catalog,2026-07-01T00:28:27Z,True
+rs4842464,12,87476312,hg38,C,,NR,unknown,0.438362,,,2E-6,skin pigmentation,,,RPL23AP68 - CYCSP30,30895295,GCST007739,gwas_catalog,2026-07-01T00:28:27Z,True
+rs11104733,12,88096342,hg38,?,,NR,unknown,,,,2E-9,sunburn,,,CEP290,30595370,GCST007086,gwas_catalog,2026-07-01T00:28:27Z,True
+rs4842610,12,88417912,hg38,T,,NR,unknown,0.27829,,,2E-6,skin pigmentation,,,TMTC3 - Y_RNA,30895295,GCST007739,gwas_catalog,2026-07-01T00:28:27Z,True
+rs2639099,12,88614587,hg38,T,,NR,unknown,0.106,,,4E-9,suntan,,,RNU1-117P - LINC02458,29739929,GCST005897,gwas_catalog,2026-07-01T00:28:27Z,True
+rs72620727,12,88716633,hg38,C,,0.384,unknown,0.28,,,1E-23,facial pigmentation,,,RNU1-117P - LINC02458,34648798,GCST90020056,gwas_catalog,2026-07-01T00:28:27Z,True
+rs3213737,12,95986028,hg38,?,,NR,unknown,,,,3E-48,sunburn,,,HAL,30595370,GCST007086,gwas_catalog,2026-07-01T00:28:27Z,True
+rs1278766,13,112880068,hg38,?,,NR,unknown,,,,1E-19,sunburn,,,ATP11A,30595370,GCST007086,gwas_catalog,2026-07-01T00:28:27Z,True
+rs1290177,13,112881818,hg38,T,,0.44,unknown,0.003,,,2E-9,skin pigmentation,,,ATP11A,36536295,GCST90246327,gwas_catalog,2026-07-01T00:28:27Z,True
+rs3742233,13,112883134,hg38,A,,NR,unknown,0.071,,,1E-16,suntan,,,ATP11A,29739929,GCST005897,gwas_catalog,2026-07-01T00:28:27Z,True
+rs77871962,13,29595384,hg38,A,,NR,unknown,0.9797,,,3E-6,facial pigmentation,,,SLC7A1,35313536,GCST90104591,gwas_catalog,2026-07-01T00:28:27Z,True
+rs68047527,13,30160361,hg38,C,,0.0969848,unknown,0.263733,,,2E-8,skin sensitivity to sun,,,LINC00385,36672889,GCST90255686,gwas_catalog,2026-07-01T00:28:27Z,True
+rs9508664,13,30170830,hg38,A,,0.140313,unknown,0.230065,,,8E-10,skin sensitivity to sun,,,LINC00385 - KATNAL1,36672889,GCST90255686,gwas_catalog,2026-07-01T00:28:27Z,True
+rs9561570,13,94503944,hg38,T,,NR,unknown,0.055,,,1E-9,suntan,,,DCT - TGDS,29739929,GCST005897,gwas_catalog,2026-07-01T00:28:27Z,True
+rs12147172,14,27883925,hg38,A,,NR,unknown,0.436113,,,7E-6,skin pigmentation,,,MIR3171HG - BNIP3P1,30895295,GCST007739,gwas_catalog,2026-07-01T00:28:27Z,True
+rs73278043,14,65317086,hg38,?,,NR,unknown,,,,1E-6,suntan,,,PTBP1P - MIR4708,29195075,GCST005189,gwas_catalog,2026-07-01T00:28:27Z,True
+rs1885194,14,92311118,hg38,C,,NR,unknown,0.061,,,1E-12,suntan,,,RNU6-366P - SLC24A4,29739929,GCST005897,gwas_catalog,2026-07-01T00:28:27Z,True
+rs17094273,14,96637470,hg38,A,,NR,unknown,0.2,,,9E-8,suntan,,,PAPOLA - RN7SKP108,19340012,GCST000371,gwas_catalog,2026-07-01T00:28:27Z,True
+rs190989442,15,24101305,hg38,G,,NR,unknown,1.34191,,,6E-6,skin pigmentation,,,PWRN4 - PWRN1,30895295,GCST007739,gwas_catalog,2026-07-01T00:28:27Z,True
+rs3098576,15,27613262,hg38,T,,NR,unknown,0.182124,,,9E-9,skin pigmentation,,,GABRG3 - OCA2,31315583,GCST008516,gwas_catalog,2026-07-01T00:28:27Z,True
+rs182498200,15,27844150,hg38,?,,NR,unknown,,,,7E-9,sunburn,,,OCA2,30595370,GCST007086,gwas_catalog,2026-07-01T00:28:27Z,True
+rs1800414,15,27951891,hg38,?,,NR,unknown,0.16,,,1E-12,skin pigmentation,,,OCA2,40010489,GCST90502784,gwas_catalog,2026-07-01T00:28:27Z,True
+rs4778219,15,27968704,hg38,?,,NR,unknown,,,,3E-9,skin pigmentation,,,OCA2,30664655,GCST007452,gwas_catalog,2026-07-01T00:28:27Z,True
+rs74653330,15,27983407,hg38,T,,0.068,unknown,0.97,,,1E-71,facial pigmentation,,,OCA2,34648798,GCST90020056,gwas_catalog,2026-07-01T00:28:27Z,True
+rs121918166,15,27985101,hg38,T,,0.008,unknown,0.035,,,7E-28,skin pigmentation,,,OCA2,36536295,GCST90246327,gwas_catalog,2026-07-01T00:28:27Z,True
+rs1800407,15,27985172,hg38,T,,NR,unknown,0.175,,,2E-31,suntan,,,OCA2,29739929,GCST005897,gwas_catalog,2026-07-01T00:28:27Z,True
+rs117886461,15,27985232,hg38,?,,NR,unknown,,,,7E-25,sunburn,,,OCA2,30595370,GCST007086,gwas_catalog,2026-07-01T00:28:27Z,True
+rs17652091,15,28026565,hg38,A,,0.209609,unknown,0.093407,,,3E-8,skin pigmentation,,,OCA2,36672889,GCST90255689,gwas_catalog,2026-07-01T00:28:27Z,True
+rs34369918,15,28032793,hg38,C,,0.22658,unknown,3.21168,,,3E-21,skin pigmentation,,,OCA2,36672889,GCST90255688,gwas_catalog,2026-07-01T00:28:27Z,True
+rs1448484,15,28038295,hg38,G,,NR,unknown,0.212961,,,4E-10,skin pigmentation,,,OCA2,31315583,GCST008516,gwas_catalog,2026-07-01T00:28:27Z,True
+rs34022588,15,28041261,hg38,T,,0.192759,unknown,3.24448,,,1E-22,skin pigmentation,,,OCA2,36672889,GCST90255688,gwas_catalog,2026-07-01T00:28:27Z,True
+rs3071601,15,28041322,hg38,T,,0.118718,unknown,3.01984,,,4E-12,skin pigmentation,,,OCA2,36672889,GCST90255688,gwas_catalog,2026-07-01T00:28:27Z,True
+rs895829,15,28052911,hg38,C,,0.347204,unknown,3.353,,,3E-34,skin pigmentation,,,OCA2,36672889,GCST90255688,gwas_catalog,2026-07-01T00:28:27Z,True
+rs79743671,15,28074502,hg38,A,,0.120345,unknown,2.36731,,,1E-8,skin pigmentation,,,OCA2,36672889,GCST90255688,gwas_catalog,2026-07-01T00:28:27Z,True
+rs6497263,15,28075515,hg38,A,,0.122954,unknown,3.66024,,,7E-20,skin pigmentation,,,OCA2,36672889,GCST90255688,gwas_catalog,2026-07-01T00:28:27Z,True
+rs62007489,15,28075818,hg38,T,,0.154267,unknown,3.17168,,,5E-18,skin pigmentation,,,OCA2,36672889,GCST90255688,gwas_catalog,2026-07-01T00:28:27Z,True
+rs58836608,15,28079300,hg38,G,,0.197307,unknown,2.13017,,,1E-9,skin pigmentation,,,OCA2,36672889,GCST90255688,gwas_catalog,2026-07-01T00:28:27Z,True
+rs72714109,15,28079662,hg38,C,,0.2216,unknown,2.95108,,,5E-20,skin pigmentation,,,OCA2,36672889,GCST90255688,gwas_catalog,2026-07-01T00:28:27Z,True
+rs4778137,15,28082689,hg38,G,,0.411312,unknown,2.42766,,,3E-19,skin pigmentation,,,OCA2,36672889,GCST90255688,gwas_catalog,2026-07-01T00:28:27Z,True
+rs4074658,15,28082760,hg38,C,,0.491689,unknown,1.82728,,,4E-12,skin pigmentation,,,OCA2,36672889,GCST90255688,gwas_catalog,2026-07-01T00:28:27Z,True
+rs7174027,15,28083619,hg38,A,,0.213156,unknown,3.2349,,,1E-23,skin pigmentation,,,OCA2,36672889,GCST90255688,gwas_catalog,2026-07-01T00:28:27Z,True
+rs4778138,15,28090674,hg38,G,,0.292925,unknown,3.79649,,,6E-39,skin pigmentation,,,OCA2,36672889,GCST90255688,gwas_catalog,2026-07-01T00:28:27Z,True
+rs35795965,15,28091804,hg38,G,,0.0873482,unknown,3.24873,,,1E-11,skin pigmentation,,,OCA2,36672889,GCST90255688,gwas_catalog,2026-07-01T00:28:27Z,True
+rs4778241,15,28093567,hg38,A,,0.353085,unknown,3.1793,,,3E-29,skin pigmentation,,,OCA2,36672889,GCST90255688,gwas_catalog,2026-07-01T00:28:27Z,True
+rs58843292,15,28100785,hg38,A,,0.171945,unknown,3.21824,,,6E-20,skin pigmentation,,,OCA2 - HERC2,36672889,GCST90255688,gwas_catalog,2026-07-01T00:28:27Z,True
+rs150763518,15,28106230,hg38,G,,0.194178,unknown,2.2242,,,9E-11,skin pigmentation,,,OCA2 - HERC2,36672889,GCST90255688,gwas_catalog,2026-07-01T00:28:27Z,True
+rs1129038,15,28111713,hg38,?,,NR,unknown,0.5341482,,,3E-11,"Abnormal skin pigmentation, suntan",,,HERC2,30166351,GCST007488,gwas_catalog,2026-07-01T00:28:27Z,True
+rs11365574,15,28116223,hg38,?,,0.0660536,unknown,4.46927,,,1E-14,skin pigmentation,,,HERC2,36672889,GCST90255688,gwas_catalog,2026-07-01T00:28:27Z,True
+rs7494942,15,28118913,hg38,A,,0.400874,unknown,4.17549,,,9E-54,skin pigmentation,,,HERC2,36672889,GCST90255688,gwas_catalog,2026-07-01T00:28:27Z,True
+rs12913832,15,28120472,hg38,?,,NR,unknown,,,,1E-200,"eye colour measurement, strand of hair color, skin pigmentation",,,HERC2,30664655,GCST007451,gwas_catalog,2026-07-01T00:28:27Z,True
+rs4778249,15,28135372,hg38,?,,NR,unknown,,,,6E-21,"eye colour measurement, strand of hair color, skin pigmentation",,,HERC2,30664655,GCST007451,gwas_catalog,2026-07-01T00:28:27Z,True
+rs117219845,15,28137613,hg38,T,,0.0693914,unknown,3.48051,,,1E-9,skin pigmentation,,,HERC2,36672889,GCST90255688,gwas_catalog,2026-07-01T00:28:27Z,True
+rs7403279,15,28138419,hg38,?,,NR,unknown,,,,9E-55,sunburn,,,HERC2,30595370,GCST007086,gwas_catalog,2026-07-01T00:28:27Z,True
+rs11636232,15,28141480,hg38,T,,0.169388,unknown,5.83834,,,1E-59,skin pigmentation,,,HERC2,36672889,GCST90255688,gwas_catalog,2026-07-01T00:28:27Z,True
+rs28784029,15,28156194,hg38,T,,0.152997,unknown,5.56351,,,2E-44,skin pigmentation,,,HERC2,36672889,GCST90255688,gwas_catalog,2026-07-01T00:28:27Z,True
+rs56743903,15,28173939,hg38,A,,0.114321,unknown,3.05384,,,3E-10,skin pigmentation,,,HERC2,36672889,GCST90255688,gwas_catalog,2026-07-01T00:28:27Z,True
+rs111433258,15,28174015,hg38,G,,0.272219,unknown,3.83718,,,1E-30,skin pigmentation,,,HERC2,36672889,GCST90255688,gwas_catalog,2026-07-01T00:28:27Z,True
+rs142046335,15,28175206,hg38,G,,0.0547849,unknown,4.45655,,,1E-11,skin pigmentation,,,HERC2,36672889,GCST90255688,gwas_catalog,2026-07-01T00:28:27Z,True
+rs2525919,15,28210654,hg38,T,,0.226878,unknown,4.18895,,,4E-37,skin pigmentation,,,HERC2,36672889,GCST90255688,gwas_catalog,2026-07-01T00:28:27Z,True
+rs433004,15,28212394,hg38,C,,0.03,unknown,0.441,,,2E-7,skin sensitivity to sun,,,HERC2,25963972,GCST002908,gwas_catalog,2026-07-01T00:28:27Z,True
+rs35629645,15,28225697,hg38,C,,0.0830975,unknown,4.57391,,,8E-17,skin pigmentation,,,HERC2,36672889,GCST90255688,gwas_catalog,2026-07-01T00:28:27Z,True
+rs1800404,15,28235773,hg19,T,C,,beta,2.54,,,1.6e-8,skin pigmentation (Crawford 2017 Table 1),African (Crawford et al. 2017 discovery cohorts),,OCA2,29025994,,crawford2017+gwas_catalog,2017_Table1,False
+rs1868333,15,28238158,hg19,A,G,,beta,-2.53,,,2.2e-8,skin pigmentation (Crawford 2017 Table 1),African (Crawford et al. 2017 discovery cohorts),,OCA2,29025994,,crawford2017,2017_Table1,False
+rs735066,15,28238895,hg19,G,A,,beta,-2.50,,,3.5e-8,skin pigmentation (Crawford 2017 Table 1),African (Crawford et al. 2017 discovery cohorts),,OCA2,29025994,,crawford2017,2017_Table1,False
+rs150231163,15,28239853,hg38,C,,0.0424438,unknown,4.73657,,,8E-12,skin pigmentation,,,HERC2,36672889,GCST90255688,gwas_catalog,2026-07-01T00:28:27Z,True
+rs147936809,15,28241588,hg38,A,,0.0620936,unknown,4.24672,,,1E-11,skin pigmentation,,,HERC2,36672889,GCST90255688,gwas_catalog,2026-07-01T00:28:27Z,True
+rs35995546,15,28259970,hg38,C,,0.0961545,unknown,4.23403,,,1E-17,skin pigmentation,,,HERC2,36672889,GCST90255688,gwas_catalog,2026-07-01T00:28:27Z,True
+rs34823980,15,28264021,hg38,C,,0.0941118,unknown,4.33863,,,7E-18,skin pigmentation,,,HERC2,36672889,GCST90255688,gwas_catalog,2026-07-01T00:28:27Z,True
+rs117201485,15,28268158,hg38,A,,0.0640375,unknown,0.211577,,,4E-11,skin pigmentation,,,HERC2,36672889,GCST90255689,gwas_catalog,2026-07-01T00:28:27Z,True
+rs1667394,15,28285036,hg38,C,,NR,unknown,0.226,,,4E-78,suntan,,,HERC2,29739929,GCST005897,gwas_catalog,2026-07-01T00:28:27Z,True
+rs1667392,15,28288419,hg38,?,,NR,unknown,0.1983,,,1E-11,"Abnormal skin pigmentation, suntan",,,HERC2,30166351,GCST007488,gwas_catalog,2026-07-01T00:28:27Z,True
+rs111458470,15,28289408,hg38,A,,0.418721,unknown,3.83211,,,8E-42,skin pigmentation,,,HERC2,36672889,GCST90255688,gwas_catalog,2026-07-01T00:28:27Z,True
+rs117325217,15,28289631,hg38,?,,NR,unknown,,,,8E-21,sunburn,,,HERC2,30595370,GCST007086,gwas_catalog,2026-07-01T00:28:27Z,True
+rs373425948,15,28298006,hg38,T,,0.102456,unknown,3.98756,,,6E-17,skin pigmentation,,,HERC2,36672889,GCST90255688,gwas_catalog,2026-07-01T00:28:27Z,True
+rs11324616,15,28314864,hg38,?,,0.182086,unknown,3.95892,,,2E-30,skin pigmentation,,,HERC2,36672889,GCST90255688,gwas_catalog,2026-07-01T00:28:27Z,True
+rs11396433,15,28316060,hg38,T,,0.0887677,unknown,3.33236,,,2E-12,skin pigmentation,,,HERC2,36672889,GCST90255688,gwas_catalog,2026-07-01T00:28:27Z,True
+rs373468882,15,28321239,hg38,T,,0.0648461,unknown,4.83034,,,3E-17,skin pigmentation,,,HERC2,36672889,GCST90255688,gwas_catalog,2026-07-01T00:28:27Z,True
+rs745333093,15,28328680,hg38,A,,0.0584191,unknown,3.48002,,,1E-8,skin pigmentation,,,HERC2 - HERC2P1,36672889,GCST90255688,gwas_catalog,2026-07-01T00:28:27Z,True
+rs12915877,15,28396894,hg19,G,T,,beta,-2.76,,,1.1e-8,skin pigmentation (Crawford 2017 Table 1),African (Crawford et al. 2017 discovery cohorts),,HERC2,29025994,,crawford2017,2017_Table1,False
+rs4932618,15,28487069,hg19,A,G,,beta,-2.69,,,1.6e-8,skin pigmentation (Crawford 2017 Table 1),African (Crawford et al. 2017 discovery cohorts),,HERC2,29025994,,crawford2017,2017_Table1,False
+rs4932620,15,28514281,hg19,T,C,,beta,-2.85,,,3.2e-9,skin pigmentation (Crawford 2017 Table 1),African (Crawford et al. 2017 discovery cohorts),,HERC2,29025994,,crawford2017,2017_Table1,False
+rs1667393,15,28532639,hg19,T,C,,beta,-2.82,,,6.3e-9,skin pigmentation (Crawford 2017 Table 1),African (Crawford et al. 2017 discovery cohorts),,HERC2,29025994,,crawford2017,2017_Table1,False
+rs1635167,15,28535675,hg19,T,C,,beta,-2.88,,,8.9e-9,skin pigmentation (Crawford 2017 Table 1),African (Crawford et al. 2017 discovery cohorts),,HERC2,29025994,,crawford2017,2017_Table1,False
+rs2905952,15,28545148,hg19,G,A,,beta,-3.16,,,9.0e-9,skin pigmentation (Crawford 2017 Table 1),African (Crawford et al. 2017 discovery cohorts),,HERC2,29025994,,crawford2017,2017_Table1,False
+rs36194177,15,28873638,hg38,A,,NR,unknown,0.228791,,,5E-10,skin pigmentation,,,GOLGA6L7 - APBA2,31315583,GCST008516,gwas_catalog,2026-07-01T00:28:27Z,True
+rs4424881,15,28969513,hg38,T,,NR,unknown,0.158,,,5E-7,skin pigmentation,,,APBA2,31315583,GCST008516,gwas_catalog,2026-07-01T00:28:27Z,True
+rs2636060,15,29133733,hg38,A,,NR,unknown,0.231106,,,6E-10,skin pigmentation,,,ENTREP2,31315583,GCST008516,gwas_catalog,2026-07-01T00:28:27Z,True
+rs11070811,15,31101879,hg38,?,,NR,unknown,,,,4E-9,sunburn,,,TRPM1,30595370,GCST007086,gwas_catalog,2026-07-01T00:28:27Z,True
+rs147237492,15,32687900,hg38,T,,NR,unknown,1.05296,,,5E-6,skin pigmentation,,,"ARHGAP11A-SCG5, SCG5",30895295,GCST007739,gwas_catalog,2026-07-01T00:28:27Z,True
+rs1919361,15,32751321,hg38,T,,NR,unknown,0.5545,,,1E-6,facial pigmentation,,,GREM1 - FMN1,35313536,GCST90104591,gwas_catalog,2026-07-01T00:28:27Z,True
+rs1912459,15,36052589,hg38,T,,NR,unknown,0.262303,,,5E-6,skin pigmentation,,,LINC02853,30895295,GCST007739,gwas_catalog,2026-07-01T00:28:27Z,True
+rs1224653,15,47702908,hg38,C,,NR,unknown,0.329455,,,2E-7,skin pigmentation,,,SEMA6D,30895295,GCST007739,gwas_catalog,2026-07-01T00:28:27Z,True
+rs1453858,15,48011913,hg38,A,,NR,unknown,0.455591,,,1E-15,skin pigmentation,,,LINC01491 - SLC24A5,30895295,GCST007739,gwas_catalog,2026-07-01T00:28:27Z,True
+rs2470102,15,48141297,hg38,?,,NR,unknown,3.4,,,4E-12,skin pigmentation,,,"MYEF2, SLC24A5",29195075,GCST005188,gwas_catalog,2026-07-01T00:28:27Z,True
+rs11636073,15,48246829,hg38,T,,NR,unknown,0.354282,,,8E-9,skin pigmentation,,,SLC12A1,30895295,GCST007739,gwas_catalog,2026-07-01T00:28:27Z,True
+rs17430375,15,48369245,hg38,C,,NR,unknown,0.898858,,,6E-8,skin pigmentation,,,DUT - FBN1,30895295,GCST007739,gwas_catalog,2026-07-01T00:28:27Z,True
+rs1834640,15,48392165,hg19,A,G,,beta,7.56,,,3.2e-61,skin pigmentation (Crawford 2017 Table 1),African (Crawford et al. 2017 discovery cohorts),,SLC24A5,29025994,,crawford2017,2017_Table1,False
+rs2675345,15,48400199,hg19,A,G,,beta,7.62,,,6.7e-61,skin pigmentation (Crawford 2017 Table 1),African (Crawford et al. 2017 discovery cohorts),,SLC24A5,29025994,,crawford2017+gwas_catalog,2017_Table1,False
+rs1426654,15,48426484,hg19,A,G,,beta,7.69,,,5.5e-62,skin pigmentation (Crawford 2017 Table 1),African (Crawford et al. 2017 discovery cohorts),,SLC24A5,29025994,,crawford2017+gwas_catalog,2017_Table1,False
+rs8028919,15,48460188,hg19,A,G,,beta,-4.95,,,5.0e-32,skin pigmentation (Crawford 2017 Table 1),African (Crawford et al. 2017 discovery cohorts),,MYEF2,29025994,,crawford2017,2017_Table1,False
+rs16960981,15,48472745,hg38,G,,NR,unknown,0.506585,,,2E-7,skin pigmentation,,,FBN1,30895295,GCST007739,gwas_catalog,2026-07-01T00:28:27Z,True
+rs2413887,15,48485926,hg19,C,T,,beta,7.70,,,4.9e-62,skin pigmentation (Crawford 2017 Table 1),African (Crawford et al. 2017 discovery cohorts),,CTXN2,29025994,,crawford2017,2017_Table1,False
+rs1799802,16,13934224,hg38,?,,NR,unknown,,,,7E-42,sunburn,,,ERCC4,30595370,GCST007086,gwas_catalog,2026-07-01T00:28:27Z,True
+rs9926609,16,3490962,hg38,?,,NR,unknown,,,,2E-8,sunburn,,,NAA60 - C16orf90,30595370,GCST007086,gwas_catalog,2026-07-01T00:28:27Z,True
+rs568405296,16,70858347,hg38,A,,0.0139411,unknown,0.441469,,,2E-8,skin pigmentation,,,HYDIN,36672889,GCST90255690,gwas_catalog,2026-07-01T00:28:27Z,True
+rs139343937,16,80222544,hg38,A,,NR,unknown,0.247831,,,3E-6,skin pigmentation,,,DYNLRB2-AS1,31315583,GCST008516,gwas_catalog,2026-07-01T00:28:27Z,True
+rs3180279,16,88644425,hg38,?,,NR,unknown,,,,5E-11,sunburn,,,CYBA,30595370,GCST007086,gwas_catalog,2026-07-01T00:28:27Z,True
+rs4782318,16,88702992,hg38,?,,NR,unknown,,,,4E-11,sunburn,,,RNF166,30595370,GCST007086,gwas_catalog,2026-07-01T00:28:27Z,True
+rs75410747,16,88703350,hg38,A,,NR,unknown,0.425,,,6E-59,suntan,,,RNF166,29739929,GCST005897,gwas_catalog,2026-07-01T00:28:27Z,True
+rs73252814,16,88830941,hg38,?,,NR,unknown,,,,1E-13,sunburn,,,GALNS,30595370,GCST007086,gwas_catalog,2026-07-01T00:28:27Z,True
+rs117644533,16,88995404,hg38,?,,NR,unknown,,,,7E-10,sunburn,,,CBFA2T3 - ACSF3,30595370,GCST007086,gwas_catalog,2026-07-01T00:28:27Z,True
+rs35561531,16,89118767,hg38,?,,NR,unknown,,,,2E-38,sunburn,,,ACSF3,30595370,GCST007086,gwas_catalog,2026-07-01T00:28:27Z,True
+rs117156175,16,89168993,hg38,T,,NR,unknown,0.671,,,1E-173,suntan,,,LINC02138,29739929,GCST005897,gwas_catalog,2026-07-01T00:28:27Z,True
+rs3114910,16,89313019,hg38,?,,NR,unknown,,,,3E-30,sunburn,,,ANKRD11,30595370,GCST007086,gwas_catalog,2026-07-01T00:28:27Z,True
+rs3114908,16,89317317,hg38,T,,NR,unknown,0.345,,,2E-328,suntan,,,ANKRD11,29739929,GCST005897,gwas_catalog,2026-07-01T00:28:27Z,True
+rs28431356,16,89400032,hg38,C,,0.112192,unknown,3.19057,,,9E-12,skin pigmentation,,,ANKRD11,36672889,GCST90255688,gwas_catalog,2026-07-01T00:28:27Z,True
+rs74836424,16,89440922,hg38,?,,NR,unknown,,,,1E-300,sunburn,,,ANKRD11,30595370,GCST007086,gwas_catalog,2026-07-01T00:28:27Z,True
+rs55637757,16,89469480,hg38,T,,NR,unknown,0.54,,,6E-359,suntan,,,ANKRD11,29739929,GCST005897,gwas_catalog,2026-07-01T00:28:27Z,True
+rs369230,16,89579029,hg38,G,,NR,unknown,0.469,,,1E-522,suntan,,,CPNE7,29739929,GCST005897,gwas_catalog,2026-07-01T00:28:27Z,True
+rs154659,16,89600929,hg38,C,,NR,unknown,0.14,,,7E-8,suntan,,,CPNE7 - DPEP1,19340012,GCST000371,gwas_catalog,2026-07-01T00:28:27Z,True
+rs4248913,16,89626691,hg38,A,,0.0339795,unknown,0.28307,,,7E-9,skin sensitivity to sun,,,DPEP1,36672889,GCST90255687,gwas_catalog,2026-07-01T00:28:27Z,True
+rs55950592,16,89632352,hg38,T,,0.106787,unknown,2.68257,,,4E-9,skin pigmentation,,,DPEP1,36672889,GCST90255688,gwas_catalog,2026-07-01T00:28:27Z,True
+rs12921177,16,89641629,hg38,A,,0.0315292,unknown,0.305868,,,5E-10,skin sensitivity to sun,,,CHMP1A,36672889,GCST90255687,gwas_catalog,2026-07-01T00:28:27Z,True
+rs164745,16,89643256,hg38,T,,NR,unknown,0.293,,,7E-206,suntan,,,CHMP1A,29739929,GCST005897,gwas_catalog,2026-07-01T00:28:27Z,True
+rs11648089,16,89647530,hg38,?,,NR,unknown,,,,1E-144,sunburn,,,CHMP1A,30595370,GCST007086,gwas_catalog,2026-07-01T00:28:27Z,True
+rs35063026,16,89669749,hg38,T,,0.07,unknown,20.29,,,9E-15,facial pigmentation,,,SPATA33,25705849,GCST002785,gwas_catalog,2026-07-01T00:28:27Z,True
+rs57119673,16,89718584,hg38,G,,NR,unknown,0.371,,,2E-387,suntan,,,VPS9D1,29739929,GCST005897,gwas_catalog,2026-07-01T00:28:27Z,True
+rs117990130,16,89720932,hg38,T,,0.18,unknown,0.012,,,8E-30,skin pigmentation,,,"VPS9D1, ZNF276",36536295,GCST90246327,gwas_catalog,2026-07-01T00:28:27Z,True
+rs11649196,16,89735544,hg38,A,,0.136173,unknown,2.57658,,,2E-10,skin pigmentation,,,"FANCA, ZNF276",36672889,GCST90255688,gwas_catalog,2026-07-01T00:28:27Z,True
+rs113548871,16,89746174,hg38,?,,NR,unknown,,,,1E-33,sunburn,,,FANCA,30595370,GCST007086,gwas_catalog,2026-07-01T00:28:27Z,True
+rs3743861,16,89751932,hg38,C,,NR,unknown,0.299,,,3E-260,suntan,,,FANCA,29739929,GCST005897,gwas_catalog,2026-07-01T00:28:27Z,True
+rs12931267,16,89752324,hg38,G,,0.08,unknown,1.88,,,8E-62,freckles,,,FANCA,20585627,GCST000708,gwas_catalog,2026-07-01T00:28:27Z,True
+rs1006548,16,89777635,hg38,C,,NR,unknown,0.322,,,4E-205,suntan,,,FANCA,29739929,GCST005897,gwas_catalog,2026-07-01T00:28:27Z,True
+rs2238529,16,89786709,hg38,C,,NR,unknown,0.128,,,6E-45,suntan,,,FANCA,29739929,GCST005897,gwas_catalog,2026-07-01T00:28:27Z,True
+rs138804614,16,89806765,hg38,?,,NR,unknown,,,,3E-20,sunburn,,,FANCA,30595370,GCST007086,gwas_catalog,2026-07-01T00:28:27Z,True
+rs36233537,16,89817719,hg38,G,,NR,unknown,0.418,,,2E-47,suntan,,,FANCA - SPIRE2,29739929,GCST005897,gwas_catalog,2026-07-01T00:28:27Z,True
+rs35096708,16,89820841,hg38,A,,0.26,unknown,0.015,,,5E-151,skin pigmentation,,,SPIRE2,36536295,GCST90246327,gwas_catalog,2026-07-01T00:28:27Z,True
+rs7198386,16,89831488,hg38,C,,0.43177,unknown,1.62913,,,2E-9,skin pigmentation,,,SPIRE2,36672889,GCST90255688,gwas_catalog,2026-07-01T00:28:27Z,True
+rs190295257,16,89840471,hg38,C,,0.01,unknown,0.025,,,5E-20,skin pigmentation,,,SPIRE2,36536295,GCST90246327,gwas_catalog,2026-07-01T00:28:27Z,True
+rs12932219,16,89849983,hg38,G,,NR,unknown,0.341,,,4E-335,suntan,,,SPIRE2,29739929,GCST005897,gwas_catalog,2026-07-01T00:28:27Z,True
+rs62052172,16,89883822,hg38,A,,0.004,unknown,0.029,,,4E-14,skin pigmentation,,,TCF25,36536295,GCST90246327,gwas_catalog,2026-07-01T00:28:27Z,True
+rs1805005,16,89919436,hg38,T,,0.142408,unknown,2.57479,,,1E-11,skin pigmentation,,,MC1R,36672889,GCST90255688,gwas_catalog,2026-07-01T00:28:27Z,True
+rs1805006,16,89919510,hg38,A,,0.01,unknown,0.023,,,3E-19,skin pigmentation,,,MC1R,36536295,GCST90246327,gwas_catalog,2026-07-01T00:28:27Z,True
+rs2228479,16,89919532,hg38,A,,0.135,unknown,1.55,,,7E-21,facial pigmentation,,,MC1R,32835660,GCST90002283,gwas_catalog,2026-07-01T00:28:27Z,True
+rs11547464,16,89919683,hg38,C,,0.12,unknown,0.0057,,,2E-9,skin pigmentation,,,MC1R,36536295,GCST90246327,gwas_catalog,2026-07-01T00:28:27Z,True
+rs1805007,16,89919709,hg38,T,,0.05,unknown,4.37,,,1E-96,freckles,,,MC1R,17952075,GCST000119,gwas_catalog,2026-07-01T00:28:27Z,True
+rs1805008,16,89919736,hg38,?,,NR,unknown,,,,2E-225,sunburn,,,MC1R,30595370,GCST007086,gwas_catalog,2026-07-01T00:28:27Z,True
+rs885479,16,89919746,hg38,A,,0.05,unknown,0.0086,,,4E-11,skin pigmentation,,,MC1R,36536295,GCST90246327,gwas_catalog,2026-07-01T00:28:27Z,True
+rs1805009,16,89920138,hg38,C,,0.0199676,unknown,0.336856,,,6E-12,skin pigmentation,,,MC1R,36672889,GCST90255689,gwas_catalog,2026-07-01T00:28:27Z,True
+rs150909008,16,89938285,hg38,A,,0.13,unknown,0.012,,,2E-52,skin pigmentation,,,TUBB3,36536295,GCST90246327,gwas_catalog,2026-07-01T00:28:27Z,True
+rs3803686,16,89953938,hg38,C,,NR,unknown,0.138,,,2E-35,suntan,,,DEF8,29739929,GCST005897,gwas_catalog,2026-07-01T00:28:27Z,True
+rs8049897,16,89957794,hg38,A,,0.13,unknown,0.013,,,5E-63,skin pigmentation,,,DEF8,36536295,GCST90246327,gwas_catalog,2026-07-01T00:28:27Z,True
+rs117204628,16,89966047,hg38,T,,0.01,unknown,0.018,,,3E-15,skin pigmentation,,,DEF8,36536295,GCST90246327,gwas_catalog,2026-07-01T00:28:27Z,True
+rs4785752,16,89968733,hg38,A,,NR,unknown,0.345,,,1E-334,suntan,,,DEF8 - CENPBD1P,29739929,GCST005897,gwas_catalog,2026-07-01T00:28:27Z,True
+rs11649211,16,89973042,hg38,G,,NR,unknown,0.107,,,1E-30,suntan,,,"AFG3L1P, AFG3L1P",29739929,GCST005897,gwas_catalog,2026-07-01T00:28:27Z,True
+rs35176381,16,89996071,hg38,G,,NR,unknown,0.436,,,5E-512,suntan,,,"AFG3L1P, AFG3L1P",29739929,GCST005897,gwas_catalog,2026-07-01T00:28:27Z,True
+rs77733403,16,90014315,hg38,C,,NR,unknown,0.508,,,8E-416,suntan,,,DBNDD1,29739929,GCST005897,gwas_catalog,2026-07-01T00:28:27Z,True
+rs11648785,16,90018153,hg38,T,,NR,unknown,0.14,,,3E-9,suntan,,,DBNDD1,19340012,GCST000371,gwas_catalog,2026-07-01T00:28:27Z,True
+rs62052663,16,90086938,hg38,?,,NR,unknown,,,,1E-51,sunburn,,,PRDM7,30595370,GCST007086,gwas_catalog,2026-07-01T00:28:27Z,True
+rs117417690,16,90091597,hg38,T,,NR,unknown,0.43,,,9E-167,suntan,,,PRDM7,29739929,GCST005897,gwas_catalog,2026-07-01T00:28:27Z,True
+rs9922277,16,90092430,hg38,C,,NR,unknown,0.223,,,4E-139,suntan,,,PRDM7 - TUBB8P7,29739929,GCST005897,gwas_catalog,2026-07-01T00:28:27Z,True
+rs9904468,17,17669873,hg38,?,,NR,unknown,,,,6E-12,sunburn,,,PEMT - SMCR2,30595370,GCST007086,gwas_catalog,2026-07-01T00:28:27Z,True
+rs1548714,17,27953178,hg38,?,,NR,unknown,,,,6E-9,sunburn,,,LINC01992,30595370,GCST007086,gwas_catalog,2026-07-01T00:28:27Z,True
+rs17833789,17,57153267,hg38,C,,0.45,unknown,1.18,,,2E-9,freckles,,,AKAP1 - MSI2,29895819,GCST006091,gwas_catalog,2026-07-01T00:28:27Z,True
+rs74791047,18,11451677,hg38,?,,NR,unknown,,,,1E-9,suntan,,,PIEZO2 - LINC01928,29195075,GCST005189,gwas_catalog,2026-07-01T00:28:27Z,True
+rs376610691,18,61224836,hg38,C,,NR,unknown,0.869385,,,6E-6,skin pigmentation,,,HMGN1P31 - CDH20,30895295,GCST007739,gwas_catalog,2026-07-01T00:28:27Z,True
+rs8084144,18,75375515,hg38,A,,NR,unknown,0.285027,,,9E-6,skin pigmentation,,,TSHZ1 - SMIM21,30895295,GCST007739,gwas_catalog,2026-07-01T00:28:27Z,True
+rs56203814,19,3544892,hg19,T,C,,beta,-4.38,,,3.6e-18,skin pigmentation (Crawford 2017 Table 1),African (Crawford et al. 2017 discovery cohorts),,MFSD12,29025994,,crawford2017,2017_Table1,False
+rs10424065,19,3545022,hg19,T,C,,beta,4.48,,,5.1e-20,skin pigmentation (Crawford 2017 Table 1),African (Crawford et al. 2017 discovery cohorts),,MFSD12,29025994,,crawford2017,2017_Table1,False
+rs73527942,19,3545150,hg19,G,T,,beta,-3.58,,,4.8e-14,skin pigmentation (Crawford 2017 Table 1),African (Crawford et al. 2017 discovery cohorts),,MFSD12,29025994,,crawford2017,2017_Table1,False
+rs142317543,19,3547685,hg19,T,C,,beta,6.99,,,5.0e-14,skin pigmentation (Crawford 2017 Table 1),African (Crawford et al. 2017 discovery cohorts),,MFSD12,29025994,,crawford2017,2017_Table1,False
+rs10414812,19,3547955,hg19,T,C,,beta,4.38,,,3.8e-16,skin pigmentation (Crawford 2017 Table 1),African (Crawford et al. 2017 discovery cohorts),,MFSD12,29025994,,crawford2017,2017_Table1,False
+rs2240751,19,3548233,hg38,G,,0.336,unknown,0.67,,,2E-14,facial pigmentation,,,"MFSD12, MFSD12-AS1",32835660,GCST90002284,gwas_catalog,2026-07-01T00:28:27Z,True
+rs10416746,19,3563984,hg38,A,,NR,unknown,0.294368,,,6E-9,skin pigmentation,,,MFSD12,31315583,GCST008516,gwas_catalog,2026-07-01T00:28:27Z,True
+rs6510760,19,3565253,hg19,A,G,,beta,3.54,,,6.5e-15,skin pigmentation (Crawford 2017 Table 1),African (Crawford et al. 2017 discovery cohorts),,MFSD12,29025994,,crawford2017,2017_Table1,False
+rs7246261,19,3565357,hg19,T,C,,beta,2.71,,,1.1e-8,skin pigmentation (Crawford 2017 Table 1),African (Crawford et al. 2017 discovery cohorts),,HMG20B,29025994,,crawford2017,2017_Table1,False
+rs112332856,19,3565599,hg19,C,T,,beta,3.52,,,3.8e-16,skin pigmentation (Crawford 2017 Table 1),African (Crawford et al. 2017 discovery cohorts),,HMG20B,29025994,,crawford2017+gwas_catalog,2017_Table1,False
+rs6510761,19,3565909,hg19,C,T,,beta,2.79,,,2.2e-8,skin pigmentation (Crawford 2017 Table 1),African (Crawford et al. 2017 discovery cohorts),,HMG20B,29025994,,crawford2017,2017_Table1,False
+rs7254463,19,3566513,hg19,T,C,,beta,2.90,,,9.0e-9,skin pigmentation (Crawford 2017 Table 1),African (Crawford et al. 2017 discovery cohorts),,HMG20B,29025994,,crawford2017,2017_Table1,False
+rs111317445,19,3566631,hg19,T,C,,beta,3.51,,,1.7e-16,skin pigmentation (Crawford 2017 Table 1),African (Crawford et al. 2017 discovery cohorts),,HMG20B,29025994,,crawford2017,2017_Table1,False
+rs147385695,19,40708529,hg38,?,,NR,unknown,19.4,,,6E-6,facial pigmentation,,,COQ8B,35313536,GCST90104590,gwas_catalog,2026-07-01T00:28:27Z,True
+rs79353338,19,48009350,hg38,T,,NR,unknown,14.17,,,1E-5,facial pigmentation,,,ELSPBP1,35313536,GCST90104590,gwas_catalog,2026-07-01T00:28:27Z,True
+rs61741441,2,110968164,hg38,G,,NR,unknown,0.737998,,,2E-6,skin pigmentation,,,"RPL5P9, ACOXL",30895295,GCST007739,gwas_catalog,2026-07-01T00:28:27Z,True
+rs35805265,2,118874405,hg38,T,,0.36,unknown,0.003,,,4E-9,skin pigmentation,,,EN1 - MARCO,36536295,GCST90246327,gwas_catalog,2026-07-01T00:28:27Z,True
+rs6743428,2,15692975,hg38,A,,NR,unknown,0.266083,,,6E-6,skin pigmentation,,,LINC01804,30895295,GCST007739,gwas_catalog,2026-07-01T00:28:27Z,True
+rs1267037,2,161241644,hg38,?,,NR,unknown,,,,1E-8,sunburn,,,PSMD14-DT,30595370,GCST007086,gwas_catalog,2026-07-01T00:28:27Z,True
+rs200875668,2,182005195,hg38,A,,NR,unknown,1.699,,,2E-6,facial pigmentation,,,PPP1R1C,35313536,GCST90104591,gwas_catalog,2026-07-01T00:28:27Z,True
+rs12693889,2,199608935,hg38,T,,0.499,unknown,0.75,,,2E-11,facial pigmentation,,,LINC01877,32835660,GCST90002283,gwas_catalog,2026-07-01T00:28:27Z,True
+rs117183145,2,213187916,hg38,A,,NR,unknown,0.9024,,,8E-7,facial pigmentation,,,LINC01953 - SPAG16-DT,35313536,GCST90104591,gwas_catalog,2026-07-01T00:28:27Z,True
+rs686802,2,233857467,hg38,T,,NR,unknown,0.9391,,,3E-7,facial pigmentation,,,HJURP - MSL3B,35313536,GCST90104591,gwas_catalog,2026-07-01T00:28:27Z,True
+rs6543678,2,32837214,hg38,T,,0.367,unknown,0.17,,,6E-9,facial pigmentation,,,LINC00486,34648798,GCST90020056,gwas_catalog,2026-07-01T00:28:27Z,True
+rs74535542,2,365786,hg38,G,,NR,unknown,0.706502,,,8E-6,skin pigmentation,,,LINC01865,30895295,GCST007739,gwas_catalog,2026-07-01T00:28:27Z,True
+rs1800440,2,38070996,hg38,?,,NR,unknown,,,,2E-10,sunburn,,,CYP1B1,30595370,GCST007086,gwas_catalog,2026-07-01T00:28:27Z,True
+rs2855655,2,38077346,hg38,T,,NR,unknown,0.049,,,2E-8,suntan,,,"CYP1B1-AS1, CYP1B1",29739929,GCST005897,gwas_catalog,2026-07-01T00:28:27Z,True
+rs10168349,2,46133768,hg38,?,,NR,unknown,,,,2E-12,sunburn,,,PRKCE,30595370,GCST007086,gwas_catalog,2026-07-01T00:28:27Z,True
+rs113419088,2,63626289,hg38,?,,NR,unknown,,,,2E-8,sunburn,,,WDPCP,30595370,GCST007086,gwas_catalog,2026-07-01T00:28:27Z,True
+rs570521611,2,7775516,hg38,G,,0.0424154,unknown,0.35501,,,7E-9,freckles,,,LINC01871 - LINC00299,36672889,GCST90255685,gwas_catalog,2026-07-01T00:28:27Z,True
+rs117929211,2,8641701,hg38,A,,NR,unknown,22.55,,,1E-5,facial pigmentation,,,SNRPEP5 - ID2-AS1,35313536,GCST90104590,gwas_catalog,2026-07-01T00:28:27Z,True
+rs201475383,20,26293355,hg38,?,,NR,unknown,,,,3E-8,sunburn,,,MIR663AHG - FRG1CP,30595370,GCST007086,gwas_catalog,2026-07-01T00:28:27Z,True
+rs17093831,20,32111119,hg38,C,,NR,unknown,0.176,,,1E-19,suntan,,,TM9SF4,29739929,GCST005897,gwas_catalog,2026-07-01T00:28:27Z,True
+rs77476644,20,32268334,hg38,G,,NR,unknown,0.189,,,6E-23,suntan,,,POFUT1 - KIF3B,29739929,GCST005897,gwas_catalog,2026-07-01T00:28:27Z,True
+rs1742982,20,32463002,hg38,T,,NR,unknown,0.189,,,3E-23,suntan,,,NOL4L,29739929,GCST005897,gwas_catalog,2026-07-01T00:28:27Z,True
+rs17123518,20,32660463,hg38,T,,NR,unknown,0.229,,,7E-28,suntan,,,C20orf203,29739929,GCST005897,gwas_catalog,2026-07-01T00:28:27Z,True
+rs55768819,20,32775561,hg38,T,,NR,unknown,0.268,,,6E-47,suntan,,,DNMT3B,29739929,GCST005897,gwas_catalog,2026-07-01T00:28:27Z,True
+rs117186940,20,33172744,hg38,T,,NR,unknown,0.345,,,3E-104,suntan,,,BPIFA2,29739929,GCST005897,gwas_catalog,2026-07-01T00:28:27Z,True
+rs17401449,20,33480139,hg38,G,,NR,unknown,0.439,,,2E-192,suntan,,,SNTA1 - CBFA2T2,29739929,GCST005897,gwas_catalog,2026-07-01T00:28:27Z,True
+rs78382342,20,33772305,hg38,A,,NR,unknown,0.456,,,1E-207,suntan,,,ZNF341,29739929,GCST005897,gwas_catalog,2026-07-01T00:28:27Z,True
+rs6088347,20,33920304,hg38,?,,NR,unknown,,,,5E-13,sunburn,,,TPM3P2 - PIGPP3,30595370,GCST007086,gwas_catalog,2026-07-01T00:28:27Z,True
+rs6059655,20,34077942,hg38,A,,NR,unknown,0.527,,,1E-315,suntan,,,RALY,29739929,GCST005897,gwas_catalog,2026-07-01T00:28:27Z,True
+rs4911414,20,34141638,hg38,G,,NR,unknown,0.07,,,4E-9,suntan,,,RPS2P1 - ASIP,23548203,GCST001939,gwas_catalog,2026-07-01T00:28:27Z,True
+rs56238684,20,34648892,hg38,C,,NR,unknown,0.517,,,1E-287,suntan,,,PIGU,29739929,GCST005897,gwas_catalog,2026-07-01T00:28:27Z,True
+rs62211613,20,34801857,hg38,C,,NR,unknown,0.512,,,1E-281,suntan,,,NCOA6,29739929,GCST005897,gwas_catalog,2026-07-01T00:28:27Z,True
+rs1885120,20,34989186,hg38,C,,NR,unknown,0.49,,,6E-255,suntan,,,MYH7B,29739929,GCST005897,gwas_catalog,2026-07-01T00:28:27Z,True
+rs4911466,20,35102207,hg38,C,,NR,unknown,0.481,,,5E-242,suntan,,,TRPC4AP - EDEM2,29739929,GCST005897,gwas_catalog,2026-07-01T00:28:27Z,True
+rs2425025,20,35259351,hg38,G,,NR,unknown,0.504,,,4E-253,suntan,,,"MMP24OS, MMP24",29739929,GCST005897,gwas_catalog,2026-07-01T00:28:27Z,True
+rs619865,20,35279894,hg38,A,,0.10,unknown,0.77,,,5E-14,freckles,,,EIF6,20585627,GCST000708,gwas_catalog,2026-07-01T00:28:27Z,True
+rs2425048,20,35284920,hg38,?,,NR,unknown,,,,3E-8,sunburn,,,"FAM83C-AS1, EIF6",30595370,GCST007086,gwas_catalog,2026-07-01T00:28:27Z,True
+rs62210588,20,35400311,hg38,G,,NR,unknown,0.456,,,4E-207,suntan,,,UQCC1,29739929,GCST005897,gwas_catalog,2026-07-01T00:28:27Z,True
+rs6142422,20,35628136,hg38,C,,NR,unknown,0.428,,,7E-173,suntan,,,CPNE1,29739929,GCST005897,gwas_catalog,2026-07-01T00:28:27Z,True
+rs112043138,20,35763696,hg38,A,,NR,unknown,0.363,,,2E-136,suntan,,,RPF2P1 - U6,29739929,GCST005897,gwas_catalog,2026-07-01T00:28:27Z,True
+rs1204552,20,36050981,hg38,A,,NR,unknown,0.408,,,4E-146,suntan,,,NORAD,29739929,GCST005897,gwas_catalog,2026-07-01T00:28:27Z,True
+rs2425192,20,36242663,hg38,A,,NR,unknown,0.269,,,4E-87,suntan,,,AAR2,29739929,GCST005897,gwas_catalog,2026-07-01T00:28:27Z,True
+rs2425224,20,36374446,hg38,A,,NR,unknown,0.319,,,1E-94,suntan,,,DLGAP4,29739929,GCST005897,gwas_catalog,2026-07-01T00:28:27Z,True
+rs55804368,20,36630339,hg38,T,,NR,unknown,0.328,,,2E-90,suntan,,,SLA2,29739929,GCST005897,gwas_catalog,2026-07-01T00:28:27Z,True
+rs73109224,20,36816725,hg38,G,,NR,unknown,0.315,,,2E-80,suntan,,,MTCL2,29739929,GCST005897,gwas_catalog,2026-07-01T00:28:27Z,True
+rs11696169,20,36923214,hg38,C,,NR,unknown,0.186,,,1E-44,suntan,,,SAMHD1,29739929,GCST005897,gwas_catalog,2026-07-01T00:28:27Z,True
+rs73094911,20,37164857,hg38,C,,NR,unknown,0.282,,,3E-56,suntan,,,MROH8,29739929,GCST005897,gwas_catalog,2026-07-01T00:28:27Z,True
+rs11697428,20,37337505,hg38,C,,NR,unknown,0.19,,,3E-38,suntan,,,MANBAL - SRC,29739929,GCST005897,gwas_catalog,2026-07-01T00:28:27Z,True
+rs7279297,21,41807559,hg38,G,,NR,unknown,0.12,,,3E-6,suntan,,,PRDM15,19340012,GCST000371,gwas_catalog,2026-07-01T00:28:27Z,True
+rs9609597,22,32567060,hg38,A,,NR,unknown,0.856133,,,6E-6,skin pigmentation,,,SYN3,30895295,GCST007739,gwas_catalog,2026-07-01T00:28:27Z,True
+rs6007506,22,45226133,hg38,?,,NR,unknown,,,,7E-27,sunburn,,,KIAA0930,30595370,GCST007086,gwas_catalog,2026-07-01T00:28:27Z,True
+rs28714227,22,47845112,hg38,T,,NR,unknown,0.587953,,,2E-6,skin pigmentation,,,EPIC1,30895295,GCST007739,gwas_catalog,2026-07-01T00:28:27Z,True
+rs5771001,22,50456591,hg38,T,,NR,unknown,0.264628,,,7E-6,skin pigmentation,,,SBF1,30895295,GCST007739,gwas_catalog,2026-07-01T00:28:27Z,True
+rs676091,3,124624409,hg38,?,,NR,unknown,9.59,,,4E-8,skin pigmentation,,,KALRN,37294081,GCST90269962,gwas_catalog,2026-07-01T00:28:27Z,True
+rs2607796,3,138637575,hg38,?,,NR,unknown,,,,2E-7,sunburn,,,FAIM - PPIAP72,30595370,GCST007086,gwas_catalog,2026-07-01T00:28:27Z,True
+rs6792049,3,156635372,hg38,T,,0.56,unknown,0.003,,,4E-10,skin pigmentation,,,TIPARP-AS1,36536295,GCST90246327,gwas_catalog,2026-07-01T00:28:27Z,True
+rs9818780,3,156774969,hg38,?,,NR,unknown,,,,5E-11,sunburn,,,TIPARP-AS1,30595370,GCST007086,gwas_catalog,2026-07-01T00:28:27Z,True
+rs9819158,3,167762873,hg38,?,,NR,unknown,,,,2E-8,"eye colour measurement, strand of hair color, skin pigmentation",,,SERPINI1,30664655,GCST007451,gwas_catalog,2026-07-01T00:28:27Z,True
+rs56360320,3,189491857,hg38,?,,NR,unknown,,,,4E-9,sunburn,,,TPRG1 - TP63,30595370,GCST007086,gwas_catalog,2026-07-01T00:28:27Z,True
+rs9839947,3,192537529,hg38,A,,NR,unknown,0.5316,,,2E-6,facial pigmentation,,,FGF12,35313536,GCST90104591,gwas_catalog,2026-07-01T00:28:27Z,True
+rs10510227,3,2116033,hg38,G,,NR,unknown,0.4958,,,8E-6,facial pigmentation,,,"CNTN4-AS2, CNTN4",35313536,GCST90104591,gwas_catalog,2026-07-01T00:28:27Z,True
+rs7428430,3,50136751,hg38,?,,NR,unknown,,,,1E-8,sunburn,,,SEMA3F-AS1,30595370,GCST007086,gwas_catalog,2026-07-01T00:28:27Z,True
+rs9858244,3,85738249,hg38,?,,NR,unknown,,,,3E-11,sunburn,,,CADM2,30595370,GCST007086,gwas_catalog,2026-07-01T00:28:27Z,True
+rs16887871,4,12932209,hg38,T,,NR,unknown,0.301555,,,6E-6,skin pigmentation,,,ECM1P2 - U6,30895295,GCST007739,gwas_catalog,2026-07-01T00:28:27Z,True
+rs111391498,4,1347765,hg38,?,,NR,unknown,,,,8E-24,sunburn,,,UVSSA,30595370,GCST007086,gwas_catalog,2026-07-01T00:28:27Z,True
+rs11723622,4,185708693,hg38,C,,NR,unknown,10.14,,,1E-5,facial pigmentation,,,SORBS2,35313536,GCST90104590,gwas_catalog,2026-07-01T00:28:27Z,True
+rs7679967,4,186014346,hg38,C,,NR,unknown,12.69,,,1E-7,facial pigmentation,,,SORBS2 - RNU4-64P,35313536,GCST90104590,gwas_catalog,2026-07-01T00:28:27Z,True
+rs4355331,4,6021527,hg38,G,,NR,unknown,0.260034,,,4E-6,skin pigmentation,,,C4orf50,30895295,GCST007739,gwas_catalog,2026-07-01T00:28:27Z,True
+rs6816819,4,64902991,hg38,?,,NR,unknown,11.99,,,6E-10,skin pigmentation,,,LINC02232,37294081,GCST90269962,gwas_catalog,2026-07-01T00:28:27Z,True
+rs13115763,4,88828954,hg38,?,,NR,unknown,,,,4E-8,sunburn,,,FAM13A,30595370,GCST007086,gwas_catalog,2026-07-01T00:28:27Z,True
+rs35399673,5,105193606,hg38,C,,NR,unknown,0.753475,,,1E-6,skin pigmentation,,,RAB9BP1 - RNA5SP189,30895295,GCST007739,gwas_catalog,2026-07-01T00:28:27Z,True
+rs7705127,5,123305008,hg38,G,,NR,unknown,12.8,,,6E-6,facial pigmentation,,,PRDM6 - CEP120,35313536,GCST90104590,gwas_catalog,2026-07-01T00:28:27Z,True
+rs146789517,5,12995852,hg38,G,,NR,unknown,18.57,,,6E-6,facial pigmentation,,,LINC02220,35313536,GCST90104590,gwas_catalog,2026-07-01T00:28:27Z,True
+rs835151,5,14877672,hg38,A,,NR,unknown,0.821533,,,1E-6,skin pigmentation,,,HNRNPKP5,30895295,GCST007739,gwas_catalog,2026-07-01T00:28:27Z,True
+rs17110447,5,149813283,hg38,A,,0.7,unknown,0.004,,,4E-15,skin pigmentation,,,PPARGC1B,36536295,GCST90246327,gwas_catalog,2026-07-01T00:28:27Z,True
+rs251468,5,149814922,hg38,C,,0.82,unknown,1.4492754,,,1E-21,freckles,,,PPARGC1B,29895819,GCST006091,gwas_catalog,2026-07-01T00:28:27Z,True
+rs251466,5,149816040,hg38,?,,NR,unknown,,,,5E-30,sunburn,,,PPARGC1B,30595370,GCST007086,gwas_catalog,2026-07-01T00:28:27Z,True
+rs251464,5,149816671,hg38,C,,NR,unknown,0.06,,,2E-9,suntan,,,PPARGC1B,29739929,GCST005897,gwas_catalog,2026-07-01T00:28:27Z,True
+rs32579,5,149831285,hg38,T,,0.297,unknown,1.56,,,9E-42,facial pigmentation,,,PPARGC1B,32835660,GCST90002283,gwas_catalog,2026-07-01T00:28:27Z,True
+rs76586863,5,160448978,hg38,T,,NR,unknown,0.60333,,,3E-6,skin pigmentation,,,MIR3142HG,30895295,GCST007739,gwas_catalog,2026-07-01T00:28:27Z,True
+rs1423300,5,33832328,hg38,A,,0.333528,unknown,0.145644,,,3E-16,skin pigmentation,,,ADAMTS12,36672889,GCST90255690,gwas_catalog,2026-07-01T00:28:27Z,True
+rs2591723,5,33832853,hg38,C,,0.0810538,unknown,0.307374,,,2E-25,skin pigmentation,,,ADAMTS12,36672889,GCST90255690,gwas_catalog,2026-07-01T00:28:27Z,True
+rs10636696,5,33832942,hg38,?,,0.0616935,unknown,0.255018,,,3E-12,skin sensitivity to sun,,,ADAMTS12,36672889,GCST90255687,gwas_catalog,2026-07-01T00:28:27Z,True
+rs2591719,5,33835538,hg38,A,,0.0809608,unknown,4.92495,,,1E-23,skin pigmentation,,,ADAMTS12,36672889,GCST90255688,gwas_catalog,2026-07-01T00:28:27Z,True
+rs1335589229,5,33835944,hg38,C,,0.0186724,unknown,0.374487,,,1E-9,skin pigmentation,,,ADAMTS12,36672889,GCST90255690,gwas_catalog,2026-07-01T00:28:27Z,True
+rs146410588,5,33835954,hg38,C,,0.443331,unknown,2.27673,,,4E-14,skin pigmentation,,,ADAMTS12,36672889,GCST90255688,gwas_catalog,2026-07-01T00:28:27Z,True
+rs145326083,5,33839928,hg38,A,,0.0163298,unknown,7.09874,,,7E-9,skin pigmentation,,,ADAMTS12,36672889,GCST90255688,gwas_catalog,2026-07-01T00:28:27Z,True
+rs116074720,5,33844457,hg38,A,,0.446331,unknown,2.62864,,,1E-22,skin pigmentation,,,ADAMTS12,36672889,GCST90255688,gwas_catalog,2026-07-01T00:28:27Z,True
+rs2591736,5,33848028,hg38,A,,0.0318872,unknown,0.362616,,,2E-14,skin pigmentation,,,ADAMTS12,36672889,GCST90255690,gwas_catalog,2026-07-01T00:28:27Z,True
+rs528795462,5,33849438,hg38,?,,0.152306,unknown,2.57314,,,7E-9,skin pigmentation,,,ADAMTS12,36672889,GCST90255688,gwas_catalog,2026-07-01T00:28:27Z,True
+rs201918952,5,33849592,hg38,C,,0.063701,unknown,0.243154,,,2E-11,skin pigmentation,,,ADAMTS12,36672889,GCST90255690,gwas_catalog,2026-07-01T00:28:27Z,True
+rs2961906,5,33858671,hg38,A,,0.116128,unknown,0.174464,,,7E-10,skin pigmentation,,,ADAMTS12,36672889,GCST90255690,gwas_catalog,2026-07-01T00:28:27Z,True
+rs114803348,5,33859299,hg38,A,,0.221422,unknown,2.47665,,,1E-12,skin pigmentation,,,ADAMTS12,36672889,GCST90255688,gwas_catalog,2026-07-01T00:28:27Z,True
+rs11442532,5,33881565,hg38,?,,0.092285,unknown,0.193589,,,2E-12,skin pigmentation,,,ADAMTS12,36672889,GCST90255690,gwas_catalog,2026-07-01T00:28:27Z,True
+rs78211086,5,33881892,hg38,C,,0.0254439,unknown,5.17362,,,5E-9,skin pigmentation,,,ADAMTS12,36672889,GCST90255688,gwas_catalog,2026-07-01T00:28:27Z,True
+rs79064946,5,33883328,hg38,G,,0.0506175,unknown,0.318374,,,3E-15,skin pigmentation,,,ADAMTS12,36672889,GCST90255690,gwas_catalog,2026-07-01T00:28:27Z,True
+rs11742467,5,33899585,hg38,G,,0.195144,unknown,3.94772,,,2E-32,skin pigmentation,,,ADAMTS12 - RXFP3,36672889,GCST90255688,gwas_catalog,2026-07-01T00:28:27Z,True
+rs1833923,5,33903329,hg38,A,,0.476389,unknown,0.18864,,,2E-13,skin sensitivity to sun,,,ADAMTS12 - RXFP3,36672889,GCST90255686,gwas_catalog,2026-07-01T00:28:27Z,True
+rs2331343,5,33921589,hg38,G,,0.0694719,unknown,6.11714,,,4E-31,skin pigmentation,,,ADAMTS12 - RXFP3,36672889,GCST90255688,gwas_catalog,2026-07-01T00:28:27Z,True
+rs1946267,5,33921705,hg38,A,,0.197366,unknown,0.1756,,,2E-16,skin sensitivity to sun,,,ADAMTS12 - RXFP3,36672889,GCST90255687,gwas_catalog,2026-07-01T00:28:27Z,True
+rs13177787,5,33926949,hg38,T,,0.12878,unknown,5.39362,,,7E-43,skin pigmentation,,,ADAMTS12 - RXFP3,36672889,GCST90255688,gwas_catalog,2026-07-01T00:28:27Z,True
+rs7713279,5,33928797,hg38,G,,0.227729,unknown,4.45581,,,2E-45,skin pigmentation,,,ADAMTS12 - RXFP3,36672889,GCST90255688,gwas_catalog,2026-07-01T00:28:27Z,True
+rs34153565,5,33932226,hg38,T,,0.0945538,unknown,3.20821,,,1E-12,skin pigmentation,,,ADAMTS12 - RXFP3,36672889,GCST90255688,gwas_catalog,2026-07-01T00:28:27Z,True
+rs34280294,5,33932510,hg38,T,,0.0503867,unknown,0.330209,,,8E-20,skin pigmentation,,,ADAMTS12 - RXFP3,36672889,GCST90255690,gwas_catalog,2026-07-01T00:28:27Z,True
+rs10054129,5,33933670,hg38,G,,0.0939923,unknown,0.21173,,,4E-15,skin pigmentation,,,ADAMTS12 - RXFP3,36672889,GCST90255690,gwas_catalog,2026-07-01T00:28:27Z,True
+rs16891958,5,33933857,hg38,T,,0.0238657,unknown,0.33716,,,3E-11,skin pigmentation,,,ADAMTS12 - RXFP3,36672889,GCST90255689,gwas_catalog,2026-07-01T00:28:27Z,True
+rs7729545,5,33933902,hg38,G,,0.129398,unknown,0.236835,,,5E-10,skin sensitivity to sun,,,ADAMTS12 - RXFP3,36672889,GCST90255686,gwas_catalog,2026-07-01T00:28:27Z,True
+rs70964426,5,33935021,hg38,T,,0.0243108,unknown,7.75219,,,7E-15,skin pigmentation,,,ADAMTS12 - RXFP3,36672889,GCST90255688,gwas_catalog,2026-07-01T00:28:27Z,True
+rs7702361,5,33935838,hg38,A,,0.409183,unknown,2.01803,,,5E-14,skin pigmentation,,,ADAMTS12 - RXFP3,36672889,GCST90255688,gwas_catalog,2026-07-01T00:28:27Z,True
+rs79014396,5,33936616,hg38,T,,0.0215006,unknown,0.380487,,,6E-12,skin pigmentation,,,RXFP3,36672889,GCST90255690,gwas_catalog,2026-07-01T00:28:27Z,True
+rs9292519,5,33938342,hg38,A,,0.498079,unknown,0.164078,,,2E-25,skin pigmentation,,,RXFP3,36672889,GCST90255690,gwas_catalog,2026-07-01T00:28:27Z,True
+rs10461708,5,33940314,hg38,A,,0.447265,unknown,1.99845,,,1E-13,skin pigmentation,,,RXFP3 - SLC45A2,36672889,GCST90255688,gwas_catalog,2026-07-01T00:28:27Z,True
+rs35400,5,33940648,hg38,A,,0.023637,unknown,0.400551,,,1E-13,skin pigmentation,,,RXFP3 - SLC45A2,36672889,GCST90255690,gwas_catalog,2026-07-01T00:28:27Z,True
+rs57525174,5,33940712,hg38,A,,0.0174524,unknown,0.464985,,,2E-14,skin pigmentation,,,RXFP3 - SLC45A2,36672889,GCST90255690,gwas_catalog,2026-07-01T00:28:27Z,True
+rs35404,5,33944407,hg38,G,,0.0172826,unknown,0.619321,,,6E-19,skin pigmentation,,,RXFP3 - SLC45A2,36672889,GCST90255690,gwas_catalog,2026-07-01T00:28:27Z,True
+rs1214023646,5,33944490,hg38,?,,0.0214985,unknown,0.390772,,,6E-10,skin pigmentation,,,RXFP3 - SLC45A2,36672889,GCST90255690,gwas_catalog,2026-07-01T00:28:27Z,True
+rs869097159,5,33944490,hg38,A,,0.0631342,unknown,7.01545,,,4E-28,skin pigmentation,,,RXFP3 - SLC45A2,36672889,GCST90255688,gwas_catalog,2026-07-01T00:28:27Z,True
+rs35406,5,33946038,hg38,G,,0.0682626,unknown,8.17197,,,3E-54,skin pigmentation,,,SLC45A2,36672889,GCST90255688,gwas_catalog,2026-07-01T00:28:27Z,True
+rs7380538,5,33946450,hg38,A,,0.0340775,unknown,0.532895,,,5E-35,skin pigmentation,,,SLC45A2,36672889,GCST90255690,gwas_catalog,2026-07-01T00:28:27Z,True
+rs35407,5,33946466,hg38,A,,0.02,unknown,0.023,,,1E-34,skin pigmentation,,,SLC45A2,36536295,GCST90246327,gwas_catalog,2026-07-01T00:28:27Z,True
+rs35395,5,33948484,hg38,T,,NR,unknown,0.321,,,2E-24,skin pigmentation,,,SLC45A2,31315583,GCST008519,gwas_catalog,2026-07-01T00:28:27Z,True
+rs10080040,5,33950346,hg38,T,,0.0339619,unknown,9.32618,,,5E-38,skin pigmentation,,,SLC45A2,36672889,GCST90255688,gwas_catalog,2026-07-01T00:28:27Z,True
+rs35397,5,33951011,hg38,?,,0.548195,unknown,0.342625,,,9E-13,skin pigmentation,,,SLC45A2,31315583,GCST008518,gwas_catalog,2026-07-01T00:28:27Z,True
+rs2278007,5,33951446,hg38,G,,0.0245737,unknown,0.618097,,,1E-33,skin pigmentation,,,SLC45A2,36672889,GCST90255690,gwas_catalog,2026-07-01T00:28:27Z,True
+rs16891982,5,33951588,hg38,?,,NR,unknown,,,,3E-320,sunburn,,,SLC45A2,30595370,GCST007086,gwas_catalog,2026-07-01T00:28:27Z,True
+rs111372186,5,33952363,hg38,A,,0.0250638,unknown,0.366323,,,9E-10,skin pigmentation,,,SLC45A2,36672889,GCST90255690,gwas_catalog,2026-07-01T00:28:27Z,True
+rs560973795,5,33954283,hg38,T,,0.0129061,unknown,8.79865,,,2E-11,skin pigmentation,,,SLC45A2,36672889,GCST90255688,gwas_catalog,2026-07-01T00:28:27Z,True
+rs35391,5,33955568,hg38,T,,NR,unknown,0.44,,,3E-10,suntan,,,SLC45A2,19340012,GCST000371,gwas_catalog,2026-07-01T00:28:27Z,True
+rs6451047,5,33956911,hg38,T,,0.015203,unknown,11.5814,,,3E-22,skin pigmentation,,,SLC45A2,36672889,GCST90255688,gwas_catalog,2026-07-01T00:28:27Z,True
+rs28777,5,33958854,hg38,?,,NR,unknown,,,,9E-127,"eye colour measurement, strand of hair color, skin pigmentation",,,SLC45A2,30664655,GCST007451,gwas_catalog,2026-07-01T00:28:27Z,True
+rs10565330,5,33960279,hg38,?,,0.0220102,unknown,0.554733,,,8E-19,skin pigmentation,,,SLC45A2,36672889,GCST90255690,gwas_catalog,2026-07-01T00:28:27Z,True
+rs73077127,5,33960343,hg38,C,,0.0192128,unknown,7.79026,,,8E-14,skin pigmentation,,,SLC45A2,36672889,GCST90255688,gwas_catalog,2026-07-01T00:28:27Z,True
+rs28117,5,33962665,hg38,G,,0.108555,unknown,0.372114,,,2E-66,skin pigmentation,,,SLC45A2,36672889,GCST90255689,gwas_catalog,2026-07-01T00:28:27Z,True
+rs183671,5,33964105,hg38,?,,NR,unknown,0.2131,,,8E-9,"Abnormal skin pigmentation, freckles",,,SLC45A2,30166351,GCST007488,gwas_catalog,2026-07-01T00:28:27Z,True
+rs367752652,5,33966428,hg38,C,,0.0396982,unknown,8.54476,,,5E-30,skin pigmentation,,,SLC45A2,36672889,GCST90255688,gwas_catalog,2026-07-01T00:28:27Z,True
+rs35412,5,33967040,hg38,C,,0.103303,unknown,8.58179,,,6E-85,skin pigmentation,,,SLC45A2,36672889,GCST90255688,gwas_catalog,2026-07-01T00:28:27Z,True
+rs3797201,5,33968040,hg38,C,,0.0207814,unknown,0.633905,,,2E-10,skin sensitivity to sun,,,SLC45A2,36672889,GCST90255686,gwas_catalog,2026-07-01T00:28:27Z,True
+rs6451050,5,33968217,hg38,T,,0.0104185,unknown,0.717845,,,3E-15,skin pigmentation,,,SLC45A2,36672889,GCST90255690,gwas_catalog,2026-07-01T00:28:27Z,True
+rs2067350,5,33968648,hg38,?,,0.144076,unknown,0.225134,,,8E-18,skin pigmentation,,,SLC45A2,36672889,GCST90255690,gwas_catalog,2026-07-01T00:28:27Z,True
+rs35414,5,33969523,hg38,T,,0.411849,unknown,0.16084,,,2E-21,skin pigmentation,,,SLC45A2,36672889,GCST90255690,gwas_catalog,2026-07-01T00:28:27Z,True
+rs3776546,5,33975982,hg38,A,,0.0883338,unknown,3.94232,,,3E-17,skin pigmentation,,,SLC45A2,36672889,GCST90255688,gwas_catalog,2026-07-01T00:28:27Z,True
+rs35960920,5,33980160,hg38,C,,0.147707,unknown,2.7895,,,7E-14,skin pigmentation,,,SLC45A2,36672889,GCST90255688,gwas_catalog,2026-07-01T00:28:27Z,True
+rs7721230,5,33992424,hg38,A,,0.442317,unknown,0.10119,,,4E-10,skin pigmentation,,,"C1QTNF3-AMACR, AMACR",36672889,GCST90255690,gwas_catalog,2026-07-01T00:28:27Z,True
+rs36089417,5,33994939,hg38,C,,0.0596264,unknown,3.39423,,,2E-9,skin pigmentation,,,"AMACR, C1QTNF3-AMACR",36672889,GCST90255688,gwas_catalog,2026-07-01T00:28:27Z,True
+rs11429237,5,34000505,hg38,?,,0.208851,unknown,1.86499,,,1E-8,skin pigmentation,,,"AMACR, C1QTNF3-AMACR",36672889,GCST90255688,gwas_catalog,2026-07-01T00:28:27Z,True
+rs149359,5,34035135,hg38,C,,0.437111,unknown,0.100936,,,4E-10,skin pigmentation,,,"C1QTNF3-AMACR, C1QTNF3",36672889,GCST90255690,gwas_catalog,2026-07-01T00:28:27Z,True
+rs11739906,5,59723533,hg38,?,,NR,unknown,,,,3E-8,sunburn,,,PDE4D,30595370,GCST007086,gwas_catalog,2026-07-01T00:28:27Z,True
+rs6882046,5,88673046,hg38,?,,NR,unknown,,,,2E-8,sunburn,,,MIR9-2HG,30595370,GCST007086,gwas_catalog,2026-07-01T00:28:27Z,True
+rs115023893,6,1023608,hg38,?,,NR,unknown,,,,2E-8,sunburn,,,LINC01622,30595370,GCST007086,gwas_catalog,2026-07-01T00:28:27Z,True
+rs7744878,6,132580381,hg38,A,,NR,unknown,0.5744,,,1E-6,facial pigmentation,,,TAAR6 - TAAR5,35313536,GCST90104591,gwas_catalog,2026-07-01T00:28:27Z,True
+rs11155321,6,143740640,hg38,T,,NR,unknown,8.707,,,3E-6,facial pigmentation,,,PHACTR2,35313536,GCST90104590,gwas_catalog,2026-07-01T00:28:27Z,True
+rs1391659,6,155663265,hg38,?,,NR,unknown,,,,2E-9,sunburn,,,RNU7-152P - MIR1202,30595370,GCST007086,gwas_catalog,2026-07-01T00:28:27Z,True
+rs74952737,6,156950105,hg38,?,,NR,unknown,,,,7E-8,sunburn,,,ARID1B,30595370,GCST007086,gwas_catalog,2026-07-01T00:28:27Z,True
+rs13198547,6,167304908,hg38,A,,NR,unknown,0.255861,,,7E-6,skin pigmentation,,,UNC93A,30895295,GCST007739,gwas_catalog,2026-07-01T00:28:27Z,True
+rs9460028,6,170064062,hg38,A,,NR,unknown,0.409592,,,4E-6,skin pigmentation,,,LINC00574 - RPL12P23,30895295,GCST007739,gwas_catalog,2026-07-01T00:28:27Z,True
+rs9350204,6,19996577,hg38,C,,0.154,unknown,,,,2E-6,skin pigmentation,,,ID4 - RPL29P17,27327535,GCST003591,gwas_catalog,2026-07-01T00:28:27Z,True
+rs2235874,6,226284,hg38,G,,NR,unknown,0.085,,,9E-20,suntan,,,LINC03066 - DUSP22,29739929,GCST005897,gwas_catalog,2026-07-01T00:28:27Z,True
+rs113773649,6,242312,hg38,?,,NR,unknown,,,,2E-11,sunburn,,,LINC03066 - DUSP22,30595370,GCST007086,gwas_catalog,2026-07-01T00:28:27Z,True
+rs2524069,6,31277012,hg38,T,,0.13,unknown,,,,3E-7,skin pigmentation,,,USP8P1,27327535,GCST003591,gwas_catalog,2026-07-01T00:28:27Z,True
+rs17208853,6,32408583,hg38,C,,NR,unknown,0.649209,,,8E-6,skin pigmentation,,,TSBP1-AS1 - HLA-DRA,30895295,GCST007739,gwas_catalog,2026-07-01T00:28:27Z,True
+rs112628998,6,32558998,hg38,A,,NR,unknown,0.673911,,,1E-6,skin pigmentation,,,"HLA-DRB6, HLA-DRB6",30895295,GCST007739,gwas_catalog,2026-07-01T00:28:27Z,True
+rs511515,6,33573730,hg38,?,,NR,unknown,,,,7E-17,sunburn,,,BAK1,30595370,GCST007086,gwas_catalog,2026-07-01T00:28:27Z,True
+rs78515650,6,33832563,hg38,C,,NR,unknown,0.250354,,,6E-6,skin pigmentation,,,MLN - LINC01016,30895295,GCST007739,gwas_catalog,2026-07-01T00:28:27Z,True
+rs2671427,6,385735,hg38,T,,0.440437,unknown,0.0989432,,,1E-8,skin sensitivity to sun,,,DUSP22 - IRF4,36672889,GCST90255687,gwas_catalog,2026-07-01T00:28:27Z,True
+rs12203592,6,396321,hg38,T,,NR,unknown,0.545,,,1E-581,suntan,,,IRF4,29739929,GCST005897,gwas_catalog,2026-07-01T00:28:27Z,True
+rs6938966,6,41793252,hg38,?,,NR,unknown,,,,8E-16,sunburn,,,USP49,30595370,GCST007086,gwas_catalog,2026-07-01T00:28:27Z,True
+rs9392026,6,453415,hg38,G,,0.397018,unknown,0.154428,,,2E-9,freckles,,,IRF4 - EXOC2,36672889,GCST90255685,gwas_catalog,2026-07-01T00:28:27Z,True
+rs1540771,6,466033,hg38,A,,0.42,unknown,1.4,,,4E-18,freckles,,,IRF4 - EXOC2,17952075,GCST000119,gwas_catalog,2026-07-01T00:28:27Z,True
+rs12210050,6,475489,hg38,T,,NR,unknown,0.22,,,5E-14,suntan,,,IRF4 - EXOC2,19340012,GCST000371,gwas_catalog,2026-07-01T00:28:27Z,True
+rs6597061,6,495636,hg38,?,,NR,unknown,,,,1E-11,sunburn,,,EXOC2,30595370,GCST007086,gwas_catalog,2026-07-01T00:28:27Z,True
+rs71550013,6,553489,hg38,C,,NR,unknown,0.199,,,5E-48,suntan,,,EXOC2,29739929,GCST005897,gwas_catalog,2026-07-01T00:28:27Z,True
+rs2294664,6,599042,hg38,?,,NR,unknown,,,,6E-15,sunburn,,,EXOC2,30595370,GCST007086,gwas_catalog,2026-07-01T00:28:27Z,True
+rs12660153,6,60381335,hg38,?,,NR,unknown,,,,1E-9,sunburn,,,PRIM2BP,30595370,GCST007086,gwas_catalog,2026-07-01T00:28:27Z,True
+rs12524852,6,61973218,hg38,?,,NR,unknown,,,,1E-10,sunburn,,,KHDRBS2,30595370,GCST007086,gwas_catalog,2026-07-01T00:28:27Z,True
+rs7765892,6,686110,hg38,C,,NR,unknown,0.076,,,1E-17,suntan,,,EXOC2,29739929,GCST005897,gwas_catalog,2026-07-01T00:28:27Z,True
+rs2788223,6,720465,hg38,?,,NR,unknown,,,,2E-9,sunburn,,,EXOC2 - LINC01622,30595370,GCST007086,gwas_catalog,2026-07-01T00:28:27Z,True
+rs1338549,6,97864267,hg38,?,,NR,unknown,,,,1E-10,sunburn,,,MMS22L - MIR2113,30595370,GCST007086,gwas_catalog,2026-07-01T00:28:27Z,True
+rs7794036,7,105230001,hg38,?,,NR,unknown,,,,2E-11,sunburn,,,SRPK2,30595370,GCST007086,gwas_catalog,2026-07-01T00:28:27Z,True
+rs2971755,7,131744295,hg38,G,,NR,unknown,0.4658,,,9E-7,facial pigmentation,,,EEF1B2P6 - NDUFB9P2,35313536,GCST90104591,gwas_catalog,2026-07-01T00:28:27Z,True
+rs6972456,7,150747295,hg38,G,,NR,unknown,0.260626,,,6E-6,skin pigmentation,,,"GIMAP3P, GIMAP5",30895295,GCST007739,gwas_catalog,2026-07-01T00:28:27Z,True
+rs117132860,7,17095084,hg38,?,,NR,unknown,,,,3E-20,sunburn,,,AHR,30595370,GCST007086,gwas_catalog,2026-07-01T00:28:27Z,True
+rs849138,7,28137719,hg38,?,,NR,unknown,,,,4E-11,sunburn,,,JAZF1,30595370,GCST007086,gwas_catalog,2026-07-01T00:28:27Z,True
+rs73311026,7,4461165,hg38,A,,NR,unknown,0.476507,,,8E-6,skin pigmentation,,,SDK1 - CYP3A54P,30895295,GCST007739,gwas_catalog,2026-07-01T00:28:27Z,True
+rs187096292,7,56655753,hg38,G,,NR,unknown,1.2935,,,5E-6,skin pigmentation,,,TRIM60P16 - CICP28,30895295,GCST007739,gwas_catalog,2026-07-01T00:28:27Z,True
+rs13278114,8,102712670,hg38,G,,NR,unknown,0.24775,,,7E-6,skin pigmentation,,,ADI1P2 - GASAL1,30895295,GCST007739,gwas_catalog,2026-07-01T00:28:27Z,True
+rs374951721,8,104147253,hg38,G,,NR,unknown,0.52564,,,4E-7,skin pigmentation,,,RIMS2,30895295,GCST007739,gwas_catalog,2026-07-01T00:28:27Z,True
+rs2049865,8,115576319,hg38,A,,0.58,unknown,0.003,,,9E-10,skin pigmentation,,,TRPS1,36536295,GCST90246327,gwas_catalog,2026-07-01T00:28:27Z,True
+rs2737212,8,115608987,hg38,C,,NR,unknown,0.09,,,4E-25,suntan,,,TRPS1,29739929,GCST005897,gwas_catalog,2026-07-01T00:28:27Z,True
+rs2737217,8,115618084,hg38,?,,NR,unknown,,,,9E-33,sunburn,,,TRPS1,30595370,GCST007086,gwas_catalog,2026-07-01T00:28:27Z,True
+rs4130120,8,127632710,hg38,C,,NR,unknown,0.48551,,,2E-6,skin pigmentation,,,CASC8 - CASC11,30895295,GCST007739,gwas_catalog,2026-07-01T00:28:27Z,True
+rs752429,8,127968117,hg38,T,,NR,unknown,0.4822,,,5E-6,facial pigmentation,,,PVT1,35313536,GCST90104591,gwas_catalog,2026-07-01T00:28:27Z,True
+rs4259415,8,23044055,hg38,C,,NR,unknown,0.258643,,,5E-6,skin pigmentation,,,TNFRSF10B,30895295,GCST007739,gwas_catalog,2026-07-01T00:28:27Z,True
+rs4370538,8,69745595,hg38,G,,NR,unknown,0.445272,,,6E-6,skin pigmentation,,,SLCO5A1,30895295,GCST007739,gwas_catalog,2026-07-01T00:28:27Z,True
+rs895267,8,80993298,hg38,A,,NR,unknown,0.253269,,,7E-6,skin pigmentation,,,PAG1,30895295,GCST007739,gwas_catalog,2026-07-01T00:28:27Z,True
+rs2762461,9,12696499,hg38,G,,0.477808,unknown,1.52387,,,1E-8,skin pigmentation,,,"LURAP1L-AS1, TYRP1",36672889,GCST90255688,gwas_catalog,2026-07-01T00:28:27Z,True
+rs1326797,9,12716763,hg38,T,,NR,unknown,0.076,,,1E-17,suntan,,,LURAP1L-AS1,29739929,GCST005897,gwas_catalog,2026-07-01T00:28:27Z,True
+rs7034354,9,12732576,hg38,?,,NR,unknown,,,,4E-11,sunburn,,,LURAP1L-AS1,30595370,GCST007086,gwas_catalog,2026-07-01T00:28:27Z,True
+rs10810635,9,16795243,hg38,C,,0.53,unknown,1.3157895,,,2E-22,freckles,,,BNC2,29895819,GCST006091,gwas_catalog,2026-07-01T00:28:27Z,True
+rs16935073,9,16795792,hg38,C,,0.434,unknown,1.58,,,2E-46,facial pigmentation,,,BNC2,32835660,GCST90002283,gwas_catalog,2026-07-01T00:28:27Z,True
+rs10962612,9,16804169,hg38,T,,NR,unknown,0.104,,,4E-25,suntan,,,BNC2,29739929,GCST005897,gwas_catalog,2026-07-01T00:28:27Z,True
+rs2153271,9,16864523,hg38,C,,0.41,unknown,0.4,,,4E-10,freckles,,,BNC2,20585627,GCST000708,gwas_catalog,2026-07-01T00:28:27Z,True
+rs10810650,9,16873553,hg38,C,,NR,unknown,0.144,,,2E-59,suntan,,,BNC2 - RN7SL720P,29739929,GCST005897,gwas_catalog,2026-07-01T00:28:27Z,True
+rs4644350,9,16882918,hg38,C,,0.436988,unknown,0.097384,,,1E-9,skin pigmentation,,,BNC2 - RN7SL720P,36672889,GCST90255690,gwas_catalog,2026-07-01T00:28:27Z,True
+rs12350739,9,16885019,hg38,?,,NR,unknown,,,,4E-53,sunburn,,,BNC2 - RN7SL720P,30595370,GCST007086,gwas_catalog,2026-07-01T00:28:27Z,True
+rs62543565,9,16901069,hg38,C,,0.37,unknown,6.32,,,2E-7,facial pigmentation,,,BNC2 - RN7SL720P,25705849,GCST002785,gwas_catalog,2026-07-01T00:28:27Z,True
+rs10122939,9,20300845,hg38,G,,0.34,unknown,0.09,,,2E-13,skin pigmentation,,,SLC24A2 - MLLT3,34570997,GCST90100219,gwas_catalog,2026-07-01T00:28:27Z,True
+rs643319,9,22017837,hg38,A,,0.364,unknown,0.57,,,9E-11,facial pigmentation,,,CDKN2B-AS1,32835660,GCST90002284,gwas_catalog,2026-07-01T00:28:27Z,True
+rs80343610,9,79269045,hg38,A,,NR,unknown,0.520464,,,2E-6,skin pigmentation,,,KRT18P24 - CHCHD2P9,30895295,GCST007739,gwas_catalog,2026-07-01T00:28:27Z,True
+rs56211720,9,85733443,hg38,A,,NR,unknown,9.685,,,9E-6,facial pigmentation,,,AGTPBP1,35313536,GCST90104590,gwas_catalog,2026-07-01T00:28:27Z,True
+rs16909902,9,95473920,hg38,?,,NR,unknown,,,,1E-7,sunburn,,,PTCH1,30595370,GCST007086,gwas_catalog,2026-07-01T00:28:27Z,True
+rs928618,9,95600210,hg38,G,,NR,unknown,0.399584,,,3E-6,skin pigmentation,,,PTCH1 - ERCC6L2-AS1,30895295,GCST007739,gwas_catalog,2026-07-01T00:28:27Z,True

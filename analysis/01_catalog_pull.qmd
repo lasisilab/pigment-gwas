@@ -1,0 +1,65 @@
+---
+title: "01 · Catalog pull"
+subtitle: "Pigmentation loci from the NHGRI-EBI GWAS Catalog"
+---
+
+## What this workbook produces
+
+**Output A** — `output/catalog/pigmentation_gwas_catalog.csv`: every pigmentation
+association the GWAS Catalog files under a small, reviewed set of root traits (and
+their child traits). Each pull is stamped with the UTC time it hit the catalog and a
+dated copy is archived under `output/catalog/versions/`, so you can always go back to
+exactly what a previous pull returned.
+
+## How the pull works
+
+The engine (`scripts/gwas_catalog.py`) is config-driven: `scripts/traits_pigmentation.json`
+names a handful of ontology **root** traits (EFO/OBA/MONDO short forms) — skin
+pigmentation, facial pigmentation, freckles, sunburn, suntan, sun sensitivity, melanin
+measurement — and the catalog's *download* endpoint returns every locus filed under each
+root **and its child traits** (`includeChildTraits=true`). That means a study added after
+this list was authored is still captured, without hardcoding a gene list that would go
+stale and hide its provenance.
+
+Three fail-loud guarantees protect the pull: every root must return >0 rows; the config's
+**anchor** SNPs (SLC24A5 `rs1426654`, HERC2 `rs12913832`) must survive or the run errors;
+and any mapped trait not in the reviewed snapshot is flagged for review.
+
+```{python}
+import sys, json
+sys.path.insert(0, "scripts")
+from gwas_catalog import load_config, run_axis, write_cache, assert_anchors
+
+# Cache-first: with a cache present this loads Output A with NO network call, so the
+# workbook renders identically every time. Set REFRESH = True to pull fresh from the
+# live catalog (which archives a new dated version under output/catalog/versions/).
+REFRESH = False
+
+cfg = load_config("scripts/traits_pigmentation.json")
+loci, meta = run_axis(cfg, refresh=REFRESH)
+if REFRESH:
+    write_cache(loci, meta, cfg)
+
+print(f"{len(loci)} lead SNPs — queried {meta.get('queried_utc')}")
+```
+
+## Anchor check
+
+If either anchor is missing, the pull is not capturing the loci this axis is built on and
+this cell raises (do not trust the output downstream).
+
+```{python}
+assert_anchors(cfg.axis, loci, cfg.anchors)
+```
+
+## The loci
+
+```{python}
+loci.head(20)
+```
+
+## Provenance (sidecar `meta.json`)
+
+```{python}
+print(json.dumps(meta, indent=2))
+```
