@@ -30,15 +30,26 @@ analysis/02_combine.qmd          ── union + dedup           → output/pigme
 
 ## Quickstart
 
+Quarto executes the `.qmd` workbooks through a Jupyter kernel, so it needs a Python
+environment with the dependencies. Use a project virtualenv so the render always uses
+*this repo's* interpreter (and doesn't pick up another project's kernel):
+
 ```bash
+python3 -m venv .venv
+source .venv/bin/activate           # do this in every shell before rendering
 pip install -r requirements.txt
 
 # refresh Output A from the live catalog (skip to use the committed pull)
 python scripts/gwas_catalog.py --config scripts/traits_pigmentation.json --refresh
 
-# render the workbooks (also (re)writes the per-source files and Output B)
+# render the workbooks (also (re)writes the per-source files and Output B) into docs/
 quarto render
 ```
+
+`_quarto.yml` pins the kernel to `python3`, which resolves to the activated venv — so with
+`.venv` active, `quarto render` uses this repo's pandas/requests and nothing else. If you
+render without activating the venv, either activate it first or point Quarto at it
+explicitly: `QUARTO_PYTHON=.venv/bin/python quarto render`.
 
 Both workbooks default to the committed data (no network), so a fresh checkout renders
 identically. `--refresh` / `REFRESH = True` pulls fresh and archives a new version.

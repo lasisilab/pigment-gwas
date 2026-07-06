@@ -8,6 +8,12 @@ project:
     - analysis/sources/crawford2017.qmd
     - analysis/02_combine.qmd
 
+# Pin the Jupyter kernel to *this project's* python3 (the repo venv). Without this,
+# Quarto picks the first python kernel it finds by name — which on a machine with other
+# projects' kernelspecs registered can be an unrelated venv. Activate .venv before
+# rendering (see README) so `python3` resolves to this repo's interpreter.
+jupyter: python3
+
 website:
   title: "pigment-gwas"
   navbar:
