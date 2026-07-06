@@ -55,6 +55,10 @@ explicitly: `QUARTO_PYTHON=.venv/bin/python quarto render`.
 Both workbooks default to the committed data (no network), so a fresh checkout renders
 identically. `--refresh` / `REFRESH = True` pulls fresh and archives a new version.
 
+The rendered site is **not committed** — GitHub Actions (`.github/workflows/publish.yml`)
+builds it on every push to `main` and deploys to GitHub Pages. `docs/` is git-ignored; the
+`quarto render` above is just for local preview.
+
 ## The harmonized schema (`scripts/harmonize.py`)
 
 `rsid, chr, pos, build, effect_allele, other_allele, eaf, effect_type, effect_size,

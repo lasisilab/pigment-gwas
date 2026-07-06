@@ -42,6 +42,6 @@ calibration (Crawford codes one allele/beta convention; calibrate against `rs142
 
 ## 5. Repo housekeeping
 
-- Add a git remote and push.
-- Decide: keep committing the rendered `docs/` (current, GitHub-Pages-from-docs), or deploy via
-  GitHub Actions and gitignore `docs/` (like melanogenesis-constraints).
+- ~~Add a git remote and push.~~ Done — `origin` = github.com/lasisilab/pigment-gwas.
+- ~~Decide docs deployment.~~ Done — deploy via **GitHub Actions**
+  (`.github/workflows/publish.yml`); `docs/` is gitignored and rebuilt in CI on every push.

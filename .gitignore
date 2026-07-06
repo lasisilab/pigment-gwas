@@ -2,6 +2,9 @@
 /_site/
 /.quarto/
 **/*.quarto_ipynb
+# The rendered site is built & deployed by GitHub Actions (.github/workflows/publish.yml),
+# not committed. Render locally with `quarto render` to preview it in docs/.
+/docs/
 
 # Python
 .venv/
