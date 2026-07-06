@@ -50,9 +50,6 @@ FAIL LOUD (so a broken pull can never masquerade as a good one)
   * DRIFT REPORT: mapped-trait values not in the per-axis reviewed snapshot are
     flagged (config.reviewed_traits_file); --strict-drift makes it a hard fail.
 
-Coordinates from the catalog are GRCh38; a genotyping array .bim is usually hg19,
-so on_array is computed by rsID match (NOT position) — the build-safe join key.
-
 Examples
 --------
   # cache-first (no network if a cache exists)
@@ -268,24 +265,6 @@ def query_traits(roots, axis, progress=print):
     return out
 
 
-def annotate_on_array(df, bim_path, progress=print):
-    """Add a boolean `on_array` column by rsID membership in the .bim (col 2).
-
-    Build-safe join: the catalog is GRCh38 and a typical array is hg19, so
-    positions don't align — rsID is the key. If bim_path is None/absent, return df
-    unchanged (no on_array column) and note the skip.
-    """
-    if not bim_path or not os.path.exists(bim_path):
-        if bim_path:
-            progress(f"  (bim {bim_path} not found — on_array skipped)")
-        return df
-    bim = pd.read_csv(bim_path, sep=r"\s+", header=None, dtype=str,
-                      usecols=[1], names=["rsid"])
-    df = df.copy()
-    df["on_array"] = df["rsid"].isin(set(bim["rsid"]))
-    return df
-
-
 # ── Fail-loud checks ─────────────────────────────────────────────────────────
 def assert_anchors(axis, df, anchors, progress=print):
     present = set(df.rsid)
@@ -345,7 +324,7 @@ def _cache_dir(out_csv):
     return os.path.join(os.path.dirname(os.path.abspath(out_csv)), "versions")
 
 
-def load_cache(cfg, bim_path=None, progress=print):
+def load_cache(cfg, progress=print):
     """Load a previously-pulled cache CSV (+ sidecar meta) with no network call."""
     df = pd.read_csv(cfg.out_csv, dtype=str, keep_default_na=False)
     meta = {}
@@ -357,9 +336,6 @@ def load_cache(cfg, bim_path=None, progress=print):
                                         if "queried_utc" in df and len(df) else "unknown")
     progress(f"  using cached pull from {stamp} ({len(df)} loci) — "
              f"{os.path.relpath(cfg.out_csv, REPO)}")
-    # on_array is cheap and local; recompute if a bim is supplied so --bim works on cache-load
-    if bim_path and os.path.exists(bim_path):
-        df = annotate_on_array(df, bim_path, progress=lambda *_: None)
     return df, meta
 
 
@@ -388,7 +364,7 @@ def write_cache(df, meta, cfg, progress=print):
              f"(+ .meta.json, archive versions/{os.path.basename(archive)})")
 
 
-def run_axis(cfg, bim_path=None, refresh=False, strict_drift=False, progress=print):
+def run_axis(cfg, refresh=False, strict_drift=False, progress=print):
     """End-to-end for one axis. Returns (loci_df, meta).
 
     Cache-first: if not refresh and cfg.out_csv exists, load it (no network).
@@ -398,12 +374,11 @@ def run_axis(cfg, bim_path=None, refresh=False, strict_drift=False, progress=pri
     run_axis safe to call from a read-only render.
     """
     if not refresh and os.path.exists(cfg.out_csv):
-        return load_cache(cfg, bim_path=bim_path, progress=progress)
+        return load_cache(cfg, progress=progress)
 
     progress(f"\n=== {cfg.axis} axis ({cfg.label}) — live pull ===")
     df = query_traits(cfg.roots, cfg.axis, progress=progress)
     assert_anchors(cfg.axis, df, cfg.anchors, progress=progress)
-    df = annotate_on_array(df, bim_path, progress=progress)
     new_traits = drift_report(df, cfg.reviewed_traits_file, strict_drift, progress=progress)
 
     queried_utc = _utc_now().strftime("%Y-%m-%dT%H:%M:%SZ")
@@ -417,7 +392,6 @@ def run_axis(cfg, bim_path=None, refresh=False, strict_drift=False, progress=pri
         "roots": list(cfg.roots.keys()),
         "anchors": cfg.anchors,
         "n_loci": int(len(df)),
-        "n_on_array": (int(df["on_array"].sum()) if "on_array" in df else None),
         "new_unreviewed_traits": new_traits,
         "endpoint": DOWNLOAD,
         "query": 'shortForm:"<root>" includeChildTraits=true efo=true facet=association',
@@ -433,7 +407,6 @@ def main():
         description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--config", required=True, action="append", metavar="PATH",
                     help="trait-axis JSON config (repeatable, e.g. scripts/traits_pigmentation.json)")
-    ap.add_argument("--bim", help="PLINK .bim for on_array rsID annotation (optional)")
     ap.add_argument("--out", help="output CSV path; overrides config.out_csv for both "
                                   "the cache-read and the write (only valid with a "
                                   "single --config)")
@@ -452,12 +425,11 @@ def main():
             cfg = load_config(cfg_path)
             if args.out:                      # redirect cache-read + output to --out
                 cfg.out_csv = _resolve(args.out)
-            df, meta = run_axis(cfg, bim_path=args.bim, refresh=args.refresh,
+            df, meta = run_axis(cfg, refresh=args.refresh,
                                 strict_drift=args.strict_drift)
             if args.refresh or not os.path.exists(cfg.out_csv):
                 write_cache(df, meta, cfg)
-            n_arr = int(df["on_array"].sum()) if "on_array" in df else "n/a"
-            line = (f"{cfg.axis}: {len(df)} lead SNPs (on array: {n_arr}) "
+            line = (f"{cfg.axis}: {len(df)} lead SNPs "
                     f"[queried {meta.get('queried_utc', 'cache')}] → "
                     f"{os.path.relpath(cfg.out_csv, REPO)}")
             print(line)
