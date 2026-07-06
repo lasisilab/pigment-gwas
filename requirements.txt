@@ -1,6 +1,8 @@
 # pigment-gwas Python dependencies
 # Install with: pip install -r requirements.txt
 
-pandas>=2.0
-requests>=2.31     # live GWAS Catalog pull (scripts/gwas_catalog.py)
-jupyter>=1.0       # Quarto executes the .qmd workbooks via the Jupyter kernel
+# Upper bounds cap the next major so a future release can't silently break the pull.
+# Tested on pandas 3.0.x, requests 2.34.x, Python 3.12 (see .python-version).
+pandas>=2.0,<4
+requests>=2.31,<3     # live GWAS Catalog pull (scripts/gwas_catalog.py)
+jupyter>=1.0,<2       # Quarto executes the .qmd workbooks via the Jupyter kernel

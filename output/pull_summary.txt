@@ -1,3 +1,3 @@
 GWAS-catalog API pull — diagnostic
 
-skin: 440 lead SNPs (on array: n/a) [queried 2026-07-01T00:28:27Z] → /Users/tlasisi/GitHub/pigment-gwas/output/catalog/pigmentation_gwas_catalog.csv
+skin: 440 lead SNPs (on array: n/a) [queried 2026-07-01T00:28:27Z] → output/catalog/pigmentation_gwas_catalog.csv

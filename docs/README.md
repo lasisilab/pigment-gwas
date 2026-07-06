@@ -32,7 +32,8 @@ analysis/02_combine.qmd          ── union + dedup           → output/pigme
 
 Quarto executes the `.qmd` workbooks through a Jupyter kernel, so it needs a Python
 environment with the dependencies. Use a project virtualenv so the render always uses
-*this repo's* interpreter (and doesn't pick up another project's kernel):
+*this repo's* interpreter (and doesn't pick up another project's kernel). It targets
+**Python 3.10+** (developed and rendered on 3.12 — see `.python-version`):
 
 ```bash
 python3 -m venv .venv

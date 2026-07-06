@@ -205,7 +205,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="how-the-pull-works">How the pull works</h2>
 <p>The engine (<code>scripts/gwas_catalog.py</code>) is config-driven: <code>scripts/traits_pigmentation.json</code> names a handful of ontology <strong>root</strong> traits (EFO/OBA/MONDO short forms) — skin pigmentation, facial pigmentation, freckles, sunburn, suntan, sun sensitivity, melanin measurement — and the catalog’s <em>download</em> endpoint returns every locus filed under each root <strong>and its child traits</strong> (<code>includeChildTraits=true</code>). That means a study added after this list was authored is still captured, without hardcoding a gene list that would go stale and hide its provenance.</p>
 <p>Three fail-loud guarantees protect the pull: every root must return &gt;0 rows; the config’s <strong>anchor</strong> SNPs (SLC24A5 <code>rs1426654</code>, HERC2 <code>rs12913832</code>) must survive or the run errors; and any mapped trait not in the reviewed snapshot is flagged for review.</p>
-<div id="1937c9c7" class="cell" data-execution_count="1">
+<div id="f0666904" class="cell" data-execution_count="1">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys, json</span>
@@ -225,7 +225,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span><span class="bu">len</span>(loci)<span class="sc">}</span><span class="ss"> lead SNPs — queried </span><span class="sc">{</span>meta<span class="sc">.</span>get(<span class="st">'queried_utc'</span>)<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>  using cached pull from 2026-07-01T00:28:27Z (440 loci) — /Users/tlasisi/GitHub/pigment-gwas/output/catalog/pigmentation_gwas_catalog.csv
+<pre><code>  using cached pull from 2026-07-01T00:28:27Z (440 loci) — output/catalog/pigmentation_gwas_catalog.csv
 440 lead SNPs — queried 2026-07-01T00:28:27Z</code></pre>
 </div>
 </div>
@@ -233,7 +233,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="anchor-check" class="level2">
 <h2 class="anchored" data-anchor-id="anchor-check">Anchor check</h2>
 <p>If either anchor is missing, the pull is not capturing the loci this axis is built on and this cell raises (do not trust the output downstream).</p>
-<div id="88c868e1" class="cell" data-execution_count="2">
+<div id="f1bfbe59" class="cell" data-execution_count="2">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>assert_anchors(cfg.axis, loci, cfg.anchors)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -245,7 +245,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="the-loci" class="level2">
 <h2 class="anchored" data-anchor-id="the-loci">The loci</h2>
-<div id="79d88fbe" class="cell" data-execution_count="3">
+<div id="18c88b81" class="cell" data-execution_count="3">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>loci.head(<span class="dv">20</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -687,7 +687,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="provenance-sidecar-meta.json" class="level2">
 <h2 class="anchored" data-anchor-id="provenance-sidecar-meta.json">Provenance (sidecar <code>meta.json</code>)</h2>
-<div id="3b6d477c" class="cell" data-execution_count="4">
+<div id="e4f9431e" class="cell" data-execution_count="4">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(json.dumps(meta, indent<span class="op">=</span><span class="dv">2</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>

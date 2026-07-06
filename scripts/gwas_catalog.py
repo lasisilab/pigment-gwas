@@ -355,7 +355,8 @@ def load_cache(cfg, bim_path=None, progress=print):
             meta = json.load(f)
     stamp = meta.get("queried_utc") or (df["queried_utc"].iloc[0]
                                         if "queried_utc" in df and len(df) else "unknown")
-    progress(f"  using cached pull from {stamp} ({len(df)} loci) — {cfg.out_csv}")
+    progress(f"  using cached pull from {stamp} ({len(df)} loci) — "
+             f"{os.path.relpath(cfg.out_csv, REPO)}")
     # on_array is cheap and local; recompute if a bim is supplied so --bim works on cache-load
     if bim_path and os.path.exists(bim_path):
         df = annotate_on_array(df, bim_path, progress=lambda *_: None)
@@ -383,7 +384,8 @@ def write_cache(df, meta, cfg, progress=print):
         archive = os.path.join(cdir, f"{stem}_{stamp}_{n}.csv")
         n += 1
     df.to_csv(archive, index=False)
-    progress(f"  wrote {cfg.out_csv} (+ .meta.json, archive versions/{os.path.basename(archive)})")
+    progress(f"  wrote {os.path.relpath(cfg.out_csv, REPO)} "
+             f"(+ .meta.json, archive versions/{os.path.basename(archive)})")
 
 
 def run_axis(cfg, bim_path=None, refresh=False, strict_drift=False, progress=print):
@@ -456,7 +458,8 @@ def main():
                 write_cache(df, meta, cfg)
             n_arr = int(df["on_array"].sum()) if "on_array" in df else "n/a"
             line = (f"{cfg.axis}: {len(df)} lead SNPs (on array: {n_arr}) "
-                    f"[queried {meta.get('queried_utc', 'cache')}] → {cfg.out_csv}")
+                    f"[queried {meta.get('queried_utc', 'cache')}] → "
+                    f"{os.path.relpath(cfg.out_csv, REPO)}")
             print(line)
             summary.append(line)
     except PullError as e:
