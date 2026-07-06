@@ -15,5 +15,6 @@ HIrisPlex-style comparisons. Two outputs, produced by two kinds of workbook:
   — the catalog plus every per-source file, unioned and deduplicated onto one shared schema.
 
 **Adding a source** = add one per-source workbook that writes `output/sources/<name>_harmonized.csv`;
-the combine step picks it up automatically. See the [README](README.md) for the schema and the
+the combine step picks it up automatically. See the
+[README](https://github.com/lasisilab/pigment-gwas/blob/main/README.md) for the schema and the
 add-a-source recipe.

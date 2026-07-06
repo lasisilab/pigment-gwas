@@ -109,7 +109,7 @@ def combine(frames, precedence):
         return "+".join(uniq)
     src_by_rsid = all_rows.groupby("rsid")["source"].apply(_src_set)
 
-    kept = (all_rows.sort_values("_rank")
+    kept = (all_rows.sort_values("_rank", kind="stable")   # stable: deterministic winner on ties
                     .drop_duplicates("rsid", keep="first")
                     .drop(columns="_rank"))
     kept["source"] = kept["rsid"].map(src_by_rsid)
