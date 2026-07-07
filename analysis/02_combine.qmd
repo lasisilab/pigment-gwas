@@ -76,12 +76,52 @@ compendium.to_csv("output/pigmentation_gwas_harmonized.csv", index=False)
 print(f"{len(compendium)} unique loci -> output/pigmentation_gwas_harmonized.csv")
 ```
 
-## Summary
+## What's in the atlas
+
+The compendium at a glance: how many loci sit on each chromosome, colored by pigmentation trait.
+The chr15 (HERC2/OCA2/SLC24A5) and chr16 (MC1R) hotspots dominate, and the eye/hair/skin balance
+is visible per region. The subtitle carries the provenance and scoring-readiness split — only the
+small Crawford core currently carries a comparable, PRS-ready effect size.
 
 ```{python}
-print("rows per source tag:")
-print(compendium["source"].value_counts().to_string())
-print(f"\nloci flagged needs_sumstats: {(compendium['needs_sumstats'].astype(str) == 'True').sum()}"
-      f" / {len(compendium)}")
-compendium.head(15)
+import plotly.graph_objects as go
+from vizhelpers import trait_category, TRAIT_COLORS, CHROM_ORDER
+
+d = compendium.copy()
+d["cat"] = d["trait"].map(trait_category)
+d["_chr"] = d["chr"].astype(str).str.strip()
+d = d[d["_chr"].isin(CHROM_ORDER)]
+present = [c for c in CHROM_ORDER if c in set(d["_chr"])]
+ct = (d.groupby(["_chr", "cat"]).size().unstack(fill_value=0)
+        .reindex(present).fillna(0))
+
+fig = go.Figure()
+for cat, color in TRAIT_COLORS.items():
+    if cat in ct.columns:
+        fig.add_trace(go.Bar(
+            y=[f"chr{c}" for c in present], x=ct[cat], name=cat, orientation="h",
+            marker_color=color, hovertemplate="chr%{y} · " + cat + ": %{x}<extra></extra>"))
+
+n = len(compendium)
+ready = int((compendium["needs_sumstats"].astype(str) == "False").sum())
+src = compendium["source"].value_counts()
+craw = int(src.get("crawford2017", 0) + src.get("crawford2017+gwas_catalog", 0))
+fig.update_layout(
+    barmode="stack",
+    title=f"Harmonized pigmentation atlas — {n} loci by chromosome and trait",
+    xaxis_title="loci", yaxis=dict(title="", autorange="reversed"),
+    template="simple_white", height=580, legend_title_text="trait",
+    margin=dict(t=84, l=64, r=16, b=48),
+)
+fig.add_annotation(
+    xref="paper", yref="paper", x=0, y=1.07, showarrow=False, align="left",
+    text=(f"{int(src.get('gwas_catalog', 0))} catalog + {craw} Crawford &nbsp;·&nbsp; "
+          f"{ready}/{n} carry a comparable β (scoring-ready); the rest need summary stats "
+          f"&nbsp;·&nbsp; chr15–16 hold the HERC2/OCA2/MC1R hotspots"),
+    font=dict(size=11, color="#666"))
+fig
 ```
+
+*Rows with a blank chromosome (7, all catalog) are omitted from the bars; every locus remains in
+`output/pigmentation_gwas_harmonized.csv`. Trait categories collapse the raw multi-label strings
+(e.g. `cutaneous melanoma, hair color` → Hair); the exact `trait` is kept per row in the CSV.*

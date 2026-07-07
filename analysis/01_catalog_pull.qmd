@@ -52,11 +52,74 @@ this cell raises (do not trust the output downstream).
 assert_anchors(cfg.axis, loci, cfg.anchors)
 ```
 
-## The loci
+## Where the signal lives — genome-wide view
+
+A Manhattan plot of every positioned locus: genomic position across the autosomes (x) against
+statistical strength `-log10(p)` (y), colored by pigmentation trait. Hover any point for the
+rsID, gene, position, trait, and exact p-value. The chr15 (HERC2/OCA2/SLC24A5) and chr16 (MC1R)
+stacks that dominate pigmentation genetics are immediately visible; the fail-loud anchors sit
+exactly where they should.
 
 ```{python}
-loci.head(20)
+import plotly.graph_objects as go
+from vizhelpers import neglog10p, trait_category, genome_layout, TRAIT_COLORS
+
+CLIP = 330  # display ceiling for -log10(p); HERC2 (~9237) etc. shown as ▲ pinned at the cap
+
+g, ticks, ticklabels = genome_layout(loci, chr_col="chr", pos_col="pos_hg38")
+g["mlogp"] = g["pvalue"].map(neglog10p)
+g = g.dropna(subset=["mlogp"]).copy()
+g["cat"] = g["mapped_trait"].map(trait_category)
+g["clipped"] = g["mlogp"] > CLIP
+g["y"] = g["mlogp"].clip(upper=CLIP)
+
+fig = go.Figure()
+
+# faint alternating chromosome bands so the eye can find each chromosome
+for i, (c, sub) in enumerate(g.groupby("_chr", observed=True)):
+    if i % 2 and len(sub):
+        fig.add_vrect(x0=sub["_x"].min(), x1=sub["_x"].max(),
+                      fillcolor="#000", opacity=0.035, line_width=0, layer="below")
+
+# one trace per trait category (drives the legend), points colored by trait
+for cat, color in TRAIT_COLORS.items():
+    sub = g[g["cat"] == cat]
+    if not len(sub):
+        continue
+    fig.add_trace(go.Scatter(
+        x=sub["_x"], y=sub["y"], mode="markers", name=cat,
+        marker=dict(color=color, size=6, opacity=0.6,
+                    symbol=["triangle-up" if c else "circle" for c in sub["clipped"]]),
+        customdata=sub[["rsid", "mapped_gene", "chr", "pos_hg38", "mapped_trait", "pvalue"]].values,
+        hovertemplate=("<b>%{customdata[0]}</b> · %{customdata[1]}"
+                       "<br>chr%{customdata[2]}:%{customdata[3]}"
+                       "<br>%{customdata[4]}<br>p = %{customdata[5]}<extra></extra>"),
+    ))
+
+fig.add_hline(y=7.30, line_dash="dash", line_color="#888",
+              annotation_text="genome-wide p = 5×10⁻⁸", annotation_position="top left")
+
+# label the canonical pigmentation loci at their real coordinates
+for rs, gene in {"rs12913832": "HERC2", "rs1426654": "SLC24A5", "rs1805007": "MC1R",
+                 "rs16891982": "SLC45A2", "rs1042602": "TYR", "rs12203592": "IRF4"}.items():
+    r = g[g["rsid"] == rs]
+    if len(r):
+        fig.add_annotation(x=r["_x"].iloc[0], y=r["y"].iloc[0], text=gene,
+                           showarrow=True, arrowhead=0, arrowwidth=0.7, ax=0, ay=-16,
+                           font=dict(size=9, color="#333"))
+
+fig.update_layout(
+    title=f"{len(g)} of {len(loci)} pigmentation loci across the genome (colored by trait)",
+    xaxis=dict(tickvals=ticks, ticktext=ticklabels, title="chromosome", showgrid=False),
+    yaxis=dict(title=f"−log10(p) · clipped at {CLIP} (▲)", zeroline=False),
+    template="simple_white", height=470, legend_title_text="trait",
+    margin=dict(t=56, l=64, r=16, b=48),
+)
+fig
 ```
+
+*Loci lacking catalog coordinates (7) are not plotted. `or_beta` is deliberately not encoded —
+this pull mixes odds ratios and betas (see workbook 2), so it would mislead as size or color.*
 
 ## Provenance (sidecar `meta.json`)
 

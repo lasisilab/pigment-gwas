@@ -55,5 +55,63 @@ craw = to_harmonized(cw, mapping, source="crawford2017",
                      source_version="2017_Table1", needs_sumstats=False)
 craw.to_csv("output/sources/crawford2017_harmonized.csv", index=False)
 print(f"{len(craw)} Crawford loci -> output/sources/crawford2017_harmonized.csv")
-craw.head(10)
 ```
+
+## Effect sizes across the African-ancestry loci
+
+Crawford codes every locus with a comparable **β** (unlike the catalog's mixed OR/β), so effect
+sizes *can* be ranked here. Each gene's **lead SNP** (most significant) is shown — the reported
+tag SNPs are only ~15 genes in tight LD, so ranking raw SNPs would double-count a locus. Marker
+size tracks significance; color is the raw **sign** of β (the sign convention is coded on the
+derived allele and is a documented review item, so it is *not* asserted as "lighter/darker").
+
+```{python}
+import plotly.graph_objects as go
+from vizhelpers import neglog10p, DIR_POS, DIR_NEG
+
+d = craw.copy()
+d["beta"] = pd.to_numeric(d["effect_size"], errors="coerce")
+d["mlogp"] = d["pvalue"].map(neglog10p)
+lead = (d.dropna(subset=["beta", "mlogp"])
+          .sort_values("mlogp", ascending=False)
+          .drop_duplicates("mapped_gene", keep="first")
+          .sort_values("beta"))
+
+fig = go.Figure()
+# lollipop stems (0 -> β) on the categorical gene axis
+sx, sy = [], []
+for _, r in lead.iterrows():
+    sx += [0, r["beta"], None]
+    sy += [r["mapped_gene"], r["mapped_gene"], None]
+fig.add_trace(go.Scatter(x=sx, y=sy, mode="lines", line=dict(color="#ccc", width=1.5),
+                         hoverinfo="skip", showlegend=False))
+fig.add_vline(x=0, line_color="#888", line_width=1)
+fig.add_trace(go.Scatter(
+    x=lead["beta"], y=lead["mapped_gene"], mode="markers",
+    marker=dict(size=(7 + 0.32 * lead["mlogp"].clip(upper=60)),
+                color=[DIR_POS if b > 0 else DIR_NEG for b in lead["beta"]],
+                line=dict(width=0.5, color="#333")),
+    customdata=lead[["rsid", "chr", "pos", "effect_allele", "other_allele", "beta", "pvalue"]].values,
+    hovertemplate=("<b>%{customdata[0]}</b> · %{y}"
+                   "<br>chr%{customdata[1]}:%{customdata[2]} (hg19)"
+                   "<br>%{customdata[3]} › %{customdata[4]}"
+                   "<br>β = %{customdata[5]:.2f} · p = %{customdata[6]}<extra></extra>"),
+    showlegend=False,
+))
+a = lead[lead["rsid"] == "rs1426654"]
+if len(a):
+    fig.add_annotation(x=a["beta"].iloc[0], y=a["mapped_gene"].iloc[0],
+                       text="rs1426654-A = light (calibration anchor)",
+                       showarrow=True, arrowhead=0, arrowwidth=0.7, ax=60, ay=0,
+                       font=dict(size=9, color="#333"))
+fig.update_layout(
+    title=f"Skin-pigmentation effect at {len(lead)} African-ancestry loci (lead SNP per gene)",
+    xaxis_title="β (Crawford melanin-index units, hg19) — sign coded on the derived allele",
+    yaxis_title="", template="simple_white", height=460,
+    margin=dict(t=56, l=100, r=40, b=64),
+)
+fig
+```
+
+*No standard errors are reported in Crawford Table 1, so these are point estimates without CIs;
+marker size is −log10(p). Sign calibration against `rs1426654` is a documented scoring TODO.*

@@ -6,3 +6,4 @@
 pandas>=2.0,<4
 requests>=2.31,<3     # live GWAS Catalog pull (scripts/gwas_catalog.py)
 jupyter>=1.0,<2       # Quarto executes the .qmd workbooks via the Jupyter kernel
+plotly>=5.0,<7        # interactive end-of-workbook visualizations (Manhattan, effect sizes)
