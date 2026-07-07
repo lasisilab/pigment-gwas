@@ -1,0 +1,3 @@
+# Test/dev dependencies — not needed to render the site, only to run `pytest`.
+-r requirements.txt
+pytest>=7,<9

@@ -74,9 +74,8 @@ def trait_category(trait):
     eye = "eye" in t
     hair = "hair" in t
     skin = any(k in t for k in (
-        "skin pigmentation", "facial pigment", "suntan", "sunburn",
-        "freckle", "sun sensit", "melanin",
-    ))
+        "skin", "facial pigment", "sun", "freckle", "melanin",
+    ))  # "skin" + "sun" cover skin pigmentation, suntan, sunburn, skin sensitivity to sun
     domains = eye + hair + skin
     if domains >= 2:
         return "Multi"
