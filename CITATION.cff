@@ -1,0 +1,41 @@
+cff-version: 1.2.0
+message: "If you use this compendium, please cite it as below, along with the underlying data sources."
+title: "pigment-gwas: a harmonized compendium of pigmentation GWAS loci (skin, eye, hair)"
+abstract: >-
+  A versioned, harmonized compendium of skin, eye, and hair pigmentation GWAS loci,
+  pulled from the NHGRI-EBI GWAS Catalog (with child traits) and key non-catalog GWAS
+  papers, standardized onto a single effect-size- and ancestry-aware schema. Built to
+  seed improved polygenic scores and HIrisPlex-S-style comparisons and to support
+  per-locus lookups.
+type: dataset
+authors:
+  - family-names: Lasisi
+    given-names: Tina
+    # orcid: "https://orcid.org/0000-0000-0000-0000"  # TODO: add ORCID
+repository-code: "https://github.com/lasisilab/pigment-gwas"
+url: "https://lasisilab.github.io/pigment-gwas/"
+license: MIT
+keywords:
+  - pigmentation
+  - skin color
+  - eye color
+  - hair color
+  - GWAS
+  - polygenic score
+  - HIrisPlex-S
+references:
+  - type: database
+    title: "NHGRI-EBI GWAS Catalog"
+    url: "https://www.ebi.ac.uk/gwas/"
+    notes: "Source of the catalog associations (download endpoint, with child traits)."
+  - type: article
+    title: "Loci associated with skin pigmentation identified in African populations"
+    authors:
+      - family-names: Crawford
+        given-names: "Nicholas G."
+    year: 2017
+    journal: "Science"
+    identifiers:
+      - type: other
+        value: "PMID:29025994"
+    notes: "Source of the crawford2017 African-ancestry loci (Table 1)."

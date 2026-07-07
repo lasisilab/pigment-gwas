@@ -95,3 +95,11 @@ No existing workbook changes — the combine globs `output/sources/*_harmonized.
 - **Full summary statistics** for the key studies (catalog sumstats FTP / paper supplements)
   for PRS-grade effect sizes and standard errors.
 - More non-catalog sources as needed (each is one workbook).
+
+See [plans/roadmap.md](plans/roadmap.md) for the full, prioritized to-do list.
+
+## License & citation
+
+Code is MIT-licensed ([LICENSE](LICENSE)). The compendium **data** is derived from the NHGRI-EBI
+GWAS Catalog and Crawford et al. 2017 — if you reuse it, cite this repo ([CITATION.cff](CITATION.cff))
+**and** those sources. See the note at the bottom of `LICENSE` for data terms.
