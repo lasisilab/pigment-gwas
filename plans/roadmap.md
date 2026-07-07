@@ -5,66 +5,45 @@ version. (Origin: lifted from `SAPPHIRE_genetics`, 2026-07-06.)
 
 ## Done
 
-- **Reproducible build** — project `.venv`, `jupyter: python3` pinned in `_quarto.yml`, deps
-  capped in `requirements.txt`, `.python-version`.
-- **Deployment** — GitHub Actions builds + deploys the site to Pages on every push to `main`
-  (`.github/workflows/publish.yml`); `docs/` is gitignored. Repo is public. Live at
-  https://lasisilab.github.io/pigment-gwas/.
-- **Scope broadened to full pigmentation** — added eye color + hair color roots (440 → 1072
-  catalog loci; Output B 492 → 1124), MC1R red-hair anchor. (HIrisPlex-S scope: skin+eye+hair.)
-- **Visualizations** — each workbook ends in an interactive Plotly view (catalog Manhattan,
-  Crawford effect-size lollipop, compendium composition) via `scripts/vizhelpers.py`.
+- **Reproducible build** — project `.venv`, `jupyter: python3` pinned, deps capped, `.python-version`.
+- **Deployment** — GitHub Actions builds + deploys to Pages on every push to `main`; `docs/`
+  gitignored; repo public. Live at https://lasisilab.github.io/pigment-gwas/.
+- **Scope broadened to full pigmentation** — eye + hair color roots added (catalog 440 → 1072),
+  MC1R red-hair anchor.
+- **Visualizations** — an interactive Plotly view per workbook (catalog Manhattan, Crawford
+  effect-size lollipop, compendium composition, HIrisPlex-S coverage) via `scripts/vizhelpers.py`.
 - **License + citation** — MIT (`LICENSE`) + `CITATION.cff`.
+- **Widened catalog pull** — `tidy()` recovers effect units (OR vs β, from the 95% CI), a
+  CI-derived standard error, and discovery ancestry + N. Scoring-ready loci: **56 → 484 / 1124**;
+  ancestry 56 → 894; SE 0 → 610. (OR/β is inferred from the CI convention — spot-check for
+  high-stakes scoring.)
+- **Tests + CI gate** — `pytest` suite in `tests/`, run as a required job before deploy.
+- **HIrisPlex-S reference panel** — the 41-SNP forensic eye/hair/skin predictor added as a source
+  (`analysis/sources/hirisplex_s.qmd`); **26/41 already in the atlas**, 15 added as reference rows.
 
-## 1. Widen the catalog pull  ← highest priority for PRS / HIrisPlex-S
+## 1. Full summary statistics for the remaining loci  ← now the biggest lever
 
-Still the biggest lever: **1068 / 1124 loci are flagged `needs_sumstats`** (not scoring-ready),
-because the pull drops fields a polygenic score needs. Today `standard_error` and `sample_size`
-are 0/1124, `ancestry` is populated only for the 56 Crawford rows, and 252 catalog rows have an
-unknown effect allele (`risk_allele = "?"`). In `scripts/gwas_catalog.py`, extend `tidy()` to keep
-columns it currently discards from the GWAS Catalog association download:
+~640 / 1139 loci still carry `needs_sumstats = True` — catalog rows without a usable CI or
+recorded ancestry. For the key studies, pull full summary statistics (GWAS Catalog sumstats FTP /
+paper supplements) for proper per-SNP effect sizes + SE, and fold them in as sources. Also
+spot-check the heuristic OR-vs-β classification from the widened pull against reported units.
 
-- **`INITIAL SAMPLE SIZE` / `REPLICATION SAMPLE SIZE`** → parse ancestry label(s) + N →
-  populate `ancestry` and `sample_size`.
-- **`95% CI (TEXT)`** → keep the raw text (today read only for increase/decrease direction, then
-  thrown away) → recover SE and the effect unit.
-- **`OR or BETA` + the CI unit text** → set `effect_type` to `OR` vs `beta` instead of
-  `"unknown"`, so odds ratios and linear betas are never mixed in a score.
-- Improve the `STRONGEST SNP-RISK ALLELE` parse so fewer effect alleles come through as `?`.
+## 2. More non-catalog sources
 
-Then: add the new fields to `TIDY_COLS`, update the catalog mapping in `analysis/02_combine.qmd`,
-re-pull with `--refresh`, and drop `needs_sumstats` for catalog rows that now have trustworthy
-effect units + ancestry. Update the composition viz "scoring-ready" count as it improves.
+One workbook per source under `analysis/sources/`, each writing `output/sources/<name>_harmonized.csv`;
+add the tag to `PRECEDENCE` in `analysis/02_combine.qmd` (the combine globs them in automatically).
+Candidates: other African / underrepresented-ancestry pigmentation GWAS; the HIrisPlex-S model
+weights (to go from panel membership to actual prediction).
 
-## 2. Tests + CI gate
+## 3. Crawford raw table
 
-No tests exist yet. Add a `pytest` suite for the easy-to-break bits — `vizhelpers.neglog10p`
-(string underflow: HERC2 `2E-9237`), `trait_category`, `harmonize.combine` (precedence +
-provenance join + dedup), `to_harmonized` (column contract), `assert_anchors` — and run it as a
-job that must pass before the Actions deploy.
+`data/sources/crawford2017_table1.tsv` was **reconstructed** from SAPPHIRE's committed union. If the
+original is recovered, swap it in and re-run `analysis/sources/crawford2017.qmd`. Also revisit the
+sign/direction calibration (calibrate against `rs1426654`-A = light).
 
-## 3. HIrisPlex-S comparison + more sources
+## 4. Smaller / open
 
-Add sources under `analysis/sources/`, each writing `output/sources/<name>_harmonized.csv`; add the
-tag to `PRECEDENCE` in `analysis/02_combine.qmd` (the combine globs them in automatically).
-Priority candidate: the **HIrisPlex-S SNP model** (Chaitanya et al. 2018) as a reference set, then
-show overlap with the atlas. Also: other African / underrepresented-ancestry pigmentation GWAS.
-
-## 4. Full summary statistics (where the catalog isn't enough)
-
-For key studies, pull full sumstats (GWAS Catalog sumstats FTP / paper supplements) for proper
-per-SNP effect sizes + SE. Fold in as a source (see §3).
-
-## 5. Crawford raw table
-
-`data/sources/crawford2017_table1.tsv` was **reconstructed** from SAPPHIRE's committed union (the
-original transcribed TSV was gitignored and not on disk). If the original is recovered, swap it in
-and re-run `analysis/sources/crawford2017.qmd`. Also revisit the sign/direction calibration
-(Crawford codes one allele/beta convention; calibrate against `rs1426654`-A = light).
-
-## 6. Smaller / open
-
-- **Melanoma-comorbid rows** — 45 loci come in under `"cutaneous melanoma, hair color"` and are
-  currently kept as hair-color signal; revisit whether to exclude.
-- **Freshness** — a scheduled CI `--refresh` drift-check that opens an issue if the catalog grew,
-  so the atlas doesn't silently drift out of date.
+- **Melanoma-comorbid rows** — 45 loci under `"cutaneous melanoma, hair color"` are kept as
+  hair-color signal; revisit whether to exclude.
+- **Freshness** — a scheduled CI `--refresh` drift-check that opens an issue if the catalog grew.
+- **ORCID** in `CITATION.cff` (currently a placeholder).

@@ -88,7 +88,7 @@ frames = [catalog]
 for f in sorted(glob.glob("output/sources/*_harmonized.csv")):
     frames.append(pd.read_csv(f, dtype=str, keep_default_na=False)[HARMONIZED_COLS])
 
-PRECEDENCE = ["crawford2017", "gwas_catalog"]   # earlier = wins a shared rsID
+PRECEDENCE = ["crawford2017", "gwas_catalog", "hirisplex_s"]   # earlier = wins a shared rsID
 compendium = combine(frames, precedence=PRECEDENCE)
 compendium.to_csv("output/pigmentation_gwas_harmonized.csv", index=False)
 print(f"{len(compendium)} unique loci -> output/pigmentation_gwas_harmonized.csv")

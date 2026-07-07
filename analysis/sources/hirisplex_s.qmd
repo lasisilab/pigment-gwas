@@ -1,0 +1,90 @@
+---
+title: "Source · HIrisPlex-S (reference SNP panel)"
+subtitle: "The 41-SNP forensic eye/hair/skin colour predictor (Chaitanya et al. 2018)"
+---
+
+## Why this source
+
+HIrisPlex-S (Chaitanya et al. 2018, *Forensic Science International: Genetics*) is the standard
+forensic DNA system for predicting **eye, hair, and skin** colour — 41 SNPs across two multiplex
+assays (24 eye/hair + 17 skin). It is a curated **predictive panel, not a GWAS**: it carries no
+per-SNP effect sizes here, so these rows are `needs_sumstats = True`. It's included as a
+**reference set** so you can ask *"which of the canonical prediction loci does this compendium
+cover?"* — a face-validity check for the atlas and a bridge toward scoring. rsID is the join key;
+for a SNP shared with the atlas, the GWAS row is kept and `+hirisplex_s` is recorded in `source`.
+
+```{python}
+import sys
+sys.path.insert(0, "scripts")
+import pandas as pd
+from harmonize import to_harmonized, const
+
+hps = pd.read_csv("data/sources/hirisplex_s_snps.tsv", sep="\t",
+                  dtype=str, keep_default_na=False)
+
+mapping = {
+    "rsid":        "rsid",
+    "effect_type": const("unknown"),
+    "trait":       lambda df: "HIrisPlex-S (" + df["panel"] + ")",
+    "mapped_gene": "gene",
+}
+ref = to_harmonized(hps, mapping, source="hirisplex_s",
+                    source_version="Chaitanya2018", needs_sumstats=True)
+ref.to_csv("output/sources/hirisplex_s_harmonized.csv", index=False)
+print(f"{len(ref)} HIrisPlex-S SNPs "
+      f"({(hps['panel'] == 'eye/hair').sum()} eye/hair + {(hps['panel'] == 'skin').sum()} skin) "
+      f"-> output/sources/hirisplex_s_harmonized.csv")
+```
+
+## How much of HIrisPlex-S does the compendium already cover?
+
+Compared against the catalog pull (Output A) plus the Crawford source — the GWAS-derived loci.
+
+```{python}
+import glob
+
+captured = set(pd.read_csv("output/catalog/pigmentation_gwas_catalog.csv",
+                           dtype=str, keep_default_na=False)["rsid"])
+for f in glob.glob("output/sources/*_harmonized.csv"):
+    if "hirisplex" in f:
+        continue
+    captured |= set(pd.read_csv(f, dtype=str, keep_default_na=False)["rsid"])
+
+hps = hps.copy()
+hps["in_atlas"] = hps["rsid"].isin(captured)
+n_in = int(hps["in_atlas"].sum())
+print(f"{n_in} / {len(hps)} HIrisPlex-S SNPs are already in the pigment-gwas atlas")
+missing = hps[~hps["in_atlas"]]
+if len(missing):
+    print("\nnot captured (added to the compendium as reference-only rows):")
+    print(missing[["rsid", "gene", "panel"]].to_string(index=False))
+```
+
+## Coverage by panel
+
+```{python}
+import plotly.graph_objects as go
+
+ct = hps.groupby(["panel", "in_atlas"]).size().unstack(fill_value=0)
+panels = list(ct.index)
+fig = go.Figure()
+if True in ct.columns:
+    fig.add_trace(go.Bar(y=panels, x=ct[True], name="in atlas", orientation="h",
+                         marker_color="#55A868",
+                         hovertemplate="%{y}: %{x} in atlas<extra></extra>"))
+if False in ct.columns:
+    fig.add_trace(go.Bar(y=panels, x=ct[False], name="not captured", orientation="h",
+                         marker_color="#C44E52",
+                         hovertemplate="%{y}: %{x} not captured<extra></extra>"))
+fig.update_layout(
+    barmode="stack",
+    title=f"HIrisPlex-S coverage by the pigment-gwas atlas — {n_in}/{len(hps)} SNPs",
+    xaxis_title="SNPs", yaxis=dict(title="", autorange="reversed"),
+    template="simple_white", height=260, legend_title_text="",
+    margin=dict(t=56, l=80, r=16, b=40))
+fig
+```
+
+*The 41 SNPs are transcribed from Chaitanya et al. 2018 (the two multiplex assays: 24 eye/hair +
+17 skin). This is a membership/reference panel — no effect sizes — so every row keeps
+`needs_sumstats = True` and does not compete on precedence with the GWAS sources.*

@@ -85,6 +85,7 @@ No existing workbook changes — the combine globs `output/sources/*_harmonized.
 |---|---|---|---|---|
 | NHGRI-EBI GWAS Catalog | `gwas_catalog` | hg38 | mixed (per study) | trait-root pull with child traits; `needs_sumstats` flagged |
 | Crawford et al. 2017 (PMID 29025994) | `crawford2017` | hg19 | African | Table 1; effect on the derived allele; not in the catalog |
+| HIrisPlex-S (Chaitanya et al. 2018) | `hirisplex_s` | — | multi | 41-SNP forensic eye/hair/skin predictor; reference panel (no effect sizes), for coverage comparison |
 
 ## Roadmap (known limitations, made explicit)
 

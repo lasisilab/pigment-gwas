@@ -6,6 +6,7 @@ project:
     - index.qmd
     - analysis/01_catalog_pull.qmd
     - analysis/sources/crawford2017.qmd
+    - analysis/sources/hirisplex_s.qmd
     - analysis/02_combine.qmd
   resources:
     - .nojekyll             # ship the GitHub Pages marker into docs/ on every render
@@ -28,6 +29,8 @@ website:
         menu:
           - text: "Crawford 2017"
             file: analysis/sources/crawford2017.qmd
+          - text: "HIrisPlex-S panel"
+            file: analysis/sources/hirisplex_s.qmd
       - text: "2 · Combine"
         file: analysis/02_combine.qmd
 

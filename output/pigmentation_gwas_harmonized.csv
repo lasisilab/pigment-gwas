@@ -6,6 +6,21 @@ rs34872037,,,hg38,TTAAC,,0.374529,beta,0.330498,0.056123,[0.22-0.44] unit increa
 rs11300391,,,hg38,TA,,0.357,beta,0.532,0.096941,[0.34-0.72] unit increase,6E-8,eye colour measurement,South Asian,329,,30895295,GCST007741,gwas_catalog,2026-07-07T03:48:29Z,False
 rs5777535,,,hg38,TA,,0.558734,beta,0.629542,0.13266,[0.37-0.89] unit increase,4E-6,eye colour measurement,South Asian,329,,30895295,GCST007743,gwas_catalog,2026-07-07T03:48:29Z,False
 rs58656588,,,hg38,TTG,,0.242,beta,0.474,0.10459,[0.27-0.68] unit decrease,9E-6,eye colour measurement,South Asian,329,,30895295,GCST007741,gwas_catalog,2026-07-07T03:48:29Z,False
+rs312262906,,,,,,,unknown,,,,,HIrisPlex-S (eye/hair),,,MC1R,,,hirisplex_s,Chaitanya2018,True
+rs2378249,,,,,,,unknown,,,,,HIrisPlex-S (eye/hair),,,PIGU,,,hirisplex_s,Chaitanya2018,True
+rs2402130,,,,,,,unknown,,,,,HIrisPlex-S (eye/hair),,,SLC24A4,,,hirisplex_s,Chaitanya2018,True
+rs683,,,,,,,unknown,,,,,HIrisPlex-S (eye/hair),,,TYRP1,,,hirisplex_s,Chaitanya2018,True
+rs4959270,,,,,,,unknown,,,,,HIrisPlex-S (eye/hair),,,EXOC2,,,hirisplex_s,Chaitanya2018,True
+rs10756819,,,,,,,unknown,,,,,HIrisPlex-S (skin),,,BNC2,,,hirisplex_s,Chaitanya2018,True
+rs2238289,,,,,,,unknown,,,,,HIrisPlex-S (skin),,,HERC2,,,hirisplex_s,Chaitanya2018,True
+rs17128291,,,,,,,unknown,,,,,HIrisPlex-S (skin),,,SLC24A4,,,hirisplex_s,Chaitanya2018,True
+rs6497292,,,,,,,unknown,,,,,HIrisPlex-S (skin),,,HERC2,,,hirisplex_s,Chaitanya2018,True
+rs1470608,,,,,,,unknown,,,,,HIrisPlex-S (skin),,,OCA2,,,hirisplex_s,Chaitanya2018,True
+rs6119471,,,,,,,unknown,,,,,HIrisPlex-S (skin),,,ASIP,,,hirisplex_s,Chaitanya2018,True
+rs1545397,,,,,,,unknown,,,,,HIrisPlex-S (skin),,,OCA2,,,hirisplex_s,Chaitanya2018,True
+rs12441727,,,,,,,unknown,,,,,HIrisPlex-S (skin),,,OCA2,,,hirisplex_s,Chaitanya2018,True
+rs3212355,,,,,,,unknown,,,,,HIrisPlex-S (skin),,,MC1R,,,hirisplex_s,Chaitanya2018,True
+rs8051733,,,,,,,unknown,,,,,HIrisPlex-S (skin),,,DEF8,,,hirisplex_s,Chaitanya2018,True
 rs6687430,1,10573188,hg38,G,,0.4588,unknown,1.045,,NR,1E-8,hair color,British,323317,PEX14,30531825,GCST006988,gwas_catalog,2026-07-07T03:48:29Z,True
 rs569438828,1,109511287,hg38,A,,0.295,beta,0.451,0.096941,[0.26-0.64] unit increase,3E-6,eye colour measurement,South Asian,329,AMIGO1 - GPR61,30895295,GCST007742,gwas_catalog,2026-07-07T03:48:29Z,False
 rs112115136,1,10977377,hg38,A,,0.2198,unknown,1.119,,NR,7E-36,hair color,British,323317,CIROZ,30531825,GCST006988,gwas_catalog,2026-07-07T03:48:29Z,True
@@ -175,11 +190,11 @@ rs111258505,11,89012759,hg38,?,,NR,unknown,,,,2E-11,sunburn,European,344000,GRM5
 rs34749698,11,89066563,hg38,C,,NR,beta,0.188,0.043368,[0.1-0.27] unit increase,4E-82,suntan,European,176678,GRM5 - TYR,29739929,GCST005897,gwas_catalog,2026-07-07T03:48:29Z,False
 rs2187128,11,89146747,hg38,T,,0.125176,beta,0.142788,0.02398,[0.096-0.19] unit decrease,2E-9,skin pigmentation,,4985,GRM5 - TYR,36672889,GCST90255690,gwas_catalog,2026-07-07T03:48:29Z,True
 rs190581995,11,89154050,hg38,?,,NR,unknown,,,,2E-9,sunburn,European,344000,GRM5 - TYR,30595370,GCST007086,gwas_catalog,2026-07-07T03:48:29Z,True
-rs1042602,11,89178528,hg38,A,,0.3674,unknown,1.325,,NR,2E-200,hair color,British,323317,TYR,30531825,GCST006988,gwas_catalog,2026-07-07T03:48:29Z,True
+rs1042602,11,89178528,hg38,A,,0.3674,unknown,1.325,,NR,2E-200,hair color,British,323317,TYR,30531825,GCST006988,gwas_catalog+hirisplex_s,2026-07-07T03:48:29Z,True
 rs7116973,11,89213898,hg38,A,,0.125426,beta,0.144741,0.025,[0.096-0.194] unit decrease,7E-9,skin pigmentation,,4985,TYR,36672889,GCST90255690,gwas_catalog,2026-07-07T03:48:29Z,True
 rs1847134,11,89272085,hg38,A,,0.68,unknown,1.58,,[NR],1E-15,eye color,European,9126,TYR,20585627,GCST000710,gwas_catalog,2026-07-07T03:48:29Z,True
-rs1393350,11,89277878,hg38,A,,0.289,unknown,1.16,,NR,3E-71,hair color,British,323317,TYR,30531825,GCST006988,gwas_catalog,2026-07-07T03:48:29Z,True
-rs1126809,11,89284793,hg38,?,,NR,unknown,,,,4E-280,sunburn,European,344000,TYR,30595370,GCST007086,gwas_catalog,2026-07-07T03:48:29Z,True
+rs1393350,11,89277878,hg38,A,,0.289,unknown,1.16,,NR,3E-71,hair color,British,323317,TYR,30531825,GCST006988,gwas_catalog+hirisplex_s,2026-07-07T03:48:29Z,True
+rs1126809,11,89284793,hg38,?,,NR,unknown,,,,4E-280,sunburn,European,344000,TYR,30595370,GCST007086,gwas_catalog+hirisplex_s,2026-07-07T03:48:29Z,True
 rs369896246,11,89322393,hg38,A,,0.152477,beta,2.81651,0.40052,[2.03-3.6] unit increase,2E-12,skin pigmentation,,4933,TYR - NOX4,36672889,GCST90255688,gwas_catalog,2026-07-07T03:48:29Z,True
 rs142893386,11,89452293,hg38,?,,NR,unknown,,,,2E-9,sunburn,European,344000,NOX4,30595370,GCST007086,gwas_catalog,2026-07-07T03:48:29Z,True
 rs11018623,11,89464544,hg38,C,,NR,beta,0.085,0.027041,[0.032-0.138] unit increase,3E-23,suntan,European,176678,NOX4,29739929,GCST005897,gwas_catalog,2026-07-07T03:48:29Z,False
@@ -221,7 +236,7 @@ rs35618688,12,88546380,hg38,A,,0.06058,unknown,1.113,,NR,1E-8,hair color,British
 rs1907703,12,88561865,hg38,?,,NR,unknown,1.1227125,,NR,2E-24,hair color,British,323317,KITLG,30531825,GCST006988,gwas_catalog,2026-07-07T03:48:29Z,True
 rs2639099,12,88614587,hg38,T,,NR,beta,0.106,0.043878,[0.02-0.192] unit increase,4E-9,suntan,European,176678,RNU1-117P - LINC02458,29739929,GCST005897,gwas_catalog,2026-07-07T03:48:29Z,False
 rs72620727,12,88716633,hg38,C,,0.384,beta,0.28,,unit decrease,1E-23,facial pigmentation,Korean,17019,RNU1-117P - LINC02458,34648798,GCST90020056,gwas_catalog,2026-07-07T03:48:29Z,False
-rs12821256,12,88934558,hg38,C,,0.1194,unknown,1.659,,NR,2E-308,hair color,British,323317,RNU1-117P - LINC02458,30531825,GCST006988,gwas_catalog,2026-07-07T03:48:29Z,True
+rs12821256,12,88934558,hg38,C,,0.1194,unknown,1.659,,NR,2E-308,hair color,British,323317,RNU1-117P - LINC02458,30531825,GCST006988,gwas_catalog+hirisplex_s,2026-07-07T03:48:29Z,True
 rs12298351,12,88946335,hg38,?,,NR,unknown,1.1686339,,NR,2E-11,hair color,British,323317,RNU1-117P - LINC02458,30531825,GCST006988,gwas_catalog,2026-07-07T03:48:29Z,True
 rs3213737,12,95986028,hg38,?,,NR,unknown,,,,3E-48,sunburn,European,344000,HAL,30595370,GCST007086,gwas_catalog,2026-07-07T03:48:29Z,True
 rs249625,12,97791470,hg38,G,,0.583626,beta,0.36429,0.076532,[0.21-0.51] unit decrease,3E-6,eye color,East Asian,377,PAFAH1B2P2,29109912,GCST005094,gwas_catalog,2026-07-07T03:48:29Z,False
@@ -258,7 +273,7 @@ rs11625064,14,68760214,hg38,T,,0.633616,unknown,,,,2E-19,"cutaneous melanoma, ha
 rs72731537,14,68771208,hg38,?,,NR,unknown,1.0736526,,NR,7E-12,hair color,British,323317,RNU6-921P - ZFP36L1,30531825,GCST006988,gwas_catalog,2026-07-07T03:48:29Z,True
 rs57461245,14,88749001,hg38,GA,,0.0112958,beta,2.57058,0.46174,[1.67-3.48] unit increase,3E-8,hair color,,4979,EML5,36672889,GCST90255681,gwas_catalog,2026-07-07T03:48:29Z,True
 rs75433889,14,92259950,hg38,T,,0.06872,unknown,1.109,,NR,9E-13,hair color,British,323317,CPSF2 - RNU6-366P,30531825,GCST006988,gwas_catalog,2026-07-07T03:48:29Z,True
-rs12896399,14,92307319,hg38,T,,0.44,OR,2.56,0.096113,[2.12-3.09],1E-48,hair color,"Icelandic, European",6918,RNU6-366P - SLC24A4,17952075,GCST000118,gwas_catalog,2026-07-07T03:48:29Z,False
+rs12896399,14,92307319,hg38,T,,0.44,OR,2.56,0.096113,[2.12-3.09],1E-48,hair color,"Icelandic, European",6918,RNU6-366P - SLC24A4,17952075,GCST000118,gwas_catalog+hirisplex_s,2026-07-07T03:48:29Z,False
 rs12896471,14,92307559,hg38,C,,NR,beta,0.476792,0.040817,[0.4-0.56] decrease,1E-30,hair color,European,12398,RNU6-366P - SLC24A4,34737440,GCST90095476,gwas_catalog,2026-07-07T03:48:29Z,False
 rs941799,14,92310481,hg38,T,,0.4533,unknown,1.662,,NR,2E-308,hair color,British,323317,RNU6-366P - SLC24A4,30531825,GCST006988,gwas_catalog,2026-07-07T03:48:29Z,True
 rs1885194,14,92311118,hg38,C,,NR,beta,0.061,0.02296,[0.016-0.106] unit increase,1E-12,suntan,European,176678,RNU6-366P - SLC24A4,29739929,GCST005897,gwas_catalog,2026-07-07T03:48:29Z,False
@@ -285,7 +300,7 @@ rs1448489,15,27934733,hg38,C,,0.05553,unknown,1.205,,NR,2E-11,hair color,British
 rs7169225,15,27943858,hg38,G,,0.2731,unknown,1.147,,NR,4E-9,hair color,British,283920,OCA2,30531825,GCST006989,gwas_catalog,2026-07-07T03:48:29Z,True
 rs76930569,15,27950999,hg38,T,,0.623,beta,0.526823,0.073981,[0.38-0.67] unit increase,5E-12,eye color,East Asian,377,OCA2,29109912,GCST005096,gwas_catalog,2026-07-07T03:48:29Z,False
 rs7173419,15,27951675,hg38,T,,NR,beta,0.33,0.061226,[0.21-0.45] unit increase,1E-7,eye color,European,6367,OCA2,23548203,GCST001929,gwas_catalog,2026-07-07T03:48:29Z,False
-rs1800414,15,27951891,hg38,?,,NR,beta,0.16,0.025511,[0.11-0.21] unit increase,1E-12,skin pigmentation,East Asian,2424,OCA2,40010489,GCST90502784,gwas_catalog,2026-07-07T03:48:29Z,True
+rs1800414,15,27951891,hg38,?,,NR,beta,0.16,0.025511,[0.11-0.21] unit increase,1E-12,skin pigmentation,East Asian,2424,OCA2,40010489,GCST90502784,gwas_catalog+hirisplex_s,2026-07-07T03:48:29Z,True
 rs7170989,15,27955262,hg38,T,,NR,beta,0.29718,0.04847,[0.2-0.39] decrease,7E-10,hair color,European,12398,OCA2,34737440,GCST90095476,gwas_catalog,2026-07-07T03:48:29Z,False
 rs4778218,15,27966612,hg38,G,,0.834,beta,0.520119,0.010204,[0.5-0.54] unit decrease,1E-582,eye color,"European, Han Chinese, Indian",194622,OCA2,33692100,GCST012219,gwas_catalog,2026-07-07T03:48:29Z,False
 rs4778219,15,27968704,hg38,?,,NR,unknown,,,,4E-11,eye colour measurement,Latin American,6236,OCA2,30664655,GCST007455,gwas_catalog,2026-07-07T03:48:29Z,True
@@ -293,7 +308,7 @@ rs72625132,15,27968778,hg38,C,,0.1125,unknown,1.225,,NR,2E-49,hair color,British
 rs121918170,15,27983383,hg38,C,,0.001026,unknown,6.071,,NR,1E-107,hair color,British,323317,OCA2,30531825,GCST006988,gwas_catalog,2026-07-07T03:48:29Z,True
 rs74653330,15,27983407,hg38,T,,6.52E-4,unknown,9.295,,NR,3E-84,hair color,British,323317,OCA2,30531825,GCST006988,gwas_catalog,2026-07-07T03:48:29Z,True
 rs121918166,15,27985101,hg38,T,,0.009077,unknown,5.937,,NR,2E-308,hair color,British,323317,OCA2,30531825,GCST006988,gwas_catalog,2026-07-07T03:48:29Z,True
-rs1800407,15,27985172,hg38,T,,0.08538,unknown,1.399,,NR,2E-81,hair color,British,323317,OCA2,30531825,GCST006988,gwas_catalog,2026-07-07T03:48:29Z,True
+rs1800407,15,27985172,hg38,T,,0.08538,unknown,1.399,,NR,2E-81,hair color,British,323317,OCA2,30531825,GCST006988,gwas_catalog+hirisplex_s,2026-07-07T03:48:29Z,True
 rs117886461,15,27985232,hg38,?,,NR,unknown,,,,7E-25,sunburn,European,344000,OCA2,30595370,GCST007086,gwas_catalog,2026-07-07T03:48:29Z,True
 rs112244493,15,27987591,hg38,G,,0.313,beta,0.263,0.030613,[0.2-0.32] unit increase,7E-18,eye color,Japanese,1108,OCA2,34265127,GCST90026489,gwas_catalog,2026-07-07T03:48:29Z,False
 rs201911192,15,27988503,hg38,CA,,0.0526245,beta,0.326055,0.051021,[0.23-0.43] unit increase,2E-10,eye color,,4987,OCA2,36672889,GCST90255684,gwas_catalog,2026-07-07T03:48:29Z,True
@@ -337,11 +352,11 @@ rs111593432,15,28102882,hg38,G,,0.0115106,beta,0.688656,0.10714,[0.48-0.9] unit 
 rs115000158,15,28105536,hg38,A,,0.0339946,beta,0.523761,0.068879,[0.39-0.66] unit increase,1E-13,eye color,,4987,OCA2 - HERC2,36672889,GCST90255684,gwas_catalog,2026-07-07T03:48:29Z,True
 rs150763518,15,28106230,hg38,G,,0.194486,beta,0.385548,0.028062,[0.33-0.44] unit increase,2E-43,eye color,,4987,OCA2 - HERC2,36672889,GCST90255684,gwas_catalog,2026-07-07T03:48:29Z,True
 rs62007494,15,28106271,hg38,T,,0.156859,beta,1.23093,0.20919,[0.82-1.64] unit decrease,3E-9,hair color,,4945,OCA2 - HERC2,36672889,GCST90255682,gwas_catalog,2026-07-07T03:48:29Z,True
-rs1129038,15,28111713,hg38,T,,0.361239,beta,0.982798,0.017857,[0.95-1.02] unit decrease,1E-523,eye color,,4987,HERC2,36672889,GCST90255684,gwas_catalog,2026-07-07T03:48:29Z,True
+rs1129038,15,28111713,hg38,T,,0.361239,beta,0.982798,0.017857,[0.95-1.02] unit decrease,1E-523,eye color,,4987,HERC2,36672889,GCST90255684,gwas_catalog+hirisplex_s,2026-07-07T03:48:29Z,True
 rs11365574,15,28116223,hg38,CT,,0.0663086,beta,0.541993,0.045919,[0.45-0.63] unit increase,2E-30,eye color,,4987,HERC2,36672889,GCST90255684,gwas_catalog,2026-07-07T03:48:29Z,True
 rs116879078,15,28118342,hg38,T,,0.0485448,beta,0.426668,0.058675,[0.31-0.54] unit increase,1E-12,eye color,,4987,HERC2,36672889,GCST90255684,gwas_catalog,2026-07-07T03:48:29Z,True
 rs7494942,15,28118913,hg38,A,,0.401082,beta,0.626421,0.020409,[0.59-0.67] unit increase,4E-186,eye color,,4987,HERC2,36672889,GCST90255684,gwas_catalog,2026-07-07T03:48:29Z,True
-rs12913832,15,28120472,hg38,A,,0.334986,unknown,,,,2E-9237,"cutaneous melanoma, hair color",European,764610,HERC2,32341527,GCST010302,gwas_catalog,2026-07-07T03:48:29Z,True
+rs12913832,15,28120472,hg38,A,,0.334986,unknown,,,,2E-9237,"cutaneous melanoma, hair color",European,764610,HERC2,32341527,GCST010302,gwas_catalog+hirisplex_s,2026-07-07T03:48:29Z,True
 rs75165924,15,28135112,hg38,T,,0.04666,unknown,1.41,,NR,3E-21,hair color,British,323317,HERC2,30531825,GCST006988,gwas_catalog,2026-07-07T03:48:29Z,True
 rs4778249,15,28135372,hg38,?,,NR,unknown,,,,6E-21,"eye colour measurement, strand of hair color, skin pigmentation",Latin American,6236,HERC2,30664655,GCST007451,gwas_catalog,2026-07-07T03:48:29Z,True
 rs8033755,15,28136400,hg38,C,,0.0268589,beta,0.674277,0.073981,[0.53-0.82] unit increase,1E-20,eye color,,4987,HERC2,36672889,GCST90255684,gwas_catalog,2026-07-07T03:48:29Z,True
@@ -383,7 +398,7 @@ rs79097182,15,28266851,hg38,?,,0.038,OR,2.9822,0.048081,[2.70-3.26],2E-14,hair c
 rs117201485,15,28268158,hg38,A,,0.0640375,beta,0.211577,0.030613,[0.15-0.27] unit increase,4E-11,skin pigmentation,,4933,HERC2,36672889,GCST90255689,gwas_catalog,2026-07-07T03:48:29Z,True
 rs916977,15,28268218,hg38,T,,NR,beta,0.997855,0.056123,[0.89-1.11] decrease,1E-72,hair color,European,12398,HERC2,34737440,GCST90095476,gwas_catalog,2026-07-07T03:48:29Z,False
 rs748125345,15,28279615,hg38,CCACACACACA,,0.0337012,beta,0.60715,0.07143,[0.47-0.75] unit increase,2E-17,eye color,,4987,HERC2,36672889,GCST90255684,gwas_catalog,2026-07-07T03:48:29Z,True
-rs1667394,15,28285036,hg38,A,,0.88,OR,29.43,0.16096,[21.47-40.35],1E-241,eye color,"Icelandic, European",6918,HERC2,17952075,GCST000120,gwas_catalog,2026-07-07T03:48:29Z,False
+rs1667394,15,28285036,hg38,A,,0.88,OR,29.43,0.16096,[21.47-40.35],1E-241,eye color,"Icelandic, European",6918,HERC2,17952075,GCST000120,gwas_catalog+hirisplex_s,2026-07-07T03:48:29Z,False
 rs1667392,15,28288419,hg38,?,,NR,beta,0.1983,0.030613,[0.14-0.26] unit decrease,1E-11,"Abnormal skin pigmentation, suntan",,4988,HERC2,30166351,GCST007488,gwas_catalog,2026-07-07T03:48:29Z,True
 rs1449123735,15,28288722,hg38,T,,0.053031,beta,0.334497,0.053572,[0.23-0.44] unit increase,6E-10,eye color,,4987,HERC2,36672889,GCST90255684,gwas_catalog,2026-07-07T03:48:29Z,True
 rs111458470,15,28289408,hg38,A,,0.419266,beta,0.581791,0.020409,[0.54-0.62] unit increase,3E-145,eye color,,4987,HERC2,36672889,GCST90255684,gwas_catalog,2026-07-07T03:48:29Z,True
@@ -426,7 +441,7 @@ rs11636073,15,48246829,hg38,T,,NR,beta,0.354282,0.061226,[0.23-0.47] unit decrea
 rs17430375,15,48369245,hg38,C,,NR,beta,0.898858,0.16582,[0.57-1.22] unit decrease,6E-8,skin pigmentation,South Asian,720,DUT - FBN1,30895295,GCST007739,gwas_catalog,2026-07-07T03:48:29Z,False
 rs1834640,15,48392165,hg19,A,G,,beta,7.56,,,3.2e-61,skin pigmentation (Crawford 2017 Table 1),African (Crawford et al. 2017 discovery cohorts),,SLC24A5,29025994,,crawford2017,2017_Table1,False
 rs2675345,15,48400199,hg19,A,G,,beta,7.62,,,6.7e-61,skin pigmentation (Crawford 2017 Table 1),African (Crawford et al. 2017 discovery cohorts),,SLC24A5,29025994,,crawford2017+gwas_catalog,2017_Table1,False
-rs1426654,15,48426484,hg19,A,G,,beta,7.69,,,5.5e-62,skin pigmentation (Crawford 2017 Table 1),African (Crawford et al. 2017 discovery cohorts),,SLC24A5,29025994,,crawford2017+gwas_catalog,2017_Table1,False
+rs1426654,15,48426484,hg19,A,G,,beta,7.69,,,5.5e-62,skin pigmentation (Crawford 2017 Table 1),African (Crawford et al. 2017 discovery cohorts),,SLC24A5,29025994,,crawford2017+gwas_catalog+hirisplex_s,2017_Table1,False
 rs8028919,15,48460188,hg19,A,G,,beta,-4.95,,,5.0e-32,skin pigmentation (Crawford 2017 Table 1),African (Crawford et al. 2017 discovery cohorts),,MYEF2,29025994,,crawford2017,2017_Table1,False
 rs16960981,15,48472745,hg38,G,,NR,beta,0.506585,0.096941,[0.32-0.7] unit increase,2E-7,skin pigmentation,South Asian,720,FBN1,30895295,GCST007739,gwas_catalog,2026-07-07T03:48:29Z,False
 rs2413887,15,48485926,hg19,C,T,,beta,7.70,,,4.9e-62,skin pigmentation (Crawford 2017 Table 1),African (Crawford et al. 2017 discovery cohorts),,CTXN2,29025994,,crawford2017,2017_Table1,False
@@ -467,7 +482,7 @@ rs35561531,16,89118767,hg38,?,,NR,unknown,,,,2E-38,sunburn,European,344000,ACSF3
 rs117156175,16,89168993,hg38,T,,NR,beta,0.671,0.12755,[0.42-0.92] unit increase,1E-173,suntan,European,176678,LINC02138,29739929,GCST005897,gwas_catalog,2026-07-07T03:48:29Z,False
 rs144104266,16,89278719,hg38,G,,NR,beta,3.49332,0.30103,[2.9-4.08] decrease,5E-31,hair color,European,10450,ANKRD11,34737440,GCST90095478,gwas_catalog,2026-07-07T03:48:29Z,False
 rs3114910,16,89313019,hg38,?,,NR,unknown,,,,3E-30,sunburn,European,344000,ANKRD11,30595370,GCST007086,gwas_catalog,2026-07-07T03:48:29Z,True
-rs3114908,16,89317317,hg38,T,,NR,beta,0.345,0.053572,[0.24-0.45] unit increase,2E-328,suntan,European,176678,ANKRD11,29739929,GCST005897,gwas_catalog,2026-07-07T03:48:29Z,False
+rs3114908,16,89317317,hg38,T,,NR,beta,0.345,0.053572,[0.24-0.45] unit increase,2E-328,suntan,European,176678,ANKRD11,29739929,GCST005897,gwas_catalog+hirisplex_s,2026-07-07T03:48:29Z,False
 rs34592614,16,89349862,hg38,A,,0.0336338,beta,2.42876,0.31123,[1.82-3.04] unit increase,5E-15,hair color,,4979,ANKRD11,36672889,GCST90255681,gwas_catalog,2026-07-07T03:48:29Z,True
 rs28431356,16,89400032,hg38,C,,0.111996,beta,2.04642,0.26786,[1.52-2.57] unit increase,3E-14,hair color,,4979,ANKRD11,36672889,GCST90255681,gwas_catalog,2026-07-07T03:48:29Z,True
 rs74836424,16,89440922,hg38,?,,NR,unknown,,,,1E-300,sunburn,European,344000,ANKRD11,30595370,GCST007086,gwas_catalog,2026-07-07T03:48:29Z,True
@@ -533,18 +548,18 @@ rs11862382,16,89906124,hg38,?,,0.8669,unknown,2.7932959,,NR,3E-13,hair color,Bri
 rs8045560,16,89913086,hg38,C,,0.4191,unknown,7.44,,NR,5E-10,hair color,British,299651,"TCF25, MC1R",30531825,GCST006986,gwas_catalog,2026-07-07T03:48:29Z,True
 rs143512305,16,89915672,hg38,TC,,0.0621445,beta,1.56477,0.28317,[1.01-2.12] unit increase,4E-8,hair color,,4979,MC1R,36672889,GCST90255681,gwas_catalog,2026-07-07T03:48:29Z,True
 rs3212350,16,89917146,hg38,?,,0.581,unknown,2.252252,,NR,1E-41,hair color,British,299651,MC1R,30531825,GCST006986,gwas_catalog,2026-07-07T03:48:29Z,True
-rs1805005,16,89919436,hg38,T,,0.122,unknown,3.255,,NR,3E-243,hair color,British,299651,MC1R,30531825,GCST006986,gwas_catalog,2026-07-07T03:48:29Z,True
-rs1805006,16,89919510,hg38,T,,0.01312,unknown,22.55,,NR,2E-308,hair color,British,299651,MC1R,30531825,GCST006986,gwas_catalog,2026-07-07T03:48:29Z,True
-rs2228479,16,89919532,hg38,A,,0.135,beta,1.55,,unit increase,7E-21,facial pigmentation,Korean,17019,MC1R,32835660,GCST90002283,gwas_catalog,2026-07-07T03:48:29Z,False
-rs11547464,16,89919683,hg38,A,,0.007148,unknown,37.62,,NR,2E-308,hair color,British,299651,MC1R,30531825,GCST006986,gwas_catalog,2026-07-07T03:48:29Z,True
-rs1805007,16,89919709,hg38,T,,0.1048,unknown,1.744,,NR,2E-308,hair color,British,323317,MC1R,30531825,GCST006988,gwas_catalog,2026-07-07T03:48:29Z,True
-rs201326893,16,89919714,hg38,A,,2.369E-4,unknown,288.8,,NR,2E-61,hair color,British,299651,MC1R,30531825,GCST006986,gwas_catalog,2026-07-07T03:48:29Z,True
-rs1110400,16,89919722,hg38,C,,0.01216,unknown,9.997,,NR,4E-214,hair color,British,299651,MC1R,30531825,GCST006986,gwas_catalog,2026-07-07T03:48:29Z,True
-rs1805008,16,89919736,hg38,T,,0.08918,unknown,12.84,,NR,2E-308,hair color,British,299651,MC1R,30531825,GCST006986,gwas_catalog,2026-07-07T03:48:29Z,True
-rs885479,16,89919746,hg38,A,,0.05,beta,0.0086,0.0012755,[0.0061-0.0111] unit increase,4E-11,skin pigmentation,European,27254,MC1R,36536295,GCST90246327,gwas_catalog,2026-07-07T03:48:29Z,False
+rs1805005,16,89919436,hg38,T,,0.122,unknown,3.255,,NR,3E-243,hair color,British,299651,MC1R,30531825,GCST006986,gwas_catalog+hirisplex_s,2026-07-07T03:48:29Z,True
+rs1805006,16,89919510,hg38,T,,0.01312,unknown,22.55,,NR,2E-308,hair color,British,299651,MC1R,30531825,GCST006986,gwas_catalog+hirisplex_s,2026-07-07T03:48:29Z,True
+rs2228479,16,89919532,hg38,A,,0.135,beta,1.55,,unit increase,7E-21,facial pigmentation,Korean,17019,MC1R,32835660,GCST90002283,gwas_catalog+hirisplex_s,2026-07-07T03:48:29Z,False
+rs11547464,16,89919683,hg38,A,,0.007148,unknown,37.62,,NR,2E-308,hair color,British,299651,MC1R,30531825,GCST006986,gwas_catalog+hirisplex_s,2026-07-07T03:48:29Z,True
+rs1805007,16,89919709,hg38,T,,0.1048,unknown,1.744,,NR,2E-308,hair color,British,323317,MC1R,30531825,GCST006988,gwas_catalog+hirisplex_s,2026-07-07T03:48:29Z,True
+rs201326893,16,89919714,hg38,A,,2.369E-4,unknown,288.8,,NR,2E-61,hair color,British,299651,MC1R,30531825,GCST006986,gwas_catalog+hirisplex_s,2026-07-07T03:48:29Z,True
+rs1110400,16,89919722,hg38,C,,0.01216,unknown,9.997,,NR,4E-214,hair color,British,299651,MC1R,30531825,GCST006986,gwas_catalog+hirisplex_s,2026-07-07T03:48:29Z,True
+rs1805008,16,89919736,hg38,T,,0.08918,unknown,12.84,,NR,2E-308,hair color,British,299651,MC1R,30531825,GCST006986,gwas_catalog+hirisplex_s,2026-07-07T03:48:29Z,True
+rs885479,16,89919746,hg38,A,,0.05,beta,0.0086,0.0012755,[0.0061-0.0111] unit increase,4E-11,skin pigmentation,European,27254,MC1R,36536295,GCST90246327,gwas_catalog+hirisplex_s,2026-07-07T03:48:29Z,False
 rs555179612,16,89919795,hg38,TC,,0.001706,unknown,231.5,,NR,2E-308,hair color,British,299651,MC1R,30531825,GCST006986,gwas_catalog,2026-07-07T03:48:29Z,True
 rs200000734,16,89919895,hg38,T,,6.126E-4,unknown,32.03,,NR,6E-50,hair color,British,299651,MC1R,30531825,GCST006986,gwas_catalog,2026-07-07T03:48:29Z,True
-rs1805009,16,89920138,hg38,C,,0.0198835,beta,2.67676,0.33164,[2.03-3.33] unit increase,8E-16,hair color,,4979,MC1R,36672889,GCST90255681,gwas_catalog,2026-07-07T03:48:29Z,True
+rs1805009,16,89920138,hg38,C,,0.0198835,beta,2.67676,0.33164,[2.03-3.33] unit increase,8E-16,hair color,,4979,MC1R,36672889,GCST90255681,gwas_catalog+hirisplex_s,2026-07-07T03:48:29Z,True
 rs368507952,16,89920175,hg38,A,,4.156E-4,unknown,71.08,,NR,2E-93,hair color,British,299651,MC1R,30531825,GCST006986,gwas_catalog,2026-07-07T03:48:29Z,True
 rs4586434,16,89928508,hg38,?,,0.7094,unknown,2.8328614,,NR,4E-8,hair color,British,299651,TUBB3,30531825,GCST006986,gwas_catalog,2026-07-07T03:48:29Z,True
 rs2302898,16,89932386,hg38,A,,0.29,unknown,2.456,,NR,3E-103,hair color,British,299651,TUBB3,30531825,GCST006986,gwas_catalog,2026-07-07T03:48:29Z,True
@@ -695,7 +710,7 @@ rs291671,20,33363039,hg38,G,,0.10,beta,0.22,,[NR] unit increase,2E-15,hair color
 rs17401449,20,33480139,hg38,G,,NR,beta,0.439,0.081634,[0.28-0.6] unit increase,2E-192,suntan,European,176678,SNTA1 - CBFA2T2,29739929,GCST005897,gwas_catalog,2026-07-07T03:48:29Z,False
 rs78382342,20,33772305,hg38,A,,NR,beta,0.456,0.081634,[0.3-0.62] unit increase,1E-207,suntan,European,176678,ZNF341,29739929,GCST005897,gwas_catalog,2026-07-07T03:48:29Z,False
 rs6088347,20,33920304,hg38,?,,NR,unknown,,,,5E-13,sunburn,European,344000,TPM3P2 - PIGPP3,30595370,GCST007086,gwas_catalog,2026-07-07T03:48:29Z,True
-rs6059655,20,34077942,hg38,A,,NR,beta,0.527,0.084185,[0.36-0.69] unit increase,1E-315,suntan,European,176678,RALY,29739929,GCST005897,gwas_catalog,2026-07-07T03:48:29Z,False
+rs6059655,20,34077942,hg38,A,,NR,beta,0.527,0.084185,[0.36-0.69] unit increase,1E-315,suntan,European,176678,RALY,29739929,GCST005897,gwas_catalog+hirisplex_s,2026-07-07T03:48:29Z,False
 rs4911414,20,34141638,hg38,G,,NR,beta,0.07,0.010204,[0.050-0.090] unit decrease,4E-9,suntan,European,9678,RPS2P1 - ASIP,23548203,GCST001939,gwas_catalog,2026-07-07T03:48:29Z,False
 rs2424995,20,34576711,hg38,A,,0.09844,unknown,1.515,,NR,1E-65,hair color,British,283920,PIGU,30531825,GCST006989,gwas_catalog,2026-07-07T03:48:29Z,True
 rs17305573,20,34592348,hg38,T,,0.932969,unknown,,,,8E-397,"cutaneous melanoma, hair color",European,764610,PIGU,32341527,GCST010302,gwas_catalog,2026-07-07T03:48:29Z,True
@@ -887,12 +902,12 @@ rs35395,5,33948484,hg38,T,,NR,beta,0.321,0.030613,[0.26-0.38] unit decrease,2E-2
 rs10080040,5,33950346,hg38,T,,0.0339619,beta,9.32618,0.71685,[7.92-10.73] unit increase,5E-38,skin pigmentation,,4933,SLC45A2,36672889,GCST90255688,gwas_catalog,2026-07-07T03:48:29Z,True
 rs35397,5,33951011,hg38,?,,0.548195,beta,0.342625,0.04847,[0.25-0.44] unit decrease,9E-13,skin pigmentation,,762,SLC45A2,31315583,GCST008518,gwas_catalog,2026-07-07T03:48:29Z,True
 rs2278007,5,33951446,hg38,G,,0.0245737,beta,0.618097,0.051021,[0.52-0.72] unit decrease,1E-33,skin pigmentation,,4985,SLC45A2,36672889,GCST90255690,gwas_catalog,2026-07-07T03:48:29Z,True
-rs16891982,5,33951588,hg38,?,,NR,unknown,,,,3E-320,sunburn,European,344000,SLC45A2,30595370,GCST007086,gwas_catalog,2026-07-07T03:48:29Z,True
+rs16891982,5,33951588,hg38,?,,NR,unknown,,,,3E-320,sunburn,European,344000,SLC45A2,30595370,GCST007086,gwas_catalog+hirisplex_s,2026-07-07T03:48:29Z,True
 rs111372186,5,33952363,hg38,A,,0.0250638,beta,0.366323,0.058675,[0.25-0.48] unit decrease,9E-10,skin pigmentation,,4985,SLC45A2,36672889,GCST90255690,gwas_catalog,2026-07-07T03:48:29Z,True
 rs560973795,5,33954283,hg38,T,,0.0129061,beta,0.453429,0.068879,[0.32-0.59] unit increase,2E-11,skin pigmentation,,4933,SLC45A2,36672889,GCST90255689,gwas_catalog,2026-07-07T03:48:29Z,True
 rs35391,5,33955568,hg38,T,,NR,beta,0.44,0.07143,[0.30-0.58] tanning ability score decrease,3E-10,suntan,European,3157,SLC45A2,19340012,GCST000371,gwas_catalog,2026-07-07T03:48:29Z,False
 rs6451047,5,33956911,hg38,T,,0.015203,beta,11.5814,1.1888,[9.25-13.91] unit increase,3E-22,skin pigmentation,,4933,SLC45A2,36672889,GCST90255688,gwas_catalog,2026-07-07T03:48:29Z,True
-rs28777,5,33958854,hg38,?,,NR,unknown,,,,9E-127,"eye colour measurement, strand of hair color, skin pigmentation",Latin American,6236,SLC45A2,30664655,GCST007451,gwas_catalog,2026-07-07T03:48:29Z,True
+rs28777,5,33958854,hg38,?,,NR,unknown,,,,9E-127,"eye colour measurement, strand of hair color, skin pigmentation",Latin American,6236,SLC45A2,30664655,GCST007451,gwas_catalog+hirisplex_s,2026-07-07T03:48:29Z,True
 rs6414861,5,33960110,hg38,A,,0.0352405,beta,0.909171,0.12245,[0.67-1.15] unit decrease,2E-13,hair color,,4702,SLC45A2,36672889,GCST90255683,gwas_catalog,2026-07-07T03:48:29Z,True
 rs10565330,5,33960279,hg38,CAT,,0.0220102,beta,0.554733,0.063777,[0.43-0.68] unit decrease,8E-19,skin pigmentation,,4985,SLC45A2,36672889,GCST90255690,gwas_catalog,2026-07-07T03:48:29Z,True
 rs73077127,5,33960343,hg38,C,,0.0192128,beta,7.79026,1.0408,[5.75-9.83] unit increase,8E-14,skin pigmentation,,4933,SLC45A2,36672889,GCST90255688,gwas_catalog,2026-07-07T03:48:29Z,True
@@ -970,7 +985,7 @@ rs511515,6,33573730,hg38,?,,NR,unknown,,,,7E-17,sunburn,European,344000,BAK1,305
 rs78515650,6,33832563,hg38,C,,NR,beta,0.250354,0.056123,[0.14-0.36] unit increase,6E-6,skin pigmentation,South Asian,720,MLN - LINC01016,30895295,GCST007739,gwas_catalog,2026-07-07T03:48:29Z,False
 rs2671427,6,385735,hg38,T,,0.3731,unknown,1.146,,NR,8E-20,hair color,British,283920,DUSP22 - IRF4,30531825,GCST006989,gwas_catalog,2026-07-07T03:48:29Z,True
 rs74758148,6,386933,hg38,A,,0.04258,unknown,1.326,,NR,2E-14,hair color,British,283920,DUSP22 - IRF4,30531825,GCST006989,gwas_catalog,2026-07-07T03:48:29Z,True
-rs12203592,6,396321,hg38,T,,NR,beta,0.545,0.073981,[0.4-0.69] unit increase,1E-581,suntan,European,176678,IRF4,29739929,GCST005897,gwas_catalog,2026-07-07T03:48:29Z,False
+rs12203592,6,396321,hg38,T,,NR,beta,0.545,0.073981,[0.4-0.69] unit increase,1E-581,suntan,European,176678,IRF4,29739929,GCST005897,gwas_catalog+hirisplex_s,2026-07-07T03:48:29Z,False
 rs3778607,6,403799,hg38,A,,0.4555,unknown,1.08,,NR,2E-12,hair color,British,323317,IRF4,30531825,GCST006988,gwas_catalog,2026-07-07T03:48:29Z,True
 rs12211228,6,408833,hg38,?,,NR,unknown,1.1566043,,NR,2E-11,hair color,British,283920,IRF4,30531825,GCST006989,gwas_catalog,2026-07-07T03:48:29Z,True
 rs9392504,6,412802,hg38,?,,NR,unknown,1.172883,,NR,1E-18,hair color,British,323317,IRF4 - EXOC2,30531825,GCST006988,gwas_catalog,2026-07-07T03:48:29Z,True
