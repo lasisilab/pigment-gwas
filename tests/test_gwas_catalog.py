@@ -3,7 +3,8 @@ import json
 import pandas as pd
 import pytest
 
-from gwas_catalog import assert_anchors, tidy, parse_dir, load_config, PullError
+from gwas_catalog import (assert_anchors, tidy, parse_dir, parse_sample, parse_effect,
+                          load_config, PullError)
 
 
 def test_assert_anchors_ok():
@@ -53,6 +54,24 @@ def test_load_config_missing_key_raises(tmp_path):
     p.write_text(json.dumps({"axis": "x"}))   # no roots / anchors
     with pytest.raises(PullError):
         load_config(str(p))
+
+
+def test_parse_sample():
+    anc, n = parse_sample(
+        "7,148 Japanese ancestry female cases, 4,034 Japanese ancestry female controls", "NA")
+    assert anc == "Japanese"
+    assert n == "11182"                                   # 7148 + 4034, commas stripped
+    assert parse_sample("1,200 African American individuals", "")[0] == "African American"
+    assert parse_sample("NR", "NA") == ("", "")           # unknown ancestry, no N
+
+
+def test_parse_effect_or_vs_beta():
+    t, se = parse_effect("1.45", "[1.33-1.56]")           # bare ratio CI -> OR
+    assert t == "OR" and float(se) > 0
+    t, se = parse_effect("0.12", "[0.08-0.16] unit increase")   # direction word -> beta
+    assert t == "beta" and abs(float(se) - (0.16 - 0.08) / (2 * 1.959964)) < 1e-4
+    assert parse_effect("1.2", "")[0] == "unknown"        # value but no CI -> unknown
+    assert parse_effect("", "") == ("unknown", "")
 
 
 def test_load_config_normalizes_roots(tmp_path):

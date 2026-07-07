@@ -69,7 +69,9 @@ import csv
 import datetime
 import io
 import json
+import math
 import os
+import re
 import sys
 import time
 from dataclasses import dataclass, field
@@ -104,7 +106,26 @@ TIDY_COLS = [
     "axis", "source_trait", "source_short_form", "mapped_trait", "reported_trait",
     "rsid", "chr", "pos_hg38", "risk_allele", "direction_raw", "risk_freq",
     "or_beta", "pvalue", "mapped_gene", "pubmed", "study_accession",
+    # widened pull (roadmap #1): effect units, SE recovered from the 95% CI, discovery
+    # ancestry + N — so scoring-ready catalog rows can drop the needs_sumstats flag.
+    "effect_type", "standard_error", "ci_text", "ancestry", "sample_size",
 ]
+
+# Broad ancestry descriptors as they appear in the catalog's free-text sample columns.
+# Ordered most-specific-first so a compound match (e.g. "African American") is consumed
+# before its components ("African") can re-match. Unmatched text -> ancestry stays "".
+_ANCESTRIES = [
+    "African American", "Afro-Caribbean", "Sub-Saharan African", "African",
+    "East Asian", "South East Asian", "Southeast Asian", "South Asian", "Central Asian",
+    "Han Chinese", "Chinese", "Japanese", "Korean", "Asian",
+    "Hispanic", "Latin American", "Latino", "Native American", "Amerindian",
+    "European", "British", "Finnish", "Icelandic", "Sardinian", "Ashkenazi",
+    "Middle Eastern", "Indian", "Pakistani", "Oceanian", "Melanesian",
+    "Greenlandic", "Inuit", "admixed", "multi-ethnic", "multiethnic",
+]
+
+_CI_RANGE = re.compile(r"([0-9]*\.?[0-9]+)\s*[-–]\s*([0-9]*\.?[0-9]+)")
+_Z95 = 2 * 1.959964  # 95% CI half-width in SEs (~3.92)
 
 
 class PullError(RuntimeError):
@@ -210,8 +231,65 @@ def parse_dir(ci_text):
     return ""
 
 
+def parse_sample(*sample_texts):
+    """Parse ancestry label(s) + total N from the catalog's free-text sample columns.
+
+    e.g. "7,148 Japanese ancestry female cases, 4,034 Japanese ancestry female controls"
+    -> ("Japanese", "11182"). Sums every comma-formatted count across the INITIAL and
+    REPLICATION columns and collects known ancestry descriptors (compound-first so
+    "African American" isn't split into "African"). Unknown ancestry -> "" (honest).
+    """
+    total, anc = 0, []
+    for t in sample_texts:
+        t = (t or "").strip()
+        if not t or t.upper() in ("NA", "NR", "N/A"):
+            continue
+        for m in re.findall(r"\d[\d,]*", t):
+            try:
+                total += int(m.replace(",", ""))
+            except ValueError:
+                pass
+        tl = t.lower()
+        for a in _ANCESTRIES:
+            if a.lower() in tl:
+                if a not in anc:
+                    anc.append(a)
+                tl = tl.replace(a.lower(), " ")   # consume so components don't re-match
+    return ", ".join(anc), (str(total) if total else "")
+
+
+def parse_effect(or_beta, ci_text):
+    """Classify OR vs beta and recover a standard error from the 95% CI text.
+
+    The catalog does not flag OR vs beta directly, but its convention disambiguates: a beta
+    carries a direction/unit word ("unit increase/decrease") while an odds ratio is a bare
+    ratio range "[lo-hi]". Returns (effect_type, standard_error) with effect_type
+    "beta" | "OR" | "unknown" and SE on the reported scale (beta: (hi-lo)/3.92; OR:
+    (ln hi - ln lo)/3.92, i.e. SE of log-OR). Missing/ambiguous -> ("unknown", "").
+    """
+    ci = (ci_text or "").strip()
+    try:
+        val = float((or_beta or "").strip())
+    except (TypeError, ValueError):
+        val = None
+    lo = hi = None
+    m = _CI_RANGE.search(ci)
+    if m:
+        lo, hi = float(m.group(1)), float(m.group(2))
+        if hi < lo:
+            lo, hi = hi, lo
+    cl = ci.lower()
+    if any(w in cl for w in ("increase", "decrease", "unit")):
+        se = (hi - lo) / _Z95 if lo is not None else None
+        return "beta", ("" if se is None else f"{se:.5g}")
+    if val is not None and lo is not None and lo > 0:
+        return "OR", f"{(math.log(hi) - math.log(lo)) / _Z95:.5g}"
+    return "unknown", ""
+
+
 def tidy(df, axis, short_form, label):
-    """Classic 38-col download -> tidy rows, same fields/idiom as the old 02c/02f."""
+    """Classic download -> tidy rows. Keeps effect units, a CI-derived SE, and discovery
+    ancestry/N (the widened pull) alongside the original fields."""
     rows = []
     for _, r in df.iterrows():
         snp = (r.get("SNP_ID_CURRENT") or "").strip()
@@ -219,18 +297,24 @@ def tidy(df, axis, short_form, label):
         rsid = ("rs" + snp) if snp and snp.isdigit() else snps
         sra = r.get("STRONGEST SNP-RISK ALLELE") or ""
         risk = sra.split("-")[-1].strip() if "-" in sra else ""
-        risk = risk if risk in ("A", "C", "G", "T") else "?"
+        risk = risk if re.fullmatch(r"[ACGT]+", risk) else "?"   # accept SNV + indel alleles
+        ci = r.get("95% CI (TEXT)") or ""
+        or_beta = r.get("OR or BETA") or ""
+        effect_type, se = parse_effect(or_beta, ci)
+        ancestry, n = parse_sample(r.get("INITIAL SAMPLE SIZE"), r.get("REPLICATION SAMPLE SIZE"))
         rows.append(dict(
             axis=axis, source_trait=label, source_short_form=short_form,
             mapped_trait=r.get("MAPPED_TRAIT") or "",
             reported_trait=r.get("DISEASE/TRAIT") or "",
             rsid=rsid, chr=r.get("CHR_ID") or "", pos_hg38=r.get("CHR_POS") or "",
-            risk_allele=risk, direction_raw=parse_dir(r.get("95% CI (TEXT)")),
+            risk_allele=risk, direction_raw=parse_dir(ci),
             risk_freq=r.get("RISK ALLELE FREQUENCY") or "",
-            or_beta=r.get("OR or BETA") or "", pvalue=r.get("P-VALUE") or "",
+            or_beta=or_beta, pvalue=r.get("P-VALUE") or "",
             mapped_gene=r.get("MAPPED_GENE") or "",
             pubmed=r.get("PUBMEDID") or "",
             study_accession=r.get("STUDY ACCESSION") or "",
+            effect_type=effect_type, standard_error=se, ci_text=ci,
+            ancestry=ancestry, sample_size=n,
         ))
     return rows
 

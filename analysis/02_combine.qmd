@@ -29,12 +29,14 @@ cat_raw = pd.read_csv(cat_path, dtype=str, keep_default_na=False)
 
 ## Map the catalog onto the shared schema
 
-The catalog's `or_beta` column mixes odds ratios and linear betas without a clean unit, and
-the v1 pull did not capture the discovery-sample ancestry or the numeric CI. So catalog rows
-carry `effect_type = "unknown"` and `needs_sumstats = True` — an explicit flag that these
-loci need full summary statistics (or a widened pull) before they are scoring-ready, not a
-silent gap. `effect_size` still carries the reported `or_beta` and `eaf` the risk-allele
-frequency, so nothing is thrown away.
+The widened pull now recovers, per row, the **effect unit** (`effect_type` = `OR` vs `beta`,
+disambiguated from the 95% CI text), a **standard error** (from that CI), and the **discovery
+ancestry + N** (parsed from the sample-size columns). A catalog row is marked scoring-ready
+(`needs_sumstats = False`) when its effect unit, ancestry, effect allele, and effect size are all
+present; the rest keep `needs_sumstats = True` — an explicit flag, not a silent gap. Nothing is
+thrown away: `effect_size` still carries the reported `or_beta`, `ci_text` the raw CI, and `eaf`
+the risk-allele frequency. (OR/β is inferred from the CI convention and should be spot-checked
+before high-stakes scoring.)
 
 ```{python}
 cat_map = {
@@ -44,18 +46,34 @@ cat_map = {
     "build":           const("hg38"),
     "effect_allele":   "risk_allele",
     "eaf":             "risk_freq",
-    "effect_type":     const("unknown"),
+    "effect_type":     "effect_type",
     "effect_size":     "or_beta",
+    "standard_error":  "standard_error",
+    "ci_text":         "ci_text",
     "pvalue":          "pvalue",
     "trait":           "mapped_trait",
+    "ancestry":        "ancestry",
+    "sample_size":     "sample_size",
     "mapped_gene":     "mapped_gene",
     "pubmed":          "pubmed",
     "study_accession": "study_accession",
 }
+
+def catalog_needs_sumstats(df):
+    # scoring-ready when the effect unit is known, discovery ancestry is recorded,
+    # the effect allele is called, and an effect size is present.
+    ready = (df["effect_type"].isin(["OR", "beta"])
+             & (df["ancestry"].astype(str).str.len() > 0)
+             & ~df["risk_allele"].isin(["?", ""])
+             & (df["or_beta"].astype(str).str.len() > 0))
+    return ~ready
+
 cat_ver = cat_raw["queried_utc"].iloc[0] if "queried_utc" in cat_raw and len(cat_raw) else "unknown"
 catalog = to_harmonized(cat_raw, cat_map, source="gwas_catalog",
-                        source_version=cat_ver, needs_sumstats=True)
-print(f"catalog: {len(catalog)} loci (queried {cat_ver})")
+                        source_version=cat_ver, needs_sumstats=catalog_needs_sumstats)
+n_ready = int((~catalog["needs_sumstats"].astype(bool)).sum())
+print(f"catalog: {len(catalog)} loci (queried {cat_ver}) — {n_ready} scoring-ready "
+      f"(effect unit + ancestry + allele recovered)")
 ```
 
 ## Union all sources and deduplicate
