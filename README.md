@@ -1,9 +1,9 @@
 # pigment-gwas
 
-A small, versioned, **harmonized compendium of skin-pigmentation GWAS loci** — built to be
-reused across projects (an improved polygenic score, HIrisPlex-style comparisons, locus
-lookups). It pulls the NHGRI-EBI GWAS Catalog, folds in key GWAS papers the catalog doesn't
-hold, and standardizes everything onto one effect-size- and ancestry-aware schema.
+A small, versioned, **harmonized compendium of pigmentation GWAS loci — skin, eye, and hair**
+— built to be reused across projects (an improved polygenic score, HIrisPlex-S-style
+comparisons, locus lookups). It pulls the NHGRI-EBI GWAS Catalog, folds in key GWAS papers the
+catalog doesn't hold, and standardizes everything onto one effect-size- and ancestry-aware schema.
 
 Lifted from the GWAS-pulling code originally developed in the `SAPPHIRE_genetics` project.
 

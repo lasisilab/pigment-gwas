@@ -1,7 +1,7 @@
 {
-  "axis": "skin",
-  "label": "Skin pigmentation & photo-response",
-  "description": "Reviewed, frozen list of EFO/OBA/MONDO root traits pulled WITH child traits from the NHGRI-EBI GWAS Catalog download endpoint. Each root names an umbrella concept (its leaf traits come along via includeChildTraits=true), so this is a small auditable list, not a hardcoded gene list. Edit `roots` to change what is queried; the pull then fails loud if a new mapped trait appears under a root that has not been reviewed. Roots were discovered 2026-06-25 by enumerating which trait nodes carry data and confirming each is on-axis. Notes carry that day's association-row counts as a sanity baseline.",
+  "axis": "pigmentation",
+  "label": "Pigmentation (skin, eye, hair) & photo-response",
+  "description": "Reviewed, frozen list of EFO/OBA/MONDO root traits pulled WITH child traits from the NHGRI-EBI GWAS Catalog download endpoint. Each root names an umbrella concept (its leaf traits come along via includeChildTraits=true), so this is a small auditable list, not a hardcoded gene list. Edit `roots` to change what is queried; the pull then fails loud if a new mapped trait appears under a root that has not been reviewed. Skin/photo-response roots were discovered 2026-06-25; eye + hair color roots added 2026-07-06 to broaden the atlas to full pigmentation (HIrisPlex-S scope: skin + eye + hair). Notes carry an association-row count as a sanity baseline.",
   "roots": {
     "OBA_VT0002095": { "label": "skin pigmentation",       "note": "core pigmentation; carries SLC24A5, HERC2 (~561)" },
     "OBA_2045282":   { "label": "facial pigmentation",     "note": "~52" },
@@ -9,9 +9,12 @@
     "MONDO_0005326": { "label": "sunburn",                 "note": "photo-response ~91" },
     "EFO_0004279":   { "label": "suntan",                  "note": "tan response ~113" },
     "MONDO_0005434": { "label": "skin sensitivity to sun", "note": "photo-response ~85" },
-    "EFO_0021835":   { "label": "melanin measurement",     "note": "marginal ~1; mostly rolls up under skin pigmentation" }
+    "EFO_0021835":   { "label": "melanin measurement",     "note": "marginal ~1; mostly rolls up under skin pigmentation" },
+    "EFO_0003949":   { "label": "eye color",               "note": "eye pigmentation; HERC2/OCA2/SLC24A4 (~157)" },
+    "EFO_0009764":   { "label": "eye colour measurement",  "note": "eye pigmentation, measurement node; overlaps eye color (~158)" },
+    "EFO_0003924":   { "label": "hair color",              "note": "hair pigmentation; MC1R red-hair, KITLG blonde, OCA2 (~435)" }
   },
-  "anchors": { "rs1426654": "SLC24A5", "rs12913832": "HERC2" },
+  "anchors": { "rs1426654": "SLC24A5", "rs12913832": "HERC2", "rs1805007": "MC1R" },
   "out_csv": "output/catalog/pigmentation_gwas_catalog.csv",
   "reviewed_traits_file": "output/catalog/reviewed_traits.txt"
 }

@@ -3,7 +3,7 @@ title: "pigment-gwas"
 subtitle: "A versioned, harmonized compendium of pigmentation GWAS loci"
 ---
 
-A small atlas of skin-pigmentation GWAS loci, built to seed improved polygenic scores and
+A small atlas of pigmentation GWAS loci (skin, eye, and hair), built to seed improved polygenic scores and
 HIrisPlex-style comparisons. Two outputs, produced by two kinds of workbook:
 
 - **[1 · Catalog pull](analysis/01_catalog_pull.qmd)** → `output/catalog/pigmentation_gwas_catalog.csv`

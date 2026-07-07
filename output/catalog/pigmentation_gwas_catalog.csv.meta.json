@@ -1,8 +1,8 @@
 {
-  "queried_utc": "2026-07-01T00:28:27Z",
-  "axis": "skin",
-  "label": "Skin pigmentation & photo-response",
-  "config_file": "config/traits_pigmentation.json",
+  "queried_utc": "2026-07-07T02:06:25Z",
+  "axis": "pigmentation",
+  "label": "Pigmentation (skin, eye, hair) & photo-response",
+  "config_file": "scripts/traits_pigmentation.json",
   "roots": [
     "OBA_VT0002095",
     "OBA_2045282",
@@ -10,15 +10,23 @@
     "MONDO_0005326",
     "EFO_0004279",
     "MONDO_0005434",
-    "EFO_0021835"
+    "EFO_0021835",
+    "EFO_0003949",
+    "EFO_0009764",
+    "EFO_0003924"
   ],
   "anchors": {
     "rs1426654": "SLC24A5",
-    "rs12913832": "HERC2"
+    "rs12913832": "HERC2",
+    "rs1805007": "MC1R"
   },
-  "n_loci": 440,
-  "n_on_array": null,
-  "new_unreviewed_traits": [],
+  "n_loci": 1072,
+  "new_unreviewed_traits": [
+    "cutaneous melanoma, hair color",
+    "eye color",
+    "eye colour measurement",
+    "hair color"
+  ],
   "endpoint": "https://www.ebi.ac.uk/gwas/api/search/downloads",
   "query": "shortForm:\"<root>\" includeChildTraits=true efo=true facet=association",
   "source": "NHGRI-EBI GWAS Catalog download endpoint (with child traits)",

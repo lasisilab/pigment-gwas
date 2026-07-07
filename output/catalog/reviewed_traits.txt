@@ -2,9 +2,13 @@
 # New traits appearing in a later pull are flagged for review.
 Abnormal skin pigmentation, freckles
 Abnormal skin pigmentation, suntan
+cutaneous melanoma, hair color
+eye color
+eye colour measurement
 eye colour measurement, strand of hair color, skin pigmentation
 facial pigmentation
 freckles
+hair color
 skin pigmentation
 skin sensitivity to sun
 sunburn
